@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>fmr.blog — Content Manager</title>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+  <style>
+    /* Global CMS Overrides */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    :root {
+      /* Try to override default Sveltia/Netlify variables */
+      --color-primary: #4A7856 !important;
+      --color-active: #3C6346 !important;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif !important;
+    }
+    
+    /* Aggressive overrides for typical buttons */
+    button, input, select, textarea, .button {
+      font-family: 'Inter', sans-serif !important;
+    }
+    
+    /* Target primary colored elements */
+    [class*="primary"], [class*="button-primary"], [class*="active"], [role="button"] {
+      --sui-primary: #4A7856 !important; 
+    }
+  </style>
 </head>
 <body></body>
 </html>
