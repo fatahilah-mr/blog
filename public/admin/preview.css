@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Gaya khusus untuk panel preview Sveltia CMS agar mirip dengan tema fmr.blog */
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  color: #1e293b !important; /* text light mode */
+  background-color: #f8fafc !important; /* bg light mode */
+  line-height: 1.8 !important;
+  font-size: 1.1rem !important;
+  padding: 2rem !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0f172a !important;
+  margin-top: 2em !important;
+  margin-bottom: 0.75em !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+h1 {
+  font-size: 2.25rem !important;
+  margin-top: 0 !important;
+}
+
+a {
+  color: #4A7856 !important; /* color-accent */
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+p {
+  margin-bottom: 1.5em !important;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 16px !important; /* radius-md */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 4px !important;
+  font-size: 0.9em !important;
+  color: #4A7856 !important;
+}
+
+pre {
+  background: #0f172a !important; /* slate-900 */
+  padding: 1.5rem !important;
+  border-radius: 8px !important;
+  overflow-x: auto !important;
+}
+
+pre code {
+  background: none !important;
+  color: #f8fafc !important;
+  padding: 0 !important;
+}
+
+blockquote {
+  border-left: 4px solid #4A7856 !important;
+  margin-left: 0 !important;
+  padding-left: 1.5rem !important;
+  color: #475569 !important;
+  font-style: italic !important;
+  background: rgba(74, 120, 86, 0.05) !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  border-radius: 0 8px 8px 0 !important;
+}
