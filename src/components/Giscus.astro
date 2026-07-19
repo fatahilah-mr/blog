@@ -1,23 +1,53 @@
 ---
 // Basic Giscus component for GitHub discussions
 ---
-<div class="giscus-container">
-  <script src="https://giscus.app/client.js"
-        data-repo="fatahilah-mr/blog"
-        data-repo-id="R_kgDOTdOLfQ"
-        data-category="General"
-        data-category-id="DIC_kwDOTdOLfc4DBhWa"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="id"
-        crossorigin="anonymous"
-        async>
-  </script>
+<div class="giscus-container" id="giscus-wrapper">
 </div>
+<script>
+  function loadGiscus() {
+    const isLight = document.documentElement.classList.contains('theme-light');
+    const themeUrl = window.location.origin + (isLight ? '/giscus-light.css' : '/giscus-dark.css');
+
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'fatahilah-mr/blog');
+    script.setAttribute('data-repo-id', 'R_kgDOTdOLfQ');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOTdOLfc4DBhWa');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', themeUrl);
+    script.setAttribute('data-lang', 'id');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+
+    const wrapper = document.getElementById('giscus-wrapper');
+    if (wrapper) {
+      wrapper.innerHTML = '';
+      wrapper.appendChild(script);
+    }
+  }
+
+  // Load initially
+  loadGiscus();
+
+  // Listen for manual theme toggle
+  document.addEventListener('theme-changed', (e) => {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    
+    // @ts-ignore
+    const themeUrl = window.location.origin + (e.detail === 'light' ? '/giscus-light.css' : '/giscus-dark.css');
+      
+    iframe.contentWindow?.postMessage(
+      { giscus: { setConfig: { theme: themeUrl } } },
+      'https://giscus.app'
+    );
+  });
+</script>
 <style>
   .giscus-container { margin-top: 4rem; }
 </style>

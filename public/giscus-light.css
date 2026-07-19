@@ -1,0 +1,27 @@
+@import url('https://giscus.app/themes/noborder_light.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+main {
+  font-family: 'Inter', sans-serif !important;
+  
+  /* Primary Green Button */
+  --color-btn-primary-bg: #4A7856 !important;
+  --color-btn-primary-hover-bg: #3d6347 !important;
+  --color-btn-primary-border: #4A7856 !important;
+  --color-btn-primary-shadow: 0 1px 0 rgba(74, 120, 86, 0.1) !important;
+  --color-btn-primary-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+
+  /* Reactions & Highlights (change from default blue to green) */
+  --color-accent-fg: #4A7856 !important;
+  --color-accent-emphasis: #4A7856 !important;
+  --color-accent-muted: rgba(74, 120, 86, 0.4) !important;
+  --color-accent-subtle: rgba(74, 120, 86, 0.1) !important;
+  
+  /* Text and Background tweaks to match site */
+  --color-canvas-default: transparent !important;
+  --color-canvas-overlay: transparent !important;
+  
+  /* Reaction buttons */
+  --color-social-reaction-bg-hover: rgba(74, 120, 86, 0.05) !important;
+  --color-social-reaction-bg-reacted-hover: rgba(74, 120, 86, 0.15) !important;
+}

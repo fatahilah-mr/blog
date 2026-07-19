@@ -41,6 +41,9 @@
     
     const isLight = element.classList.contains('theme-light');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    
+    // Dispatch event for components like Giscus to sync themes
+    document.dispatchEvent(new CustomEvent('theme-changed', { detail: isLight ? 'light' : 'dark' }));
   }
   
   document.getElementById('theme-toggle')?.addEventListener('click', handleToggleClick);
