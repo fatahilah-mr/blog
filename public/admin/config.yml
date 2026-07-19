@@ -1,8 +1,9 @@
 backend:
   name: github
-  repo: your-username/fmr-blog
+  repo: fatahilah-mr/blog
   branch: main
-  auth_endpoint: https://your-worker.workers.dev/auth
+  base_url: https://blog.fatahmr.my.id
+  auth_endpoint: /oauth/auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
