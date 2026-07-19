@@ -1,0 +1,18 @@
+---
+interface Props {
+  lang: string;
+}
+const { lang } = Astro.props;
+---
+<span class="lang-badge">{lang.toUpperCase()}</span>
+
+<style>
+  .lang-badge {
+    background: var(--color-surface-hover);
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+</style>

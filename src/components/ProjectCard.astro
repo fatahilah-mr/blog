@@ -1,0 +1,76 @@
+---
+interface Props {
+  proj: any;
+}
+const { proj } = Astro.props;
+---
+<a href={`/projects/${proj.slug}`} class="card-link" data-tags={proj.data.techStack?.join(',') || ''}>
+  <div class="glass-panel card">
+    <div class="header">
+      <h3 class="title">{proj.data.title}</h3>
+      {proj.data.status === 'active' && <span class="status-dot"></span>}
+    </div>
+    <p class="desc">{proj.data.description}</p>
+    <div class="tags">
+      {proj.data.techStack.map((tech: string) => <span class="tag">{tech}</span>)}
+    </div>
+  </div>
+</a>
+
+<style>
+  .card-link {
+    display: block;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 10px #4ade80;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { opacity: 0.5; box-shadow: 0 0 0px #4ade80; }
+    50% { opacity: 1; box-shadow: 0 0 10px #4ade80; }
+    100% { opacity: 0.5; box-shadow: 0 0 0px #4ade80; }
+  }
+  .desc {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+  }
+  .tag {
+    background: var(--color-accent-muted);
+    color: var(--color-accent-text);
+    border: 1px solid var(--color-accent-muted);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+</style>

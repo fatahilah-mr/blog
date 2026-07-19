@@ -1,0 +1,328 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const allTags = [...new Set(posts.flatMap(p => p.data.tags || []))];
+---
+
+<Base title="Blog | fmr.blog" description="Semua artikel di fmr.blog">
+  <div class="page-header">
+    <h1 class="title">Artikel <span class="text-gradient">Blog</span></h1>
+    <p class="desc">Tulisan, tutorial, dan dokumentasi proses belajar.</p>
+    <a href="/" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      Kembali ke Beranda
+    </a>
+  </div>
+  
+  <div class="controls-container">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Cari artikel..." class="search-input" aria-label="Cari artikel" />
+      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </div>
+
+    <div class="custom-select-wrapper" id="custom-tag-select">
+      <div class="custom-select-trigger" tabindex="0" aria-label="Filter berdasarkan tag">
+        <span class="custom-select-value">Semua Kategori</span>
+        <svg class="select-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+      <div class="custom-select-options">
+        <div class="custom-option active" data-value="all">Semua Kategori</div>
+        {allTags.map(tag => (
+          <div class="custom-option" data-value={tag}>#{tag}</div>
+        ))}
+      </div>
+    </div>
+  </div>
+  
+  <div class="cards-grid">
+    {posts.map(post => <ArticleCard post={post} />)}
+  </div>
+  
+  <div class="empty-state" id="empty-state" style="display: none;">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      <line x1="9" y1="9" x2="13" y2="13"></line>
+      <line x1="13" y1="9" x2="9" y2="13"></line>
+    </svg>
+    <h3>Tidak ditemukan</h3>
+    <p>Coba gunakan kata kunci atau tag lain.</p>
+  </div>
+</Base>
+
+<style>
+  .page-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .desc {
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    background: var(--color-accent-muted);
+    transition: all var(--transition-fast);
+  }
+  .back-link:hover {
+    background: var(--color-accent);
+    color: #fff;
+    transform: translateX(-3px);
+  }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .cards-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .controls-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+  }
+  @media (min-width: 640px) {
+    .controls-container {
+      flex-direction: row;
+    }
+  }
+  .search-container {
+    position: relative;
+    flex: 1;
+  }
+  .search-input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--glass-bg);
+    color: var(--color-text);
+    font-size: 1rem;
+    outline: none;
+    transition: all var(--transition-fast);
+  }
+  .search-input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(74, 120, 86, 0.2);
+  }
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-muted);
+    pointer-events: none;
+  }
+  
+  .custom-select-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 200px;
+    user-select: none;
+  }
+  .custom-select-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--glass-bg);
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all var(--transition-fast);
+  }
+  .custom-select-trigger:focus,
+  .custom-select-wrapper.open .custom-select-trigger {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(74, 120, 86, 0.2);
+  }
+  .select-icon {
+    color: var(--color-muted);
+    transition: transform var(--transition-fast);
+  }
+  .custom-select-wrapper.open .select-icon {
+    transform: rotate(180deg);
+  }
+  .custom-select-options {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background: var(--glass-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1.25rem;
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  html.theme-dark .custom-select-options {
+    background: rgba(18, 18, 18, 0.85);
+  }
+  .custom-select-wrapper.open .custom-select-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .custom-option {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    cursor: pointer;
+    border-radius: 0.75rem;
+    margin-bottom: 0.25rem;
+    transition: background var(--transition-fast);
+  }
+  .custom-option:last-child {
+    margin-bottom: 0;
+  }
+  @media (hover: hover) {
+    .custom-option:hover {
+      background: var(--color-surface-hover);
+    }
+  }
+  .custom-option:active {
+    background: var(--color-border);
+    transform: scale(0.98);
+  }
+  .custom-option.active {
+    background: var(--color-accent-muted);
+    color: var(--color-accent-text);
+    font-weight: 600;
+  }
+  
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--color-muted);
+  }
+  .empty-state svg {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+  .empty-state h3 {
+    color: var(--color-text);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .empty-state p {
+    font-size: 1rem;
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const cards = document.querySelectorAll('.card-link') as NodeListOf<HTMLElement>;
+  const emptyState = document.getElementById('empty-state');
+  
+  const customSelectWrapper = document.getElementById('custom-tag-select');
+  const customSelectTrigger = customSelectWrapper?.querySelector('.custom-select-trigger');
+  const customSelectValue = customSelectWrapper?.querySelector('.custom-select-value');
+  const customOptions = customSelectWrapper?.querySelectorAll('.custom-option');
+  
+  let activeTag = 'all';
+
+  function filterCards() {
+    const term = searchInput?.value.toLowerCase() || '';
+    let hasVisibleCards = false;
+    
+    cards.forEach(card => {
+      const text = card.textContent?.toLowerCase() || '';
+      const tags = card.dataset.tags || '';
+      
+      const matchesSearch = text.includes(term);
+      const matchesTag = activeTag === 'all' || tags.includes(activeTag);
+      
+      if (matchesSearch && matchesTag) {
+        card.style.display = '';
+        hasVisibleCards = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (emptyState) {
+      if (hasVisibleCards) {
+        emptyState.style.display = 'none';
+      } else {
+        emptyState.style.display = 'flex';
+      }
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterCards);
+  }
+
+  if (customSelectTrigger && customOptions && customSelectWrapper) {
+    customSelectTrigger.addEventListener('click', () => {
+      customSelectWrapper.classList.toggle('open');
+    });
+
+    customOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        activeTag = option.getAttribute('data-value') || 'all';
+        if (customSelectValue) {
+          customSelectValue.textContent = option.textContent;
+        }
+        
+        customOptions.forEach(opt => opt.classList.remove('active'));
+        option.classList.add('active');
+        
+        customSelectWrapper.classList.remove('open');
+        filterCards();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!customSelectWrapper.contains(e.target as Node)) {
+        customSelectWrapper.classList.remove('open');
+      }
+    });
+  }
+</script>

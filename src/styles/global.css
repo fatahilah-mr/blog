@@ -1,0 +1,167 @@
+:root {
+  /* ===== WARNA AKSEN ===== */
+  --color-accent: #4A7856;
+  --color-accent-light: #81C784;
+  --color-accent-dark: #2E5238;
+  --color-accent-gradient: linear-gradient(135deg, #4A7856 0%, #81C784 100%);
+  
+  /* Dark mode (default) */
+  --color-bg: #0a0a0a;
+  --color-surface: rgba(255, 255, 255, 0.08);
+  --color-surface-hover: rgba(255, 255, 255, 0.12);
+  --color-border: rgba(255, 255, 255, 0.22);
+  --color-text: #f3f4f6;
+  --color-muted: #9ca3af;
+  --color-glow: rgba(74, 120, 86, 0.15);
+  --color-accent-text: var(--color-accent-light);
+  --color-accent-text-hover: #a7f3d0;
+  --color-accent-muted: rgba(74, 120, 86, 0.2);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(24, 24, 24, 0.85);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+  --glass-blur: blur(16px);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Spacing & Sizes */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root.theme-light {
+  --color-bg: #f8fafc;
+  --color-surface: rgba(0, 0, 0, 0.04);
+  --color-surface-hover: rgba(0, 0, 0, 0.07);
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-text: #1e293b;
+  --color-muted: #475569;
+  --color-glow: rgba(74, 120, 86, 0.1);
+  --color-accent-text: var(--color-accent-dark);
+  --color-accent-text-hover: var(--color-accent);
+  --color-accent-muted: rgba(74, 120, 86, 0.15);
+  
+  --glass-bg: rgba(248, 250, 252, 0.85);
+  --glass-border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background animated mesh/blobs */
+.bg-mesh {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(circle at 15% 50%, var(--color-glow), transparent 25%),
+              radial-gradient(circle at 85% 30%, var(--color-glow), transparent 25%);
+  animation: pulseMesh 15s ease-in-out infinite alternate;
+}
+
+@keyframes pulseMesh {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+a {
+  color: var(--color-accent-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-accent-text-hover);
+  }
+}
+
+/* Accessibility Focus Ring */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Custom Touch Feedback (Mobile) */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:active, button:active {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+
+/* Utilities */
+.text-gradient {
+  background: var(--color-accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.glass-panel {
+  background: var(--color-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
+}
+
+@media (hover: hover) {
+  .glass-panel:hover {
+    transform: translateY(-4px);
+    background: var(--color-surface-hover);
+    box-shadow: 0 10px 30px -10px var(--color-glow);
+  }
+}
+
+.glass-panel:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 5px 15px -5px var(--color-glow);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Prose for content */
+.prose {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+.prose h1, .prose h2, .prose h3 {
+  color: var(--color-text);
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.prose p { margin-bottom: 1.5em; }
+.prose img { max-width: 100%; border-radius: var(--radius-md); }

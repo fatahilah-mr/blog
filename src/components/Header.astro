@@ -1,0 +1,202 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+const pathname = Astro.url.pathname;
+---
+<header class="header-wrapper">
+  <div class="header-pill">
+    <a href="/" class="logo text-gradient">fmr.blog</a>
+    
+    <div class="right-section">
+      <nav id="nav-menu" aria-label="Navigasi Utama">
+        <a href="/" class={`nav-link ${pathname === '/' ? 'active' : ''}`} aria-current={pathname === '/' ? 'page' : undefined}>Beranda</a>
+        <a href="/blog" class={`nav-link ${pathname.startsWith('/blog') ? 'active' : ''}`} aria-current={pathname.startsWith('/blog') ? 'page' : undefined}>Blog</a>
+        <a href="/projects" class={`nav-link ${pathname.startsWith('/projects') ? 'active' : ''}`} aria-current={pathname.startsWith('/projects') ? 'page' : undefined}>Projects</a>
+        <a href="/about" class={`nav-link ${pathname.startsWith('/about') ? 'active' : ''}`} aria-current={pathname.startsWith('/about') ? 'page' : undefined}>About</a>
+      </nav>
+      
+      <div class="nav-controls">
+        <ThemeToggle />
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header-wrapper {
+    position: fixed;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    pointer-events: none;
+    padding: 0 1rem;
+  }
+  
+  .header-pill {
+    pointer-events: auto;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    z-index: 101;
+    text-decoration: none;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    z-index: 101;
+  }
+  
+  .mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-fast), background var(--transition-fast);
+  }
+  
+  .mobile-menu-btn:active {
+    transform: scale(0.9);
+    background: var(--color-surface);
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+  }
+  
+  .nav-link.active {
+    color: var(--color-accent-text);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  @media (hover: hover) {
+    .nav-link:hover {
+      color: var(--color-accent-text);
+      text-decoration: none;
+    }
+  }
+  
+  .nav-link:active {
+    transform: scale(0.95);
+  }
+
+  /* Responsive Mobile Menu */
+  @media (max-width: 640px) {
+    .mobile-menu-btn {
+      display: flex;
+    }
+    
+    .right-section {
+      gap: 0.5rem;
+    }
+    
+    nav {
+      position: absolute;
+      top: calc(100% + 0.75rem);
+      left: 0;
+      right: 0;
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      padding: 0.5rem 0;
+      display: none; /* Bulletproof hidden */
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+    }
+    
+    nav.show {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-link {
+      width: 100%;
+      padding: 0.8rem 1.5rem;
+      text-align: center;
+      font-size: 1rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nav-link:last-child {
+      border-bottom: none;
+    }
+  }
+</style>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const nav = document.getElementById('nav-menu');
+  
+  btn?.addEventListener('click', () => {
+    if (nav?.classList.contains('show')) {
+      nav.style.opacity = '0';
+      nav.style.transform = 'translateY(-10px)';
+      btn?.setAttribute('aria-expanded', 'false');
+      setTimeout(() => {
+        nav.classList.remove('show');
+      }, 200);
+    } else {
+      nav?.classList.add('show');
+      btn?.setAttribute('aria-expanded', 'true');
+      // trigger reflow
+      void nav?.offsetWidth;
+      if (nav) {
+        nav.style.opacity = '1';
+        nav.style.transform = 'translateY(0)';
+      }
+    }
+  });
+</script>

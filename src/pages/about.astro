@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="About | fmr.blog" description="Tentang saya dan blog ini.">
+  <div class="page-header">
+    <h1 class="title">Tentang <span class="text-gradient">Saya</span></h1>
+  </div>
+  
+  <article class="glass-panel content-container">
+    <div class="prose">
+      <p>Halo! Saya <strong>Fatahilah Miftahul Rahman</strong>.</p>
+      
+      <p>Saya adalah lulusan Teknik Komputer dan Jaringan (TKJ) SMK Patriot Pituruh angkatan 2026. Saya berspesialisasi di bidang <strong>IT Network & System Administration</strong>, dan meraih medali emas pada Lomba Kompetensi Siswa (LKS) tingkat Kabupaten Purworejo di bidang tersebut.</p>
+      
+      <p>Saat ini, selain mengelola infrastruktur jaringan dan server (Linux/Windows, MikroTik, Cisco), saya juga aktif mendalami <strong>AI Prompt Engineering (LLM)</strong> untuk mengotomatisasi skrip jaringan dan troubleshooting sistem.</p>
+      
+      <h2>Apa itu fmr.blog?</h2>
+      <p>Situs ini dikembangkan sebagai ruang dokumentasi dan portofolio teknis saya. Di sini saya menyimpan catatan laboratorium, artikel, dan daftar proyek eksperimen infrastruktur yang sedang saya kerjakan.</p>
+      
+      <h2>Tech Stack</h2>
+      <ul>
+        <li><strong>Framework:</strong> Astro 5</li>
+        <li><strong>Styling:</strong> Vanilla CSS Variables & Glassmorphism</li>
+        <li><strong>CMS:</strong> Sveltia CMS (Git-based CMS)</li>
+        <li><strong>Deployment:</strong> Cloudflare Pages</li>
+      </ul>
+      
+      <h2>Mari Terhubung!</h2>
+      <p>Jika Anda tertarik dengan apa yang saya kerjakan atau ingin berkolaborasi, jangan ragu untuk menghubungi saya melalui platform yang tersedia atau tinggalkan pesan di halaman diskusi.</p>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .page-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem;
+  }
+  .prose ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+</style>

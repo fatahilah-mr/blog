@@ -1,0 +1,206 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(proj => ({
+    params: { slug: proj.slug },
+    props: { proj },
+  }));
+}
+
+const { proj } = Astro.props;
+const { Content } = await proj.render();
+---
+
+<Base title={proj.data.title} description={proj.data.description}>
+  <article class="post-container">
+    <div class="top-actions">
+      <a href="/projects" class="back-link">← Kembali ke Projects</a>
+      <button id="share-btn" class="share-btn" aria-label="Bagikan proyek">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+        Bagikan
+      </button>
+    </div>
+    <header class="post-header glass-panel">
+      <div class="meta">
+        <span class="status">Status: <strong>{proj.data.status}</strong></span>
+        <span class="dot">•</span>
+        <span class="date">{proj.data.startDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long' })}</span>
+      </div>
+      <h1 class="title">{proj.data.title}</h1>
+      <p class="desc">{proj.data.description}</p>
+      
+      <div class="tech-stack">
+        {proj.data.techStack.map((tech: string) => <span class="tag">{tech}</span>)}
+      </div>
+      
+      <div class="links">
+        {proj.data.repoUrl && <a href={proj.data.repoUrl} target="_blank" class="btn btn-secondary">🔗 Repository</a>}
+        {proj.data.demoUrl && <a href={proj.data.demoUrl} target="_blank" class="btn btn-primary">🚀 Live Demo</a>}
+      </div>
+    </header>
+    
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .post-container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .back-link {
+    color: var(--color-muted);
+    font-weight: 500;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+  }
+  .back-link:hover {
+    color: var(--color-accent);
+    transform: translateX(-4px);
+    text-decoration: none;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  .share-btn:hover {
+    background: var(--color-surface);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .share-btn.copied {
+    color: #10B981;
+    border-color: #10B981;
+  }
+  .post-header {
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .meta {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    text-transform: capitalize;
+  }
+  .title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .desc {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    margin-bottom: 2rem;
+  }
+  .tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .tag {
+    background: var(--color-accent-muted);
+    color: var(--color-accent-text);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    font-size: 0.95rem;
+  }
+  .btn-primary {
+    background: var(--color-accent-gradient);
+    color: #fff;
+    box-shadow: 0 4px 15px var(--color-glow);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--color-glow);
+  }
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: var(--glass-border);
+    color: var(--color-text);
+  }
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+</style>
+
+<script>
+  const shareBtn = document.getElementById('share-btn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      const shareData = {
+        title: document.title,
+        text: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+        url: window.location.href
+      };
+
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else {
+          await navigator.clipboard.writeText(window.location.href);
+          const originalText = shareBtn.innerHTML;
+          shareBtn.classList.add('copied');
+          shareBtn.innerHTML = `
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Tersalin!
+          `;
+          setTimeout(() => {
+            shareBtn.classList.remove('copied');
+            shareBtn.innerHTML = originalText;
+          }, 2000);
+        }
+      } catch (err) {
+        console.error('Error sharing:', err);
+      }
+    });
+  }
+</script>

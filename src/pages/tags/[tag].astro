@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog');
+  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Base title={`Artikel dengan tag #${tag} | fmr.blog`} description={`Kumpulan artikel blog dengan tag ${tag}`}>
+  <a href="/blog" class="back-link">← Kembali ke Blog</a>
+  <div class="page-header">
+    <h1 class="title">Tag: <span class="text-gradient">#{tag}</span></h1>
+    <p class="desc">Ditemukan {posts.length} artikel dengan tag ini.</p>
+  </div>
+  
+  <div class="cards-grid">
+    {posts.map((post: any) => <ArticleCard post={post} />)}
+  </div>
+</Base>
+
+<style>
+  .back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--color-muted);
+    font-weight: 500;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+  }
+  .back-link:hover {
+    color: var(--color-accent);
+    transform: translateX(-4px);
+    text-decoration: none;
+  }
+  .page-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .desc {
+    color: var(--color-muted);
+    font-size: 1.1rem;
+  }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .cards-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

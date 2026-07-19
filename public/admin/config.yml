@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: your-username/fmr-blog
+  branch: main
+  auth_endpoint: https://your-worker.workers.dev/auth
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "blog"
+    label: "📝 Artikel Blog"
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/blog/{{slug}}"
+    fields:
+      - { label: "Judul / Title", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Tanggal Terbit", name: "pubDate", widget: "datetime" }
+      - { label: "Gambar Utama", name: "heroImage", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - label: "Bahasa"
+        name: "lang"
+        widget: "select"
+        options: ["id", "en"]
+        default: "id"
+      - { label: "Draft?", name: "draft", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "🚀 Proyek"
+    folder: "src/content/projects"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama Proyek", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["active", "completed", "archived"]
+      - { label: "Tech Stack", name: "techStack", widget: "list" }
+      - { label: "URL Repo", name: "repoUrl", widget: "string", required: false }
+      - { label: "URL Demo", name: "demoUrl", widget: "string", required: false }
+      - { label: "Gambar", name: "heroImage", widget: "image", required: false }
+      - { label: "Featured?", name: "featured", widget: "boolean", default: false }
+      - { label: "Tanggal Mulai", name: "startDate", widget: "datetime" }
+      - { label: "Deskripsi Panjang", name: "body", widget: "markdown" }
