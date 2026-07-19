@@ -49,8 +49,8 @@
 </style>
 
 <script>
-  const handleToggleClick = (e) => {
-    const btn = e.currentTarget;
+  const handleToggleClick = (e: Event) => {
+    const btn = e.currentTarget as HTMLElement;
     
     // 1. Switch site theme instantly
     const element = document.documentElement;

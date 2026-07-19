@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+
 
 // This acts as a global layout wrapper with Header and Footer included
 interface Props {
@@ -11,5 +10,5 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 <Base title={title} description={description}>
-  <Header slot="header" /> <!-- Need to update Base to use slots if needed, or just import them here directly if I don't use slots. Actually I can just render Header and Footer here and pass the slot inside. Wait, Base already has <main><slot/></main>. -->
+  <slot />
 </Base>
