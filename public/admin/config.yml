@@ -3,7 +3,7 @@ backend:
   repo: fatahilah-mr/blog
   branch: main
   base_url: https://blog.fatahmr.my.id
-  auth_endpoint: /oauth/auth
+  auth_endpoint: oauth/auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
