@@ -34,6 +34,8 @@ The visual identity leverages a tailored Forest Green (`#4A7856`) design token, 
 ## Project Structure
 
 ```text
+├── GUIDE-BLOG-AI.md         # System instructions for AI agents generating blog posts
+├── GUIDE-PROJECT-AI.md      # System instructions for AI agents generating project showcases
 ├── functions/
 │   └── oauth/               # Cloudflare Pages Functions for serverless GitHub OAuth proxy
 │       ├── auth.js          # Redirects users to GitHub OAuth authorization screen
@@ -123,3 +125,6 @@ You can publish and manage content through two primary workflows:
 
 2. **Via Direct Git Workflow**:
    Create or edit `.md` files directly within `src/content/blog/` or `src/content/projects/`. Ensure frontmatter attributes strictly match the schema defined in `src/content/config.ts`. Once committed and pushed to GitHub, Cloudflare Pages will automatically rebuild the site.
+
+3. **Via AI Agents**:
+   If you are using an AI coding assistant, simply prompt it to read `GUIDE-BLOG-AI.md` or `GUIDE-PROJECT-AI.md`. These files contain the exact frontmatter schemas and structural rules the AI needs to generate perfectly formatted content without errors.
