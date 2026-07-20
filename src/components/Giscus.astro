@@ -6,7 +6,7 @@
 <script>
   function loadGiscus() {
     const isLight = document.documentElement.classList.contains('theme-light');
-    const themeUrl = window.location.origin + (isLight ? '/giscus-light.css' : '/giscus-dark.css');
+    const themeName = isLight ? 'noborder_light' : 'noborder_dark';
 
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
@@ -19,7 +19,7 @@
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
     script.setAttribute('data-input-position', 'bottom');
-    script.setAttribute('data-theme', themeUrl);
+    script.setAttribute('data-theme', themeName);
     script.setAttribute('data-lang', 'id');
     script.setAttribute('crossorigin', 'anonymous');
     script.async = true;
@@ -40,10 +40,10 @@
     if (!iframe) return;
     
     // @ts-ignore
-    const themeUrl = window.location.origin + (e.detail === 'light' ? '/giscus-light.css' : '/giscus-dark.css');
+    const themeName = e.detail === 'light' ? 'noborder_light' : 'noborder_dark';
       
     iframe.contentWindow?.postMessage(
-      { giscus: { setConfig: { theme: themeUrl } } },
+      { giscus: { setConfig: { theme: themeName } } },
       'https://giscus.app'
     );
   });
