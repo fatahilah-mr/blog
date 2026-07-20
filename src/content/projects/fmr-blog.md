@@ -8,7 +8,7 @@ techStack:
   - Cloudflare Pages
 repoUrl: https://github.com/fatahilah-mr/blog
 demoUrl: https://blog.fatahmr.my.id
-heroImage: https://raw.githubusercontent.com/fatahilah-mr/blog/refs/heads/main/public/readme-logo.svg
+heroImage: /uploads/Logo Web Blog.png
 featured: true
 startDate: 2026-07-19
 ---
