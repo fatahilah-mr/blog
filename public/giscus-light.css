@@ -19,9 +19,20 @@ main {
   
   /* Text and Background tweaks to match site */
   --color-canvas-default: transparent !important;
-  --color-canvas-overlay: transparent !important;
+  --color-canvas-overlay: rgba(248, 250, 252, 0.85) !important;
+  --color-border-muted: rgba(0, 0, 0, 0.12) !important;
   
   /* Reaction buttons */
   --color-social-reaction-bg-hover: rgba(74, 120, 86, 0.05) !important;
   --color-social-reaction-bg-reacted-hover: rgba(74, 120, 86, 0.15) !important;
+}
+
+/* Kustomisasi kontainer pemilihan reaction (Glassmorphism) */
+.Popover-message, .dropdown-menu, .gsc-reactions-popover {
+  background: rgba(248, 250, 252, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.15) !important;
 }
