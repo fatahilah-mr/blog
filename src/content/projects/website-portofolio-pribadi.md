@@ -4,10 +4,15 @@ description: Website portofolio interaktif dan responsif berbasis Astro yang men
 status: active
 techStack:
   - Astro
-  - TypeScript
-  - GSAP
-  - Lenis
+  - Custom Vanilla CSS
+  - Vanilla JS
+  - Google Sheets
   - Cloudflare Pages
+  - Node.js
+  - NPM
+  - Git
+  - GitHub CLI
+  - Termux
 repoUrl: https://github.com/fatahilah-mr/portfolio
 demoUrl: https://fatahmr.my.id
 heroImage: https://cdn.fatahmr.my.id/portfolio/assets/favicon/web-app-manifest-512x512.png
