@@ -1,6 +1,6 @@
 ---
 title: fmr.blog
-description: My personal blog and project showcase built with Astro and Sveltia CMS.
+description: Blog pribadi dan galeri proyek saya, yang dibuat menggunakan Astro dan Sveltia CMS.
 status: active
 techStack:
   - Astro 5
