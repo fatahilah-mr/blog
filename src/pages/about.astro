@@ -35,9 +35,10 @@ import Base from '../layouts/Base.astro';
 
       <h2>Filosofi Teknis Saya</h2>
       <ol>
-        <li><strong>Keamanan & Keandalan (Target Uptime 99.9%):</strong> Infrastruktur tidak boleh lengah. Saya menerapkan segmentasi VLAN, firewall ketat, dan redundansi protokol.</li>
-        <li><strong>Otomatisasi Efisien:</strong> Menghemat waktu dengan otomatisasi skrip shell dan diagnosa berbantuan AI untuk efisiensi sistem maksimal.</li>
-        <li><strong>Pembelajaran Berkelanjutan:</strong> Teknologi jaringan dan AI berkembang pesat. Saya selalu menguji teknologi terbaru di laboratorium virtual secara kontinyu.</li>
+        <li><strong>Infrastruktur Bebas <em>Downtime</em> & Berikatan Keamanan (High Availability & Security Hardening):</strong> Memastikan ketersediaan layanan sistem dengan target <em>uptime</em> tinggi melalui redundansi protokol (VRRP, HAProxy, RAID Storage), segmentasi VLAN presisi, serta pengerasan keamanan (Firewall Nftables, MikroTik Hardening, & Active Directory OU).</li>
+        <li><strong>Harmoni Administrasi Jaringan & Otomatisasi AI (AI-Augmented System Administration):</strong> Memadukan konfigurasi jaringan dan server (Cisco, MikroTik, Linux/Windows Server) dengan otomatisasi skrip <em>shell</em> dan rekayasa <em>prompt</em> AI (LLM) untuk mempercepat analisis <em>troubleshooting</em> serta efisiensi manajemen infrastruktur.</li>
+        <li><strong>Standar Presisi Fisik & Logis (Physical-to-Logical Precision):</strong> Keahlian teknis sejati dimulai dari presisi lapisan fisik (penataan <em>rack server</em>, pengkabelan UTP, penyambungan <em>Fiber Optic</em> & pengujian OPM) hingga arsitektur logis (routing OSPF/BGP, DNS, & Nginx/IIS).</li>
+        <li><strong>Dokumentasi & Pembelajaran Lab Berkelanjutan (Continuous Lab & Documentation):</strong> Selalu memvalidasi arsitektur jaringan dan server di lingkungan simulasi/lab virtual secara kontinyu serta mendokumentasikan setiap prosedur sistematis di <strong>fmr.blog</strong> agar infrastruktur mudah dirawat dan dikembangkan.</li>
       </ol>
 
       <h2>Mengenal fmr.blog</h2>
@@ -75,7 +76,12 @@ import Base from '../layouts/Base.astro';
   .content-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2.5rem;
+    padding: 1.25rem 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .content-container {
+      padding: 1.75rem 2.25rem;
+    }
   }
   .profile-badge-bar {
     display: flex;
