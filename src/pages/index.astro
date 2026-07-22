@@ -15,13 +15,20 @@ projects.sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf())
 const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
 ---
 
-<Base title="fmr.blog" description="Personal blog and projects of fmr.">
+<Base title="fmr.blog | Fatahilah Miftahul Rahman" description="Personal blog dan proyek Fatahilah Miftahul Rahman - Juara 1 LKS IT Network System Administration & AI Prompt Engineering Specialist">
   <section class="hero">
-    <div class="badge">Selamat datang</div>
-    <h1 class="hero-title">Saya <span class="text-gradient">Fatahilah Miftahul Rahman</span>. <br/>Spesialis IT Network & AI Prompt Engineering.</h1>
-    <p class="hero-desc">Menghubungkan masa depan, satu jaringan pada satu waktu. Ini adalah ruang digital saya untuk berbagi pemikiran seputar administrasi jaringan, server, dan eksplorasi teknologi AI (LLM).</p>
+    <div class="badge">
+      <span class="badge-icon">🏆</span> Juara 1 LKS IT Network System Administration 2026
+    </div>
+    <h1 class="hero-title">
+      Fatahilah <span class="text-gradient">Miftahul Rahman</span>
+    </h1>
+    <p class="hero-tagline">"Connecting the future, one network at a time."</p>
+    <p class="hero-desc">
+      Spesialis <strong>IT Network & System Administration</strong>, konfigurasi server Linux/Windows, infrastruktur jaringan Cisco & MikroTik, otomatisasi berbasis <strong>AI Prompt Engineering</strong>, serta Web Development responsif.
+    </p>
     <div class="hero-actions">
-      <a href="/blog" class="btn btn-primary">Baca Artikel</a>
+      <a href="/blog" class="btn btn-primary">Baca Artikel →</a>
       <a href="/projects" class="btn btn-secondary">Lihat Proyek</a>
     </div>
   </section>
@@ -50,9 +57,9 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
 
   <section class="about-cta">
     <div class="about-cta-content glass-panel">
-      <h2>Ingin tahu lebih banyak tentang latar belakang saya?</h2>
-      <p>Pelajari perjalanan karir, keahlian teknis, dan filosofi saya dalam dunia IT Network & AI.</p>
-      <a href="/about" class="btn btn-primary">Baca Profil Saya</a>
+      <h2>Ingin tahu lebih banyak tentang profil & kompetensi saya?</h2>
+      <p>Pelajari latar belakang LKS 2026, keahlian administrasi jaringan, otomatisasi AI Prompt Engineering, dan filosofi teknis saya.</p>
+      <a href="/about" class="btn btn-primary">Baca Profil Lengkap Saya →</a>
     </div>
   </section>
 </Base>
@@ -81,13 +88,21 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
     font-size: clamp(2.5rem, 6vw, 4rem);
     line-height: 1.1;
     letter-spacing: -0.04em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     font-weight: 800;
+  }
+  .hero-tagline {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-accent-text);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
   }
   .hero-desc {
     font-size: 1.15rem;
     color: var(--color-muted);
-    max-width: 600px;
+    max-width: 680px;
     margin-bottom: 2.5rem;
     line-height: 1.7;
   }
