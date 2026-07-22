@@ -117,9 +117,14 @@ a:active, button:active {
 }
 
 /* Utilities */
-.btn, .view-all, .back-link, .share-btn, .card-link {
+.btn, .view-all, .back-link, .share-btn {
   white-space: nowrap;
   word-break: keep-all;
+}
+
+.card-link {
+  white-space: normal;
+  word-break: normal;
 }
 
 .text-gradient {
