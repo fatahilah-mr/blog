@@ -6,7 +6,6 @@ techStack:
   - Astro 5
   - Google Sheets CMS
   - Cloudflare Pages
-  - Vercel (Staging)
   - Vanilla CSS
   - Vanilla JS
   - DOM i18n Engine
@@ -36,7 +35,7 @@ Website ini dirancang menggunakan pendekatan _Static Site Generation_ (SSG) mode
 
 - **Framework Core:** Astro 5 untuk performa _zero-JS by default_, pengorganisasian komponen modular, dan kompilasi statis cepat.
 - **Headless CMS / Data Source:** Google Sheets API (endpoint `gviz/tq`) sebagai Headless CMS publik untuk update konten proyek & laboratorium secara real-time tanpa memerlukan redeployment.
-- **Styling & Design System:** Custom Vanilla CSS dengan design tokens HSL, kartu *glass-morphism* (`.glass-card`), mikro-animasi `fadeSlideUp`, anti-FOUC script, serta tata letak responsif penuh.
+- **Styling & Design System:** Custom Vanilla CSS dengan design tokens HSL, kartu _glass-morphism_ (`.glass-card`), mikro-animasi `fadeSlideUp`, anti-FOUC script, serta tata letak responsif penuh.
 - **Internationalization (i18n):** Client-side DOM translation (`src/i18n/ui.js` & `FloatingLang.astro`) yang tersimpan di `localStorage.lang` tanpa perantara reload halaman.
 - **Deployment & Hosting:** Cloudflare Pages untuk distribusi edge network global (Vercel hanya digunakan untuk pengujian/staging) serta otomasi XML Sitemap via `@astrojs/sitemap`.
 
