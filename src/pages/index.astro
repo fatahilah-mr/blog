@@ -55,11 +55,19 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
     </section>
   </div>
 
-  <section class="about-cta">
-    <div class="about-cta-content glass-panel">
-      <h2>Ingin tahu lebih banyak tentang profil & kompetensi saya?</h2>
-      <p>Pelajari latar belakang LKS 2026, keahlian administrasi jaringan, otomatisasi AI Prompt Engineering, dan filosofi teknis saya.</p>
-      <a href="/about" class="btn btn-primary">Baca Profil Lengkap Saya →</a>
+  <section class="home-teasers">
+    <div class="teaser-glass glass-panel">
+      <div class="teaser-col teaser-about">
+        <h2>Kenali Saya Lebih Jauh</h2>
+        <p>Saya Fatahilah, lulusan TKJ (SMK Patriot Pituruh 2026) & Juara 1 LKS IT Network System Administration dengan minat mendalam pada otomatisasi AI dan sistem server. Saya senang memecahkan masalah kompleks dan membangun infrastruktur yang stabil serta efisien.</p>
+        <a href="/about" class="btn btn-secondary">Baca Profil Lengkap →</a>
+      </div>
+      <div class="teaser-divider"></div>
+      <div class="teaser-col teaser-contact">
+        <h2>Tertarik Bekerja Sama?</h2>
+        <p>Saya selalu terbuka untuk peluang karir, proyek freelance, kolaborasi industri, atau diskusi teknis seputar IT Network & AI Prompt Engineering.</p>
+        <a href="mailto:fatahilah.f10@gmail.com" class="btn btn-primary">Hubungi Saya Sekarang →</a>
+      </div>
     </div>
   </section>
 </Base>
@@ -183,31 +191,64 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
     gap: 1rem;
   }
   
-  .about-cta {
+  .home-teasers {
     margin-top: 5rem;
-    text-align: center;
   }
-  
-  .about-cta-content {
-    padding: 3rem 2rem;
+  .teaser-glass {
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg, 16px);
   }
-  
-  .about-cta h2 {
-    font-size: 1.8rem;
-    margin: 0;
+  .teaser-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .teaser-col h2 {
+    font-size: 1.5rem;
     font-weight: 800;
+    margin: 0;
     letter-spacing: -0.02em;
   }
-  
-  .about-cta p {
+  .teaser-col p {
     color: var(--color-muted);
-    font-size: 1.1rem;
-    max-width: 500px;
-    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 0.5rem 0;
+  }
+  .teaser-divider {
+    height: 1px;
+    background: var(--color-border);
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .teaser-glass {
+      flex-direction: row;
+      align-items: center;
+      gap: 2.5rem;
+      padding: 3rem 2.5rem;
+    }
+    .teaser-col {
+      flex: 1;
+    }
+    .teaser-about {
+      text-align: left;
+    }
+    .teaser-contact {
+      text-align: right;
+    }
+    .teaser-contact .btn {
+      align-self: flex-end;
+    }
+    .teaser-about .btn {
+      align-self: flex-start;
+    }
+    .teaser-divider {
+      width: 1px;
+      height: 140px;
+    }
   }
 </style>
