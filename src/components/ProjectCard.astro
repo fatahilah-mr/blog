@@ -1,4 +1,6 @@
 ---
+import LangBadge from './LangBadge.astro';
+
 interface Props {
   proj: any;
 }
@@ -8,7 +10,10 @@ const { proj } = Astro.props;
   <div class="glass-panel card">
     <div class="header">
       <h3 class="title">{proj.data.title}</h3>
-      {proj.data.status === 'active' && <span class="status-dot"></span>}
+      <div style="display:flex; gap:0.5rem; align-items:center;">
+        <LangBadge item={proj} />
+        {proj.data.status === 'active' && <span class="status-dot"></span>}
+      </div>
     </div>
     <p class="desc">{proj.data.description}</p>
     <div class="tags">

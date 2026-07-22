@@ -1,0 +1,74 @@
+---
+interface Props {
+  item?: any;
+  lang?: string;
+}
+
+const { item, lang: manualLang } = Astro.props;
+
+let langCode = 'IND';
+
+if (manualLang) {
+  const l = manualLang.toLowerCase();
+  if (l.includes('en') || l === 'eng') {
+    langCode = 'ENG';
+  } else {
+    langCode = 'IND';
+  }
+} else if (item) {
+  const id = (item.id || '').toLowerCase();
+  const slug = (item.slug || '').toLowerCase();
+  const langProp = (item.data?.lang || '').toLowerCase();
+
+  if (id.endsWith('.en.md') || id.endsWith('.en') || slug.endsWith('en') || langProp === 'en') {
+    langCode = 'ENG';
+  } else {
+    langCode = 'IND';
+  }
+}
+---
+
+<span class={`lang-badge lang-badge-${langCode.toLowerCase()}`} aria-label={`Bahasa: ${langCode === 'IND' ? 'Indonesia' : 'Inggris'}`}>
+  {langCode}
+</span>
+
+<style>
+  .lang-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem 0.55rem;
+    border-radius: var(--radius-full, 9999px);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: all var(--transition-fast, 0.2s);
+    user-select: none;
+  }
+
+  .lang-badge-ind {
+    background: rgba(74, 120, 86, 0.15);
+    color: var(--color-accent-text, #4A7856);
+    border: 1px solid rgba(74, 120, 86, 0.35);
+  }
+
+  .lang-badge-eng {
+    background: rgba(59, 130, 246, 0.15);
+    color: #2563EB;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+  }
+
+  html.theme-dark .lang-badge-ind {
+    background: rgba(74, 120, 86, 0.25);
+    color: #6EE7B7;
+    border-color: rgba(110, 231, 183, 0.3);
+  }
+
+  html.theme-dark .lang-badge-eng {
+    background: rgba(59, 130, 246, 0.25);
+    color: #60A5FA;
+    border-color: rgba(96, 165, 250, 0.3);
+  }
+</style>

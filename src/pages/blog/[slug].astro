@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Giscus from '../../components/Giscus.astro';
+import LangBadge from '../../components/LangBadge.astro';
 import { getReadingTime } from '../../utils/readingTime';
 
 export async function getStaticPaths() {
@@ -37,6 +38,8 @@ const readingTime = getReadingTime(post.body || post.data.description);
         <span class="date">{post.data.pubDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         <span class="dot">•</span>
         <span>{readingTime} menit baca</span>
+        <span class="dot">•</span>
+        <LangBadge item={post} />
       </div>
       <h1 class="title">{post.data.title}</h1>
       <div class="tags">

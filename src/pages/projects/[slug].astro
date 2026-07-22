@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import LangBadge from '../../components/LangBadge.astro';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -34,6 +35,8 @@ const { Content } = await proj.render();
         <span class="status">Status: <strong>{proj.data.status}</strong></span>
         <span class="dot">•</span>
         <span class="date">{proj.data.startDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long' })}</span>
+        <span class="dot">•</span>
+        <LangBadge item={proj} />
       </div>
       <h1 class="title">{proj.data.title}</h1>
       <p class="desc">{proj.data.description}</p>

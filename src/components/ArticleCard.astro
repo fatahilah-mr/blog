@@ -1,5 +1,6 @@
 ---
 import { getReadingTime } from '../utils/readingTime';
+import LangBadge from './LangBadge.astro';
 
 interface Props {
   post: any;
@@ -11,7 +12,10 @@ const readingTime = getReadingTime(post.body || post.data.description);
   <article class="glass-panel card">
     <div class="meta">
       <span class="date">{post.data.pubDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-      <span>{readingTime} min read</span>
+      <div style="display:flex; gap: 0.5rem; align-items:center;">
+        <span>{readingTime} min read</span>
+        <LangBadge item={post} />
+      </div>
     </div>
     <h3 class="title">{post.data.title}</h3>
     <p class="desc">{post.data.description}</p>
