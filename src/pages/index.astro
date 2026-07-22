@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 const posts = await getCollection('blog');
 const projects = await getCollection('projects');
@@ -18,7 +20,7 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
 <Base title="fmr.blog | Fatahilah Miftahul Rahman" description="Personal blog dan proyek Fatahilah Miftahul Rahman - Juara 1 LKS IT Network System Administration, Web Development & AI Prompt Engineering Specialist">
   <section class="hero">
     <div class="badge">
-      <span class="badge-icon">🏆</span> Juara 1 LKS IT Network System Administration 2026
+      <EmojiEventsIcon sx={{ fontSize: '1rem', color: '#F59E0B', verticalAlign: 'middle', marginRight: '4px' }} /> Juara 1 LKS IT Network System Administration 2026
     </div>
     <h1 class="hero-title">
       Fatahilah <span class="text-gradient">Miftahul Rahman</span>
@@ -28,7 +30,7 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
       Spesialis <strong>IT Network & System Administration</strong>, konfigurasi server Linux/Windows, infrastruktur jaringan Cisco & MikroTik, otomatisasi berbasis <strong>AI Prompt Engineering</strong>, serta <strong>Web Development</strong> responsif.
     </p>
     <div class="hero-actions">
-      <a href="/blog" class="btn btn-primary">Baca Artikel →</a>
+      <a href="/blog" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem;">Baca Artikel <ArrowForwardIcon sx={{ fontSize: '1.1rem' }} /></a>
       <a href="/projects" class="btn btn-secondary">Lihat Proyek</a>
     </div>
   </section>
@@ -37,7 +39,7 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
     <section class="recent-posts">
       <div class="section-header">
         <h2>Tulisan Terbaru</h2>
-        <a href="/blog" class="view-all">Lihat Semua →</a>
+        <a href="/blog" class="view-all" style="display:inline-flex; align-items:center; gap:0.25rem;">Lihat Semua <ArrowForwardIcon sx={{ fontSize: '0.9rem' }} /></a>
       </div>
       <div class="cards-list">
         {recentPosts.map(post => <ArticleCard post={post} />)}
@@ -47,7 +49,7 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
     <section class="featured-projects">
       <div class="section-header">
         <h2>Proyek Pilihan</h2>
-        <a href="/projects" class="view-all">Lihat Semua →</a>
+        <a href="/projects" class="view-all" style="display:inline-flex; align-items:center; gap:0.25rem;">Lihat Semua <ArrowForwardIcon sx={{ fontSize: '0.9rem' }} /></a>
       </div>
       <div class="cards-grid">
         {featuredProjects.map(proj => <ProjectCard proj={proj} />)}
@@ -60,13 +62,13 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
       <div class="teaser-col teaser-about">
         <h2>Kenali Saya Lebih Jauh</h2>
         <p>Saya Fatahilah, lulusan TKJ (SMK Patriot Pituruh 2026) & Juara 1 LKS IT Network System Administration dengan minat mendalam pada jaringan IT, sistem server, otomatisasi AI, dan <strong>Web Development</strong>. Saya senang memecahkan masalah kompleks serta membangun sistem dan aplikasi web yang stabil, cepat, serta efisien.</p>
-        <a href="/about" class="btn btn-secondary">Baca Profil Lengkap →</a>
+        <a href="/about" class="btn btn-secondary" style="display:inline-flex; align-items:center; gap:0.4rem;">Baca Profil Lengkap <ArrowForwardIcon sx={{ fontSize: '1rem' }} /></a>
       </div>
       <div class="teaser-divider"></div>
       <div class="teaser-col teaser-contact">
         <h2>Tertarik Bekerja Sama?</h2>
         <p>Saya selalu terbuka untuk peluang karir, proyek freelance <strong>Web Development</strong> & infrastruktur jaringan, kolaborasi industri, atau diskusi teknis seputar IT Network & AI Prompt Engineering.</p>
-        <a href="mailto:fatahilah.f10@gmail.com" class="btn btn-primary">Hubungi Saya Sekarang →</a>
+        <a href="mailto:fatahilah.f10@gmail.com" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem;">Hubungi Saya Sekarang <ArrowForwardIcon sx={{ fontSize: '1rem' }} /></a>
       </div>
     </div>
   </section>

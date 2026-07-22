@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
@@ -21,7 +22,7 @@ const { posts } = Astro.props;
 ---
 
 <Base title={`Artikel dengan tag #${tag} | fmr.blog`} description={`Kumpulan artikel blog dengan tag ${tag}`}>
-  <a href="/blog" class="back-link">← Kembali ke Blog</a>
+  <a href="/blog" class="back-link" style="display:inline-flex; align-items:center; gap:0.3rem;"><ArrowBackIcon sx={{ fontSize: '1rem' }} /> Kembali ke Blog</a>
   <div class="page-header">
     <h1 class="title">Tag: <span class="text-gradient">#{tag}</span></h1>
     <p class="desc">Ditemukan {posts.length} artikel dengan tag ini.</p>
