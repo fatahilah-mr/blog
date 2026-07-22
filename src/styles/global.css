@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 :root {
   /* ===== WARNA AKSEN ===== */
   --color-accent: #4A7856;
@@ -12,7 +14,7 @@
   --color-border: rgba(255, 255, 255, 0.22);
   --color-text: #f3f4f6;
   --color-muted: #9ca3af;
-  --color-glow: rgba(74, 120, 86, 0.15);
+  --color-glow: rgba(74, 120, 86, 0.18);
   --color-accent-text: var(--color-accent-light);
   --color-accent-text-hover: #a7f3d0;
   --color-accent-muted: rgba(74, 120, 86, 0.2);
@@ -23,17 +25,22 @@
   --glass-blur: blur(16px);
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   
   /* Spacing & Sizes */
   --radius-sm: 8px;
-  --radius-md: 16px;
+  --radius-md: 18px;
   --radius-full: 9999px;
   
-  /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* High-End Fluid Dynamics Transitions */
+  --transition-fast: 0.25s cubic-bezier(0.32, 0.72, 0, 1);
+  --transition-normal: 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+  --transition-fluid: 0.6s cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Icon Pill Backgrounds */
+  --pill-bg: rgba(255, 255, 255, 0.18);
+  --pill-bg-hover: rgba(255, 255, 255, 0.28);
 }
 
 :root.theme-light {
@@ -50,6 +57,10 @@
   
   --glass-bg: rgba(248, 250, 252, 0.85);
   --glass-border: 1px solid rgba(0, 0, 0, 0.12);
+
+  /* High contrast dark/green translucent pill for Light Mode */
+  --pill-bg: rgba(74, 120, 86, 0.16);
+  --pill-bg-hover: rgba(74, 120, 86, 0.28);
 }
 
 html {
@@ -141,20 +152,50 @@ a:active, button:active {
   -webkit-backdrop-filter: var(--glass-blur);
   border: var(--glass-border);
   border-radius: var(--radius-md);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  transition: transform var(--transition-fluid), box-shadow var(--transition-fluid), background var(--transition-fluid);
 }
 
 @media (hover: hover) {
   .glass-panel:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     background: var(--color-surface-hover);
-    box-shadow: 0 10px 30px -10px var(--color-glow);
+    box-shadow: 0 20px 40px -15px var(--color-glow), inset 0 1px 1px rgba(255, 255, 255, 0.25);
   }
 }
 
 .glass-panel:active {
-  transform: translateY(-2px) scale(0.98);
-  box-shadow: 0 5px 15px -5px var(--color-glow);
+  transform: translateY(-2px) scale(0.985);
+  box-shadow: 0 8px 20px -8px var(--color-glow), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+/* High-End Nested Button Icon Pill Architecture */
+.icon-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--pill-bg);
+  margin-left: 0.5rem;
+  margin-right: -0.25rem;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.group:hover .icon-pill {
+  transform: translateX(3px) translateY(-1px) scale(1.05);
+  background: var(--pill-bg-hover);
+}
+
+/* Primary buttons (dark green gradient) always keep bright white translucent circle */
+.btn-primary .icon-pill {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.group:hover.btn-primary .icon-pill,
+.btn-primary:hover .icon-pill {
+  background: rgba(255, 255, 255, 0.28);
 }
 
 *, *::before, *::after {

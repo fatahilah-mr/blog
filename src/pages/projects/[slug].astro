@@ -30,11 +30,13 @@ const { Content } = await proj.render();
     </div>
     <header class="post-header glass-panel">
       <div class="meta">
-        <span class="status">Status: <strong>{proj.data.status}</strong></span>
+        <span class="meta-item status">Status: <strong style="text-transform: capitalize;">{proj.data.status}</strong></span>
         <span class="dot">•</span>
-        <span class="date">{proj.data.startDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long' })}</span>
-        <span class="dot">•</span>
-        <LangBadge item={proj} />
+        <span class="meta-item date">{proj.data.startDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long' })}</span>
+        <span class="dot lang-dot">•</span>
+        <div class="meta-item lang-item">
+          <LangBadge item={proj} />
+        </div>
       </div>
       <h1 class="title">{proj.data.title}</h1>
       <p class="desc">{proj.data.description}</p>
@@ -109,11 +111,38 @@ const { Content } = await proj.render();
   .meta {
     color: var(--color-muted);
     font-size: 0.95rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    text-transform: capitalize;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .meta-item {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+  }
+  .dot {
+    opacity: 0.45;
+    user-select: none;
+  }
+  .lang-dot {
+    display: none;
+  }
+  .lang-item {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: 0.15rem;
+  }
+  @media (min-width: 768px) {
+    .lang-dot {
+      display: inline;
+    }
+    .lang-item {
+      flex-basis: auto;
+      margin-top: 0;
+    }
   }
   .title {
     font-size: clamp(2rem, 5vw, 2.5rem);

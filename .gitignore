@@ -1,20 +1,37 @@
-# Build output
+# Build & Output
 dist/
+.astro/
+.vercel/
+.output/
 
 # Dependencies
 node_modules/
 
-# Astro cache & generated types
-.astro/
-
-# Environment variables
+# Environment & Local Configuration
 .env
-.env.*
+.env.local
+.env.*.local
+.env.production
+.env.development
 
-# Logs & temp files
+# Logs & Debug Output
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 debug.html
 
-# System files
+# IDE & OS Metadata
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Scratch / Temp Files
+scratch/

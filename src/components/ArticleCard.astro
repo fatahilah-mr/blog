@@ -9,19 +9,26 @@ interface Props {
 const { post } = Astro.props;
 const readingTime = getReadingTime(post.body || post.data.description);
 ---
-<a href={`/blog/${post.slug}`} class="card-link" data-tags={post.data.tags?.join(',') || ''}>
-  <article class="glass-panel card">
-    <div class="meta">
-      <span class="date">{post.data.pubDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-      <div style="display:flex; gap: 0.5rem; align-items:center;">
-        <span>{readingTime} min read</span>
-        <LangBadge item={post} />
+<a href={`/blog/${post.slug}`} class="card-link group" data-tags={post.data.tags?.join(',') || ''}>
+  <div class="outer-shell">
+    <article class="glass-panel card">
+      <div class="meta">
+        <span class="date">{post.data.pubDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+        <div style="display:flex; gap: 0.5rem; align-items:center;">
+          <span>{readingTime} min read</span>
+          <LangBadge item={post} />
+        </div>
       </div>
-    </div>
-    <h3 class="title">{post.data.title}</h3>
-    <p class="desc">{post.data.description}</p>
-    <div class="read-more">Baca selengkapnya <ArrowForwardIcon sx={{ fontSize: '1rem', verticalAlign: 'middle' }} /></div>
-  </article>
+      <h3 class="title">{post.data.title}</h3>
+      <p class="desc">{post.data.description}</p>
+      <div class="read-more">
+        <span>Baca selengkapnya</span>
+        <div class="icon-pill" style="width:1.6rem; height:1.6rem; margin-left:0.25rem;">
+          <ArrowForwardIcon sx={{ fontSize: '0.9rem' }} />
+        </div>
+      </div>
+    </article>
+  </div>
 </a>
 
 <style>
@@ -29,6 +36,19 @@ const readingTime = getReadingTime(post.body || post.data.description);
     display: block;
     text-decoration: none !important;
     color: inherit !important;
+  }
+  .outer-shell {
+    padding: 0.35rem;
+    border-radius: calc(var(--radius-md) + 0.35rem);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform var(--transition-fluid), background var(--transition-fluid), border-color var(--transition-fluid);
+    height: 100%;
+  }
+  .card-link:hover .outer-shell {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.16);
+    transform: translateY(-4px);
   }
   .card {
     padding: 1.5rem;

@@ -7,17 +7,19 @@ interface Props {
 const { proj } = Astro.props;
 ---
 <a href={`/projects/${proj.slug}`} class="card-link" data-tags={proj.data.techStack?.join(',') || ''}>
-  <div class="glass-panel card">
-    <div class="header">
-      <h3 class="title">{proj.data.title}</h3>
-      <div style="display:flex; gap:0.5rem; align-items:center;">
-        <LangBadge item={proj} />
-        {proj.data.status === 'active' && <span class="status-dot"></span>}
+  <div class="outer-shell">
+    <div class="glass-panel card">
+      <div class="header">
+        <h3 class="title">{proj.data.title}</h3>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+          <LangBadge item={proj} />
+          {proj.data.status === 'active' && <span class="status-dot"></span>}
+        </div>
       </div>
-    </div>
-    <p class="desc">{proj.data.description}</p>
-    <div class="tags">
-      {proj.data.techStack.map((tech: string) => <span class="tag">{tech}</span>)}
+      <p class="desc">{proj.data.description}</p>
+      <div class="tags">
+        {proj.data.techStack.map((tech: string) => <span class="tag">{tech}</span>)}
+      </div>
     </div>
   </div>
 </a>
@@ -27,6 +29,19 @@ const { proj } = Astro.props;
     display: block;
     text-decoration: none !important;
     color: inherit !important;
+  }
+  .outer-shell {
+    padding: 0.35rem;
+    border-radius: calc(var(--radius-md) + 0.35rem);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform var(--transition-fluid), background var(--transition-fluid), border-color var(--transition-fluid);
+    height: 100%;
+  }
+  .card-link:hover .outer-shell {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.16);
+    transform: translateY(-4px);
   }
   .card {
     padding: 1.5rem;

@@ -30,16 +30,34 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
       Spesialis <strong>IT Network & System Administration</strong>, konfigurasi server Linux/Windows, infrastruktur jaringan Cisco & MikroTik, otomatisasi berbasis <strong>AI Prompt Engineering</strong>, serta <strong>Web Development</strong> responsif.
     </p>
     <div class="hero-actions">
-      <a href="/blog" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem;">Baca Artikel <ArrowForwardIcon sx={{ fontSize: '1.1rem' }} /></a>
-      <a href="/projects" class="btn btn-secondary">Lihat Proyek</a>
+      <a href="/blog" class="btn btn-primary group" style="display:inline-flex; align-items:center;">
+        <span>Baca Artikel</span>
+        <div class="icon-pill">
+          <ArrowForwardIcon sx={{ fontSize: '1rem' }} />
+        </div>
+      </a>
+      <a href="/projects" class="btn btn-secondary group" style="display:inline-flex; align-items:center;">
+        <span>Lihat Proyek</span>
+        <div class="icon-pill">
+          <ArrowForwardIcon sx={{ fontSize: '1rem' }} />
+        </div>
+      </a>
     </div>
   </section>
 
   <div class="grid-container">
     <section class="recent-posts">
       <div class="section-header">
-        <h2>Tulisan Terbaru</h2>
-        <a href="/blog" class="view-all" style="display:inline-flex; align-items:center; gap:0.25rem;">Lihat Semua <ArrowForwardIcon sx={{ fontSize: '0.9rem' }} /></a>
+        <div>
+          <span class="eyebrow-pill">ARTIKEL &amp; WAWASAN</span>
+          <h2>Tulisan Terbaru</h2>
+        </div>
+        <a href="/blog" class="view-all group" style="display:inline-flex; align-items:center;">
+          <span>Lihat Semua</span>
+          <div class="icon-pill" style="width:1.5rem; height:1.5rem; margin-left:0.35rem;">
+            <ArrowForwardIcon sx={{ fontSize: '0.85rem' }} />
+          </div>
+        </a>
       </div>
       <div class="cards-list">
         {recentPosts.map(post => <ArticleCard post={post} />)}
@@ -48,8 +66,16 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
 
     <section class="featured-projects">
       <div class="section-header">
-        <h2>Proyek Pilihan</h2>
-        <a href="/projects" class="view-all" style="display:inline-flex; align-items:center; gap:0.25rem;">Lihat Semua <ArrowForwardIcon sx={{ fontSize: '0.9rem' }} /></a>
+        <div>
+          <span class="eyebrow-pill">KARYA TERBAIK</span>
+          <h2>Proyek Pilihan</h2>
+        </div>
+        <a href="/projects" class="view-all group" style="display:inline-flex; align-items:center;">
+          <span>Lihat Semua</span>
+          <div class="icon-pill" style="width:1.5rem; height:1.5rem; margin-left:0.35rem;">
+            <ArrowForwardIcon sx={{ fontSize: '0.85rem' }} />
+          </div>
+        </a>
       </div>
       <div class="cards-grid">
         {featuredProjects.map(proj => <ProjectCard proj={proj} />)}
@@ -60,15 +86,27 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
   <section class="home-teasers">
     <div class="teaser-glass glass-panel">
       <div class="teaser-col teaser-about">
+        <span class="eyebrow-pill">TENTANG PENULIS</span>
         <h2>Kenali Saya Lebih Jauh</h2>
-        <p>Saya Fatahilah, lulusan TKJ (SMK Patriot Pituruh 2026) & Juara 1 LKS IT Network System Administration dengan minat mendalam pada jaringan IT, sistem server, otomatisasi AI, dan <strong>Web Development</strong>. Saya senang memecahkan masalah kompleks serta membangun sistem dan aplikasi web yang stabil, cepat, serta efisien.</p>
-        <a href="/about" class="btn btn-secondary" style="display:inline-flex; align-items:center; gap:0.4rem;">Baca Profil Lengkap <ArrowForwardIcon sx={{ fontSize: '1rem' }} /></a>
+        <p>Saya Fatahilah, lulusan TKJ (SMK Patriot Pituruh 2026) &amp; Juara 1 LKS IT Network System Administration dengan minat mendalam pada jaringan IT, sistem server, otomatisasi AI, dan <strong>Web Development</strong>. Saya senang memecahkan masalah kompleks serta membangun sistem dan aplikasi web yang stabil, cepat, serta efisien.</p>
+        <a href="/about" class="btn btn-secondary group" style="display:inline-flex; align-items:center;">
+          <span>Baca Profil Lengkap</span>
+          <div class="icon-pill">
+            <ArrowForwardIcon sx={{ fontSize: '0.95rem' }} />
+          </div>
+        </a>
       </div>
       <div class="teaser-divider"></div>
       <div class="teaser-col teaser-contact">
+        <span class="eyebrow-pill">KOLABORASI &amp; PELUANG</span>
         <h2>Tertarik Bekerja Sama?</h2>
-        <p>Saya selalu terbuka untuk peluang karir, proyek freelance <strong>Web Development</strong> & infrastruktur jaringan, kolaborasi industri, atau diskusi teknis seputar IT Network & AI Prompt Engineering.</p>
-        <a href="mailto:fatahilah.f10@gmail.com" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem;">Hubungi Saya Sekarang <ArrowForwardIcon sx={{ fontSize: '1rem' }} /></a>
+        <p>Saya selalu terbuka untuk peluang karir, proyek freelance <strong>Web Development</strong> &amp; infrastruktur jaringan, kolaborasi industri, atau diskusi teknis seputar IT Network &amp; AI Prompt Engineering.</p>
+        <a href="mailto:fatahilah.f10@gmail.com" class="btn btn-primary group" style="display:inline-flex; align-items:center;">
+          <span>Hubungi Saya Sekarang</span>
+          <div class="icon-pill">
+            <ArrowForwardIcon sx={{ fontSize: '0.95rem' }} />
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -167,29 +205,42 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 4.5rem;
   }
   @media (min-width: 768px) {
     .grid-container {
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      gap: 2.5rem;
     }
   }
   
+  .eyebrow-pill {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-accent-light);
+    margin-bottom: 0.35rem;
+  }
+
   .section-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 1.5rem;
+    align-items: flex-end;
+    margin-bottom: 1.75rem;
   }
   .section-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0;
   }
   .view-all {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 600;
+    transition: color var(--transition-fast);
   }
   
   .cards-list, .cards-grid {
