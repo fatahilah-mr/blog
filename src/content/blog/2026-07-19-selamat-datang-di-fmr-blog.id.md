@@ -7,6 +7,7 @@ tags:
   - welcome
   - tech
 lang: id
+project: ''
 ---
 
 Halo dunia! Selamat datang di **fmr.blog**, rumah digital baru tempat saya membagikan catatan laboratorium, coretan kode, hingga dokumentasi infrastruktur IT. 
