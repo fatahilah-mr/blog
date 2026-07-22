@@ -3,11 +3,15 @@ title: Website Portofolio Pribadi
 description: Website portofolio interaktif dan responsif berbasis Astro yang menampilkan profil, proyek jaringan/AI, serta sertifikasi teknis.
 status: active
 techStack:
-  - Astro
-  - Custom Vanilla CSS
-  - Vanilla JS
-  - Google Sheets
+  - Astro 5
+  - Google Sheets CMS
   - Cloudflare Pages
+  - Vercel (Staging)
+  - Vanilla CSS
+  - Vanilla JS
+  - DOM i18n Engine
+  - Google Fonts
+  - Astro Sitemap
   - Node.js
   - NPM
   - Git
@@ -30,10 +34,11 @@ Website portofolio ini dibangun untuk menggantikan daftar riwayat hidup konvensi
 
 Website ini dirancang menggunakan pendekatan _Static Site Generation_ (SSG) modern yang mengutamakan performa tinggi dan nol kelebihan _overhead_ JavaScript:
 
-- **Framework Core:** Astro v5 untuk performa _zero-JS by default_ dan pengorganisasian komponen yang modular.
-- **Styling & UI:** Vanilla CSS murni dengan desain antarmuka modern, sistem variabel warna yang presisi, serta tata letak penuh responsif.
-- **Data Source / CMS:** Google Sheets API sebagai basis data dinamis untuk pengelolaan entri proyek dan portofolio secara terpusat.
-- **Deployment & Edge Network:** Cloudflare Pages untuk distribusi konten tingkat global dengan latensi minimal dan keandalan tinggi.
+- **Framework Core:** Astro 5 untuk performa _zero-JS by default_, pengorganisasian komponen modular, dan kompilasi statis cepat.
+- **Headless CMS / Data Source:** Google Sheets API (endpoint `gviz/tq`) sebagai Headless CMS publik untuk update konten proyek & laboratorium secara real-time tanpa memerlukan redeployment.
+- **Styling & Design System:** Custom Vanilla CSS dengan design tokens HSL, kartu *glass-morphism* (`.glass-card`), mikro-animasi `fadeSlideUp`, anti-FOUC script, serta tata letak responsif penuh.
+- **Internationalization (i18n):** Client-side DOM translation (`src/i18n/ui.js` & `FloatingLang.astro`) yang tersimpan di `localStorage.lang` tanpa perantara reload halaman.
+- **Deployment & Hosting:** Cloudflare Pages untuk distribusi edge network global (Vercel hanya digunakan untuk pengujian/staging) serta otomasi XML Sitemap via `@astrojs/sitemap`.
 
 ## Key Features
 
