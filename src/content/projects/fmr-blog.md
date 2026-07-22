@@ -17,6 +17,8 @@ techStack:
   - Astro RSS
   - NPM
   - Git
+  - GitHub CLI
+  - Termux
 repoUrl: https://github.com/fatahilah-mr/blog
 demoUrl: https://blog.fatahmr.my.id
 heroImage: /uploads/Logo Web Blog.png
@@ -31,13 +33,13 @@ Pembangunan **fmr.blog** berawal dari kebutuhan akan sebuah ruang digital pribad
 Alih-alih menggunakan platform _monolithic_ seperti WordPress, blog ini dibangun menggunakan pendekatan arsitektur modern (Jamstack):
 
 *   **Astro 5 (Static Site Generator):** Dipilih karena kemampuannya menghasilkan HTML statis murni tanpa memuat _JavaScript_ bawaan (_Zero-JS by default_). Ini menjamin waktu muat halaman (_load time_) yang nyaris instan dan sangat ramah mesin pencari (SEO).
-*   **Node.js & NPM:** Digunakan sebagai runtime lingkungan pengembangan lokal (*development*), manajer paket dependensi, serta proses kompilasi (*build-time*) halaman statis.
-*   **TypeScript:** Memberikan pengetikan ketat (*type-safety*) pada konfigurasi, skema konten, serta properti komponen UI.
+*   **Node.js & NPM:** Digunakan sebagai runtime lingkungan pengembangan lokal (_development_), manajer paket dependensi, serta proses kompilasi (_build-time_) halaman statis.
+*   **TypeScript:** Memberikan pengetikan ketat (_type-safety_) pada konfigurasi, skema konten, serta properti komponen UI.
 *   **Sveltia CMS:** Sebagai alternatif modern untuk Decap/Netlify CMS. Sveltia memungkinkan pengelolaan konten (_markdown_) melalui antarmuka visual yang terhubung langsung dengan repositori GitHub (Git-based CMS).
 *   **Cloudflare Pages & Functions:** Seluruh situs di-_deploy_ di atas jaringan tepi (_edge network_) Cloudflare. Serverless functions (`functions/oauth`) menangani autentikasi GitHub OAuth untuk CMS tanpa memerlukan server backend eksternal.
-*   **Vanilla CSS, Design Tokens & Google Fonts:** Diisi styling CSS murni dengan variabel warna *Forest Green* (`#4A7856`), efek tembus pandang (_glassmorphism_), font web Inter & Outfit, serta switcher mode terang dan gelap (*Dark/Light Mode*).
-*   **Zod Content Collections:** Menjamin integritas data artikel dan proyek dengan validasi skema ketat saat proses *build*.
-*   **Shiki & Giscus:** Penyorotan kode otomatis (*syntax highlighting*) menggunakan Shiki `github-dark`, dan sistem komentar interaktif berbasis GitHub Discussions melalui Giscus.
+*   **Vanilla CSS, Design Tokens & Google Fonts:** Diisi styling CSS murni dengan variabel warna _Forest Green_ (`#4A7856`), efek tembus pandang (_glassmorphism_), font web Inter & Outfit, serta switcher mode terang dan gelap (_Dark/Light Mode_).
+*   **Zod Content Collections:** Menjamin integritas data artikel dan proyek dengan validasi skema ketat saat proses _build_.
+*   **Shiki & Giscus:** Penyorotan kode otomatis (_syntax highlighting_) menggunakan Shiki `github-dark`, dan sistem komentar interaktif berbasis GitHub Discussions melalui Giscus.
 *   **Astro Sitemap & RSS Integration:** Otomatisasi pembuatan XML Sitemap (`sitemap-index.xml`) untuk Google Search Console dan RSS Feed (`/rss.xml`) untuk agregator berita.
 
 ### ✨ Fitur Unggulan
