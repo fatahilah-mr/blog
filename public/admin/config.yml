@@ -40,17 +40,19 @@ collections:
     create: true
     delete: true
     slug: "{{slug}}"
+    i18n: true
     fields:
-      - { label: "Nama Proyek", name: "title", widget: "string" }
-      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Nama Proyek", name: "title", widget: "string", i18n: true }
+      - { label: "Deskripsi", name: "description", widget: "text", i18n: true }
       - label: "Status"
         name: "status"
         widget: "select"
         options: ["active", "completed", "archived"]
-      - { label: "Tech Stack", name: "techStack", widget: "list" }
-      - { label: "URL Repo", name: "repoUrl", widget: "string", required: false }
-      - { label: "URL Demo", name: "demoUrl", widget: "string", required: false }
-      - { label: "Gambar", name: "heroImage", widget: "image", required: false }
-      - { label: "Featured?", name: "featured", widget: "boolean", default: false }
-      - { label: "Tanggal Mulai", name: "startDate", widget: "datetime" }
-      - { label: "Deskripsi Panjang", name: "body", widget: "markdown" }
+        i18n: duplicate
+      - { label: "Tech Stack", name: "techStack", widget: "list", i18n: duplicate }
+      - { label: "URL Repo", name: "repoUrl", widget: "string", required: false, i18n: duplicate }
+      - { label: "URL Demo", name: "demoUrl", widget: "string", required: false, i18n: duplicate }
+      - { label: "Gambar", name: "heroImage", widget: "image", required: false, i18n: duplicate }
+      - { label: "Featured?", name: "featured", widget: "boolean", default: false, i18n: duplicate }
+      - { label: "Tanggal Mulai", name: "startDate", widget: "datetime", i18n: duplicate }
+      - { label: "Deskripsi Panjang", name: "body", widget: "markdown", i18n: true }
