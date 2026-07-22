@@ -10,6 +10,11 @@ logo_url: /favicon.svg
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
+i18n:
+  structure: multiple_files
+  locales: [id, en]
+  default_locale: id
+
 collections:
   - name: "blog"
     label: "📝 Artikel Blog"
@@ -18,19 +23,22 @@ collections:
     delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "/blog/{{slug}}"
+    i18n: true
     fields:
-      - { label: "Judul / Title", name: "title", widget: "string" }
-      - { label: "Deskripsi", name: "description", widget: "text" }
-      - { label: "Tanggal Terbit", name: "pubDate", widget: "datetime" }
-      - { label: "Gambar Utama", name: "heroImage", widget: "image", required: false }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Judul / Title", name: "title", widget: "string", i18n: true }
+      - { label: "Deskripsi", name: "description", widget: "text", i18n: true }
+      - { label: "Tanggal Terbit", name: "pubDate", widget: "datetime", i18n: duplicate }
+      - { label: "Gambar Utama", name: "heroImage", widget: "image", required: false, i18n: duplicate }
+      - { label: "Tags", name: "tags", widget: "list", required: false, i18n: duplicate }
       - label: "Bahasa"
         name: "lang"
         widget: "select"
         options: ["id", "en"]
         default: "id"
-      - { label: "Draft?", name: "draft", widget: "boolean", default: false }
-      - { label: "Konten", name: "body", widget: "markdown" }
+        i18n: duplicate
+      - { label: "Draft?", name: "draft", widget: "boolean", default: false, i18n: duplicate }
+      - { label: "Proyek Terkait", name: "project", widget: "string", required: false, i18n: duplicate }
+      - { label: "Konten", name: "body", widget: "markdown", i18n: true }
 
   - name: "projects"
     label: "🚀 Proyek"
