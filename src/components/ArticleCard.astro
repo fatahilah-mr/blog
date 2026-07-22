@@ -11,10 +11,7 @@ const readingTime = getReadingTime(post.body || post.data.description);
   <article class="glass-panel card">
     <div class="meta">
       <span class="date">{post.data.pubDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-      <div style="display:flex; gap: 0.5rem; align-items:center;">
-        <span>{readingTime} min read</span>
-        <span class="lang-badge">{post.data.lang.toUpperCase()}</span>
-      </div>
+      <span>{readingTime} min read</span>
     </div>
     <h3 class="title">{post.data.title}</h3>
     <p class="desc">{post.data.description}</p>

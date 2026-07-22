@@ -37,8 +37,6 @@ const readingTime = getReadingTime(post.body || post.data.description);
         <span class="date">{post.data.pubDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         <span class="dot">•</span>
         <span>{readingTime} menit baca</span>
-        <span class="dot">•</span>
-        <span class="lang-badge">{post.data.lang.toUpperCase()}</span>
       </div>
       <h1 class="title">{post.data.title}</h1>
       <div class="tags">
