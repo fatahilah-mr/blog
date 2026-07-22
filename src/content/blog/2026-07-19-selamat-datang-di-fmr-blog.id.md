@@ -7,7 +7,7 @@ tags:
   - welcome
   - tech
 lang: id
-project: ''
+project: "fmr-blog"
 ---
 
 Halo dunia! Selamat datang di **fmr.blog**, rumah digital baru tempat saya membagikan catatan laboratorium, coretan kode, hingga dokumentasi infrastruktur IT. 
@@ -26,11 +26,14 @@ Blog ini hadir sebagai:
 
 ### Mengintip Dapur Teknologi (Tech Stack)
 
-Bagi Anda yang penasaran, blog ini dirancang dengan filosofi "sedikit mungkin _JavaScript_, secepat mungkin responsnya". 
+Bagi Anda yang penasaran, blog ini dirancang dengan filosofi "sedikit mungkin _JavaScript_, secepat mungkin responsnya" menggunakan ekosistem teknologi modern berikut:
 
-*   **Astro 5:** Sebagai mesin utama (_Static Site Generator_). Astro memungkinkan saya memuat _website_ super cepat dengan _Zero-JS_ secara _default_. Seluruh komponen yang statis dikirim murni sebagai HTML dan CSS.
-*   **Sveltia CMS:** Untuk urusan menulis (_authoring_), saya meninggalkan Decap CMS dan beralih ke Sveltia CMS yang jauh lebih ringan, modern, dan menyatu mulus dengan repositori GitHub.
-*   **Cloudflare Pages:** Web ini di-_deploy_ di atas jaringan _edge_ Cloudflare, memastikan keamanan tinggi dan pengiriman aset (_delivery_) secepat kilat ke seluruh dunia.
+*   **Astro 5 & Node.js:** Mesin utama *Static Site Generator* (SSG) dengan lingkungan kompilasi Node.js untuk menghasilkan halaman statis super cepat dengan *Zero-JS* secara *default*.
+*   **TypeScript & Zod:** Pengetikan ketat (*type-safety*) dan validasi skema data koleksi konten secara otomatis pada saat proses *build*.
+*   **Sveltia CMS & Cloudflare Functions:** Pengelolaan konten (_authoring_) berbasis Git di `/admin` yang terhubung dengan *Serverless GitHub OAuth proxy* di Cloudflare Pages.
+*   **Vanilla CSS & Google Fonts:** Sistem desain UI ringan dengan token warna *Forest Green* (`#4A7856`), efek *glassmorphism*, dan tipografi Inter/Outfit tanpa menggunakan framework CSS berat.
+*   **Shiki & Giscus:** Penyorotan sintaksis kode otomatis (*github-dark*) serta sistem komentar terintegrasi berbasis GitHub Discussions yang tersinkronisasi otomatis dengan tema gelap/terang.
+*   **Astro Sitemap & RSS Feed:** Pembuatan XML Sitemap otomatis untuk SEO Google Search Console serta Umpan RSS di `/rss.xml` untuk aplikasi agregator berita.
 
 ### Apa Selanjutnya?
 

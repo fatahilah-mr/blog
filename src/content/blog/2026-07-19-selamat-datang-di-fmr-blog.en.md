@@ -6,9 +6,9 @@ heroImage: /uploads/Logo Web Blog.png
 tags:
   - welcome
   - tech
-lang: id
+lang: en
 draft: false
-project: ''
+project: "fmr-blog"
 ---
 
 Hello world! Welcome to **fmr.blog**, my new digital home where I share lab notes, code snippets and IT infrastructure documentation. 
@@ -27,11 +27,14 @@ This blog serves as:
 
 ### A Peek Behind the Scenes (Tech Stack)
 
-For those of you who are curious, this blog is designed with the philosophy of “as little JavaScript as possible, as fast a response as possible”. 
+For those of you who are curious, this blog is designed with the philosophy of “as little JavaScript as possible, as fast a response as possible” using the following modern tech stack:
 
-*   **Astro 5:** As the main engine (Static Site Generator). Astro allows me to load the website super-fast with Zero-JS by default. All static components are served purely as HTML and CSS.
-*   **Sveltia CMS:** For content creation (_authoring_), I’ve moved away from Decap CMS and switched to Sveltia CMS, which is far lighter, more modern, and integrates seamlessly with GitHub repositories.
-*   **Cloudflare Pages:** This website is deployed on Cloudflare’s edge network, ensuring high security and lightning-fast asset delivery worldwide.
+*   **Astro 5 & Node.js:** Main Static Site Generator (SSG) powered by Node.js build-time compilation for a Zero-JS by default experience.
+*   **TypeScript & Zod:** Strict type-safety and automated content collection schema validation at build time.
+*   **Sveltia CMS & Cloudflare Functions:** Git-backed CMS at `/admin` with serverless GitHub OAuth proxy running on Cloudflare Pages edge network.
+*   **Vanilla CSS & Google Fonts:** Lightweight design system with Forest Green design tokens, glassmorphism, and Inter/Outfit web fonts without heavy CSS frameworks.
+*   **Shiki & Giscus:** Automatic code block syntax highlighting (`github-dark`) and GitHub Discussions-based comment system dynamically synced with dark/light mode.
+*   **Astro Sitemap & RSS Feed:** Automated XML Sitemap generation for Google Search Console and RSS feed output at `/rss.xml`.
 
 ### What’s Next?
 
