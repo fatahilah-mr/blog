@@ -44,17 +44,23 @@ heroImage: "/uploads/project-cover.jpg"
 
 # [OPTIONAL] Set to true to feature this project. Defaults to false
 featured: true
+
+# [OPTIONAL] Array of cited references/sources for the Collapsible References Accordion
+references:
+  - title: "Astro 5 Documentation"
+    url: "https://docs.astro.build"
 ---
 ```
 
-## 3. CONTENT & LAYOUT RULES
+## 3. COPYWRITING & LAYOUT RULES
 1. **No H1 in Content Body:** NEVER write an `# Project Title` (H1) inside the markdown body. The Astro project layout (`src/pages/projects/[slug].astro`) automatically renders the frontmatter `title` inside a styled Double-Bezel header with responsive action buttons and status pills.
-2. **Recommended Section Structure:** A complete project showcase entry should use `##` (H2) headings:
+2. **No Raw References in Body:** NEVER write raw link lists at the bottom of the markdown body. ALWAYS put citations in the frontmatter `references:` array so the UI renders them in the interactive Collapsible Accordion (`<details class="references-accordion">`).
+3. **Recommended Section Structure:** A complete project showcase entry should use `##` (H2) headings:
    - **Latar Belakang / Permasalahan:** Mengapa proyek ini dibuat?
    - **Arsitektur & Tech Stack:** Bagaimana sistem ini bekerja di balik layar?
    - **Fitur-Fitur Utama:** Apa saja keunggulan dan kemampuan sistem?
    - **Hasil & Pembelajaran (*Lessons Learned*):** Apa pencapaian atau efisiensi yang didapatkan?
-3. **Action Buttons:**
+4. **Action Buttons:**
    - If `repoUrl` or `demoUrl` is provided in frontmatter, Astro automatically renders styled MUI action buttons (*Repository* & *Live Demo*). On mobile (< 640px), these buttons auto-stack into 2 full-width rows for clean touch padding.
-4. **Formatting & Syntax Highlighting:** Use GitHub Flavored Markdown (GFM) and provide language tags for all code snippets (e.g., ```bash, ```yaml, ```typescript).
+5. **Code Snippets & Tables:** Use GitHub Flavored Markdown (GFM) with explicit language identifiers for code blocks, and clear table structures that fit desktop container bounds.
 </system_instructions>
