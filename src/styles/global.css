@@ -260,28 +260,25 @@ a:active, button:active {
 
 /* High-End Glassmorphic Tables */
 .prose table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  font-size: 0.95rem;
-  text-align: left;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  background: var(--glass-bg);
-}
-
-/* Automatic responsive container for tables */
-.prose table {
   display: block;
+  width: 100%;
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.92rem;
+  text-align: left;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
 }
 
 @media (min-width: 768px) {
   .prose table {
     display: table;
+    table-layout: fixed;
+    width: 100%;
   }
 }
 
@@ -291,17 +288,20 @@ a:active, button:active {
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.85rem 1.1rem;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1rem;
   border-bottom: 2px solid var(--color-border);
-  white-space: nowrap;
+  white-space: normal;
+  word-break: normal;
 }
 
 .prose td {
-  padding: 0.85rem 1.1rem;
+  padding: 0.85rem 1rem;
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text);
   line-height: 1.6;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .prose tbody tr:last-child td {
