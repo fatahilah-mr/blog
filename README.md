@@ -8,6 +8,9 @@
     <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
     <img src="https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare Pages" />
     <img src="https://img.shields.io/badge/Sveltia%20CMS-FF3E00?style=flat-square&logo=svelte&logoColor=white" alt="Sveltia CMS" />
+    <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" alt="Zod" />
+    <img src="https://img.shields.io/badge/Shiki-0d1117?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Shiki" />
+    <img src="https://img.shields.io/badge/Giscus-24292e?style=flat-square&logo=github&logoColor=white" alt="Giscus" />
   </p>
 </div>
 
@@ -18,6 +21,24 @@
 **fmr.blog** is a modern, statically-generated web application designed to serve as both a technical engineering journal and a portfolio showcase. The architecture prioritizes maximum page load velocity, zero unnecessary client-side JavaScript, and seamless content management using Git-backed workflows.
 
 The visual identity features an agency-grade Forest Green (`#4A7856`) design token system, double-bezel card depth (`.outer-shell`), glassmorphism, responsive typography, and native dark mode synchronization across components, Shiki code blocks, and embedded interactive widgets.
+
+---
+
+## Tech Stack & Ecosystem
+
+| Category | Technology / Library | Purpose & Implementation |
+| :--- | :--- | :--- |
+| **Core Framework** | **Astro 5** | High-performance Static Site Generation (SSG) with zero runtime JS bloat. |
+| **Language & Runtime** | **TypeScript**, **Node.js** | Strict type safety across components, content collections, and build scripts. |
+| **CMS Platform** | **Sveltia CMS** | Git-backed, serverless CMS interface accessible via `/admin` for editing content. |
+| **Serverless OAuth** | **Cloudflare Pages Functions** | Serverless GitHub OAuth proxy (`/functions/oauth`) for zero-fee CMS login. |
+| **Cloud Hosting** | **Cloudflare Pages** | Global CDN distribution, fast static edge delivery, and automatic Git builds. |
+| **Content Validation** | **Zod** | Schema validation for blog posts, projects, and structured reference citations. |
+| **Syntax Highlighting** | **Shiki** | Dual-theme code blocks (`github-light` & `github-dark`) with Mac-terminal styling. |
+| **Styling & Design** | **Vanilla CSS (Design Tokens)** | Custom CSS system with double-bezel depth, glassmorphism, and fluid dynamics. |
+| **Comment Engine** | **Giscus** | Interactivity powered by GitHub Discussions with dynamic theme sync. |
+| **SEO & Feed Utilities** | **Astro Sitemap**, **Astro RSS** | Automated XML sitemap generation and RSS feed syndication. |
+| **Dev Environment** | **NPM**, **Git**, **GitHub CLI**, **Termux** | Mobile-native CLI development, version control, and automated deployments. |
 
 ---
 
@@ -124,7 +145,7 @@ When deploying to **Cloudflare Pages**, configure the following environment vari
 Publish and manage content through three supported workflows:
 
 1. **Via Sveltia CMS (Recommended for Editorial Work)**:
-   Navigate to `/admin` on the production site, sign in with your GitHub account, and use the visual markdown editor. Saving changes automatically commits to the `main` branch and triggers a Cloudflare Pages deployment.
+   Navigate to `/admin` on the production site, sign in with your GitHub account, and use the visual markdown editor. Saving changes automatically commits to the `main` branch and triggers a Cloudflare Pages Deployment.
 
 2. **Via Direct Git Workflow**:
    Create or edit `.id.md` or `.en.md` files directly within `src/content/blog/` or `src/content/projects/`. Ensure frontmatter attributes strictly match the schema defined in `src/content/config.ts`. Once committed and pushed to GitHub, Cloudflare Pages automatically rebuilds the site.
