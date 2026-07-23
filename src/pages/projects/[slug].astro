@@ -17,9 +17,33 @@ export async function getStaticPaths() {
 
 const { proj } = Astro.props;
 const { Content } = await proj.render();
+
+const projLang = proj.slug.endsWith('en') ? 'en' : 'id';
+const projectSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": proj.data.title,
+  "description": proj.data.description,
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "image": proj.data.heroImage ? new URL(proj.data.heroImage, Astro.site).toString() : new URL('/uploads/Logo Web Blog.png', Astro.site).toString(),
+  "author": {
+    "@type": "Person",
+    "name": "Fatahilah M. R.",
+    "url": "https://blog.fatahmr.my.id"
+  },
+  "inLanguage": projLang
+};
 ---
 
-<Base title={proj.data.title} description={proj.data.description}>
+<Base 
+  title={proj.data.title} 
+  description={proj.data.description}
+  image={proj.data.heroImage}
+  lang={projLang}
+  type="article"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(projectSchema)} />
   <article class="post-container">
     <div class="top-actions">
       <a href="/projects" class="back-link" style="display:inline-flex; align-items:center; gap:0.3rem;"><ArrowBackIcon sx={{ fontSize: '1rem' }} /> Kembali ke Projects</a>
