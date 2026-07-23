@@ -1,14 +1,16 @@
 <system_instructions>
 # AI GUIDELINE: WRITING PROJECTS
-This document contains the exact rules and schemas an AI must follow when creating or editing project showcase entries in this repository.
+This document contains the exact rules and schemas an AI or CMS must follow when creating or editing project showcase entries in this repository (`fmr.blog`).
 
 ## 1. FILE LOCATION & NAMING CONVENTION
 - **Directory:** `src/content/projects/`
-- **Filename:** `your-project-slug.md` (Use lowercase, kebab-case).
+- **Filename:** `your-project-slug.id.md` or `your-project-slug.en.md`
+  - Use lowercase, kebab-case for the slug.
+  - Append `.id.md` for Indonesian content or `.en.md` for English content to ensure Sveltia CMS and Astro i18n routing sync cleanly.
 
 ## 2. FRONTMATTER SCHEMA (YAML)
 Every project MUST begin with a YAML frontmatter block enclosed by `---`. 
-Below is the strict Zod schema validation rules:
+Below is the strict Zod schema definition from `src/content/config.ts`:
 
 ```yaml
 ---
@@ -16,38 +18,43 @@ Below is the strict Zod schema validation rules:
 title: "fmr.blog"
 
 # [REQUIRED] Short description of the project
-description: "High-performance, bilingual personal journal and project showcase."
+description: "Blog pribadi dan galeri proyek interaktif berbasis Astro 5 dan Sveltia CMS."
 
-# [REQUIRED] Current status. Must be exactly 'active', 'completed', or 'archived'.
+# [REQUIRED] Current status. Must be exactly 'active', 'completed', or 'archived'
 status: "active"
 
-# [REQUIRED] Array of technologies used
-techStack: ["Astro", "TypeScript", "Sveltia CMS", "Cloudflare Pages"]
+# [REQUIRED] Array of technologies used (e.g. Astro 5, TypeScript, Cisco, MikroTik)
+techStack:
+  - Astro 5
+  - TypeScript
+  - Sveltia CMS
+  - Cloudflare Pages
 
 # [REQUIRED] Date the project started (YYYY-MM-DD)
-startDate: "2024-01-01"
+startDate: "2026-07-19"
 
-# [OPTIONAL] URL to the source code repository. Must be a valid URL or an empty string "".
+# [OPTIONAL] URL to the source code repository (valid URL or "")
 repoUrl: "https://github.com/fatahilah-mr/blog"
 
-# [OPTIONAL] URL to the live demo. Must be a valid URL or an empty string "".
+# [OPTIONAL] URL to the live demo (valid URL or "")
 demoUrl: "https://blog.fatahmr.my.id"
 
-# [OPTIONAL] Path to the project cover image. Must be in /public/uploads/
+# [OPTIONAL] Path to project cover image. Must be stored in /public/uploads/
 heroImage: "/uploads/project-cover.jpg"
 
-# [OPTIONAL] Set to true to feature this project on the homepage. Defaults to false.
+# [OPTIONAL] Set to true to feature this project. Defaults to false
 featured: true
 ---
 ```
 
-## 3. CONTENT GUIDELINES
-1. **No H1 in Content:** Do NOT write an `# Project Title` (H1) at the top of the markdown body. The Astro layout already renders the `title` from the frontmatter.
-2. **Structure:** A good project showcase should typically include the following sections (using `##` H2):
-   - **Background / Problem Statement:** Why was this built?
-   - **Architecture / Tech Stack:** How does it work under the hood?
-   - **Key Features:** What are the standout capabilities?
-   - **Outcomes / Lessons Learned:** What was achieved or learned?
-3. **Images:** If using inline images, reference them from `/uploads/...` assuming they will be served from the public directory.
-4. **Formatting:** Use GitHub Flavored Markdown (GFM) and code blocks where applicable.
+## 3. CONTENT & LAYOUT RULES
+1. **No H1 in Content Body:** NEVER write an `# Project Title` (H1) inside the markdown body. The Astro project layout (`src/pages/projects/[slug].astro`) automatically renders the frontmatter `title` inside a styled Double-Bezel header with responsive action buttons and status pills.
+2. **Recommended Section Structure:** A complete project showcase entry should use `##` (H2) headings:
+   - **Latar Belakang / Permasalahan:** Mengapa proyek ini dibuat?
+   - **Arsitektur & Tech Stack:** Bagaimana sistem ini bekerja di balik layar?
+   - **Fitur-Fitur Utama:** Apa saja keunggulan dan kemampuan sistem?
+   - **Hasil & Pembelajaran (*Lessons Learned*):** Apa pencapaian atau efisiensi yang didapatkan?
+3. **Action Buttons:**
+   - If `repoUrl` or `demoUrl` is provided in frontmatter, Astro automatically renders styled MUI action buttons (*Repository* & *Live Demo*). On mobile (< 640px), these buttons auto-stack into 2 full-width rows for clean touch padding.
+4. **Formatting & Syntax Highlighting:** Use GitHub Flavored Markdown (GFM) and provide language tags for all code snippets (e.g., ```bash, ```yaml, ```typescript).
 </system_instructions>

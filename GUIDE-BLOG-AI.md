@@ -1,49 +1,52 @@
 <system_instructions>
 # AI GUIDELINE: WRITING BLOG ARTICLES
-This document contains the exact rules and schemas an AI must follow when creating or editing blog articles in this repository.
+This document contains the exact rules and schemas an AI or CMS must follow when creating or editing blog articles in this repository (`fmr.blog`).
 
 ## 1. FILE LOCATION & NAMING CONVENTION
 - **Directory:** `src/content/blog/`
-- **Filename:** `your-article-slug.md` (Use lowercase, kebab-case, english or indonesian depending on `lang`).
+- **Filename:** `your-article-slug.id.md` or `your-article-slug.en.md`
+  - Use lowercase, kebab-case for the slug.
+  - Append `.id.md` for Indonesian content or `.en.md` for English content to ensure Sveltia CMS and Astro i18n routing sync cleanly.
 
 ## 2. FRONTMATTER SCHEMA (YAML)
 Every article MUST begin with a YAML frontmatter block enclosed by `---`. 
-Below is the strict Zod schema validation rules:
+Below is the strict Zod schema definition from `src/content/config.ts`:
 
 ```yaml
 ---
 # [REQUIRED] Title of the article
-title: "Your Article Title"
+title: "Judul Artikel Anda"
 
-# [REQUIRED] Short summary for SEO and preview cards
-description: "A comprehensive description of what this article is about."
+# [REQUIRED] Short summary for SEO and preview cards (1-2 sentences)
+description: "Deskripsi ringkas mengenai topik dan poin penting yang dibahas."
 
-# [REQUIRED] Publication date (YYYY-MM-DD or full ISO 8601)
-pubDate: "2024-12-31"
+# [REQUIRED] Publication date (YYYY-MM-DD)
+pubDate: "2026-07-23"
 
-# [OPTIONAL] Date of last update. Only add if editing an older article
-updatedDate: "2025-01-15"
+# [OPTIONAL] Date of last update. Add only when modifying an existing article
+updatedDate: "2026-07-25"
 
-# [OPTIONAL] Path to cover image. Images should be in /public/uploads/
+# [OPTIONAL] Path to cover image. Images MUST be stored in /public/uploads/
 heroImage: "/uploads/cover-image.jpg"
 
-# [OPTIONAL] Array of relevant tags
-tags: ["programming", "astro", "typescript"]
+# [OPTIONAL] Array of relevant tags (lowercase, e.g. ["tech", "networking", "ai"])
+tags: ["tech", "networking"]
 
-# [OPTIONAL] Language of the content. Must be exactly 'id' or 'en'. Defaults to 'id'.
+# [OPTIONAL] Language of the content. Must be 'id' or 'en'. Defaults to 'id'
 lang: "id"
 
-# [OPTIONAL] Set to true if the article is not ready for publication. Defaults to false.
+# [OPTIONAL] Set to true if drafting. Defaults to false
 draft: false
 
-# [OPTIONAL] Slug of a related project in src/content/projects/ to link this article to.
-project: "fmr.blog"
+# [OPTIONAL] Slug of a related project in src/content/projects/
+project: "fmr-blog"
 ---
 ```
 
-## 3. CONTENT GUIDELINES
-1. **No H1 in Content:** Do NOT write an `# Article Title` (H1) at the top of the markdown body. The Astro layout already renders the `title` from the frontmatter as an H1. Start your content directly or use `##` (H2) for your first sub-heading.
-2. **Formatting:** Use GitHub Flavored Markdown (GFM). Use bolding, italics, lists, and tables where appropriate to improve readability.
-3. **Code Blocks:** Provide language tags for all code blocks (e.g., ```typescript) to ensure proper Shiki syntax highlighting.
-4. **Tone:** Professional, analytical, yet accessible. Treat the reader as a peer engineer.
+## 3. CONTENT & LAYOUT RULES
+1. **No H1 in Content Body:** NEVER write an `# Article Title` (H1) inside the markdown body. The Astro page layout (`src/pages/blog/[slug].astro`) automatically renders the frontmatter `title` inside a styled Double-Bezel header with responsive metadata pills. Start directly with introductory text or `##` (H2) headings.
+2. **Table of Contents (TOC):** Astro automatically builds an interactive Table of Contents for all `##` (H2) and `###` (H3) headings. Ensure heading levels follow a logical hierarchy.
+3. **Syntax Highlighting:** Always specify language identifiers for code blocks (e.g. ```bash, ```typescript, ```json) so Shiki renders high-end syntax highlighting.
+4. **Media & Images:** Reference cover images or inline figures using `/uploads/filename.ext` from the public directory.
+5. **Tone & Style:** Professional, authoritative, yet accessible. Focus on IT Network System Administration, Server Infrastructure, and AI Prompt Engineering.
 </system_instructions>
