@@ -6,11 +6,16 @@
   <p>
     <img src="https://img.shields.io/badge/Astro%205-BC52EE?style=flat-square&logo=astro&logoColor=white" alt="Astro 5" />
     <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
     <img src="https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare Pages" />
     <img src="https://img.shields.io/badge/Sveltia%20CMS-FF3E00?style=flat-square&logo=svelte&logoColor=white" alt="Sveltia CMS" />
     <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" alt="Zod" />
     <img src="https://img.shields.io/badge/Shiki-0d1117?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Shiki" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
     <img src="https://img.shields.io/badge/Giscus-24292e?style=flat-square&logo=github&logoColor=white" alt="Giscus" />
+    <img src="https://img.shields.io/badge/NPM-CB3837?style=flat-square&logo=npm&logoColor=white" alt="NPM" />
+    <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+    <img src="https://img.shields.io/badge/Termux-000000?style=flat-square&logo=gnu-bash&logoColor=white" alt="Termux" />
   </p>
 </div>
 
@@ -39,6 +44,23 @@ The visual identity features an agency-grade Forest Green (`#4A7856`) design tok
 | **Comment Engine** | **Giscus** | Interactivity powered by GitHub Discussions with dynamic theme sync. |
 | **SEO & Feed Utilities** | **Astro Sitemap**, **Astro RSS** | Automated XML sitemap generation and RSS feed syndication. |
 | **Dev Environment** | **NPM**, **Git**, **GitHub CLI**, **Termux** | Mobile-native CLI development, version control, and automated deployments. |
+
+---
+
+## Component Architecture
+
+The UI architecture in `src/components/` consists of 8 modular, highly-focused Astro components:
+
+| Component Name | File Path | Responsibilities & UI Features |
+| :--- | :--- | :--- |
+| **Header** | `Header.astro` | Top navigation bar with brand logo, main page routes, theme toggle, and mobile menu. |
+| **Footer** | `Footer.astro` | Bottom navigation shell with social links, copyright info, and glassmorphic layout. |
+| **ArticleCard** | `ArticleCard.astro` | Preview card for blog articles with double-bezel depth, hover liquid motion, and tags. |
+| **ProjectCard** | `ProjectCard.astro` | Showcase card for projects featuring tech stack pills, status badges, and action links. |
+| **ThemeToggle** | `ThemeToggle.astro` | Light/Dark mode switcher with spinning icon animation and Giscus event broadcasting. |
+| **Giscus** | `Giscus.astro` | Embedded comment system powered by GitHub Discussions with theme auto-sync. |
+| **LangBadge** | `LangBadge.astro` | Responsive single-row language badge pill (`ID` / `EN`) for article & project metadata. |
+| **TagBadge** | `TagBadge.astro` | Interactive category/tag pill for topic filtering and taxonomies. |
 
 ---
 
@@ -71,7 +93,7 @@ The visual identity features an agency-grade Forest Green (`#4A7856`) design tok
 │   ├── favicon.svg          # Vector logo and favicon
 │   └── uploads/             # Media storage folder managed by Sveltia CMS
 └── src/
-    ├── components/          # Reusable UI components (ArticleCard, ProjectCard, Giscus, ThemeToggle, etc.)
+    ├── components/          # Reusable UI components (Header, Footer, ArticleCard, ProjectCard, etc.)
     ├── content/
     │   ├── blog/            # Markdown articles for the engineering journal
     │   ├── projects/        # Markdown entries for the project showcase
