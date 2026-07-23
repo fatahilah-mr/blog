@@ -206,13 +206,324 @@ a:active, button:active {
 .prose {
   line-height: 1.8;
   font-size: 1.1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
-.prose h1, .prose h2, .prose h3 {
+.prose h1, .prose h2, .prose h3, .prose h4 {
   color: var(--color-text);
   margin-top: 2em;
   margin-bottom: 0.75em;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
-.prose p { margin-bottom: 1.5em; }
-.prose img { max-width: 100%; border-radius: var(--radius-md); }
+.prose p { 
+  margin-bottom: 1.5em; 
+}
+.prose img { 
+  max-width: 100%; 
+  height: auto;
+  border-radius: var(--radius-md); 
+  margin: 1.5rem 0;
+}
+
+/* ============================================================
+   PROSE LINKS — distinct colour per theme, always high contrast
+   Light : #2E5238 (deep forest green) on #f8fafc  → AA+ contrast
+   Dark  : #81C784 (mint green)        on #0a0a0a  → AA+ contrast
+   ============================================================ */
+.prose a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+/* Light Mode link colour */
+:root.theme-light .prose a {
+  color: #1a5c2e;                         /* deep forest — 7.8:1 on white */
+  text-decoration-color: rgba(26, 92, 46, 0.4);
+}
+:root.theme-light .prose a:hover {
+  color: #4A7856;
+  text-decoration-color: #4A7856;
+}
+/* Dark Mode link colour */
+:root:not(.theme-light) .prose a {
+  color: #81C784;                          /* mint green — 6.3:1 on #0a0a0a */
+  text-decoration-color: rgba(129, 199, 132, 0.4);
+}
+:root:not(.theme-light) .prose a:hover {
+  color: #a5d6a7;
+  text-decoration-color: #a5d6a7;
+}
+
+/* High-End Glassmorphic Tables */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  text-align: left;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+}
+
+/* Automatic responsive container for tables */
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 768px) {
+  .prose table {
+    display: table;
+  }
+}
+
+.prose th {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 2px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.prose td {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.prose tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.prose tbody tr:hover {
+  background: var(--color-surface-hover);
+}
+
+/* ============================================================
+   INLINE CODE — explicit per-theme colours, no variable chain
+   Light : dark charcoal text on pale sage chip
+   Dark  : soft mint text on deep graphite chip
+   ============================================================ */
+.prose :not(pre) > code {
+  padding: 0.18rem 0.45rem;
+  border-radius: 6px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.88em;
+  font-weight: 500;
+}
+:root.theme-light .prose :not(pre) > code {
+  background: #e8f0e9;                     /* pale sage chip */
+  color: #1a3c22;                          /* near-black forest — 11:1 on chip */
+  border: 1px solid rgba(74, 120, 86, 0.25);
+}
+:root:not(.theme-light) .prose :not(pre) > code {
+  background: rgba(129, 199, 132, 0.12);   /* translucent mint chip */
+  color: #b3e5b5;                          /* light mint — 8.2:1 on dark bg */
+  border: 1px solid rgba(129, 199, 132, 0.22);
+}
+
+/* ============================================================
+   BLOCKQUOTE
+   ============================================================ */
+.prose blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding: 0.85rem 1.25rem;
+  margin: 1.75rem 0;
+  font-style: italic;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+:root.theme-light .prose blockquote {
+  background: rgba(74, 120, 86, 0.06);
+  color: #2d4a35;
+}
+:root:not(.theme-light) .prose blockquote {
+  background: rgba(129, 199, 132, 0.07);
+  color: #b0c4b1;
+}
+
+/* High-End Agency Code Block Architecture (Mac-Terminal Style) */
+.prose pre,
+.prose .astro-code {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2.75rem 1.4rem 1.25rem 1.4rem;
+  border-radius: var(--radius-md);
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 10px 30px -10px rgba(0, 0, 0, 0.25);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Terminal Dots Decoration (Red, Yellow, Green) */
+.prose pre::before,
+.prose .astro-code::before {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  left: 1.1rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
+}
+
+/* Custom Scrollbar inside Code Blocks */
+.prose pre::-webkit-scrollbar,
+.prose .astro-code::-webkit-scrollbar {
+  height: 6px;
+}
+.prose pre::-webkit-scrollbar-track,
+.prose .astro-code::-webkit-scrollbar-track {
+  background: transparent;
+}
+.prose pre::-webkit-scrollbar-thumb,
+.prose .astro-code::-webkit-scrollbar-thumb {
+  background: rgba(125, 125, 125, 0.3);
+  border-radius: 3px;
+}
+
+/* ============================================================
+   CODE BLOCK — container styling per mode
+   ============================================================ */
+
+/* LIGHT MODE: let Shiki's own background (#fff) and inline colours show through.
+   We only add border, shadow, and terminal-dot padding adjustments. */
+:root.theme-light .prose pre,
+:root.theme-light .prose .astro-code {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 2px 12px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* LIGHT MODE tokens: do NOT override. Shiki writes correct colour inline per span.
+   Only strip any background bleed. */
+:root.theme-light .prose pre code span,
+:root.theme-light .prose pre > code,
+:root.theme-light .prose .astro-code span {
+  background: transparent !important;
+}
+
+/* DARK MODE: override Shiki's Light bg colour with proper dark bg */
+:root:not(.theme-light) .prose pre,
+:root:not(.theme-light) .prose .astro-code {
+  background-color: #161b22 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e6edf3 !important;
+  box-shadow: 0 4px 20px -6px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* DARK MODE tokens: Shiki writes --shiki-dark CSS variable on each span.
+   We set color to consume that variable, overriding the Light Mode colour that
+   Shiki writes as the base color: property on the same span. */
+:root:not(.theme-light) .prose pre code span,
+:root:not(.theme-light) .prose .astro-code span {
+  color: var(--shiki-dark) !important;
+  background: transparent !important;
+  font-style: var(--shiki-dark-font-style, normal);
+  font-weight: var(--shiki-dark-font-weight, 400);
+  text-decoration: var(--shiki-dark-text-decoration, none);
+}
+
+/* ============================================================
+   COLLAPSIBLE REFERENCES ACCORDION
+   ============================================================ */
+.references-accordion {
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+}
+
+.references-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  transition: background var(--transition-fast);
+}
+
+.references-summary::-webkit-details-marker {
+  display: none;
+}
+
+.references-summary:hover {
+  background: var(--color-surface-hover);
+}
+
+.ref-title-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.references-accordion .chevron {
+  transition: transform var(--transition-fast);
+}
+
+.references-accordion[open] .chevron {
+  transform: rotate(180deg);
+}
+
+.references-list {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  margin: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.references-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.references-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ref-item-title {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.ref-item-link {
+  color: var(--color-accent-light);
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+:root.theme-light .ref-item-link {
+  color: #1a5c2e;
+}

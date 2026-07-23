@@ -1,5 +1,10 @@
 import { defineCollection, z } from 'astro:content';
 
+const referenceSchema = z.object({
+  title: z.string(),
+  url:   z.string().optional(),
+});
+
 const blog = defineCollection({
   type: 'content',
   schema: z.object({
@@ -12,6 +17,7 @@ const blog = defineCollection({
     lang:        z.enum(['id', 'en']).default('id'),
     draft:       z.boolean().default(false),
     project:     z.string().optional(),
+    references:  z.array(referenceSchema).optional(),
   }),
 });
 
@@ -27,6 +33,7 @@ const projects = defineCollection({
     heroImage:   z.string().optional(),
     featured:    z.boolean().default(false),
     startDate:   z.coerce.date(),
+    references:  z.array(referenceSchema).optional(),
   }),
 });
 

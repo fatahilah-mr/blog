@@ -79,6 +79,35 @@ const readingTime = getReadingTime(post.body || post.data.description);
       <Content />
     </div>
     
+    {post.data.references && post.data.references.length > 0 && (
+      <details class="references-accordion glass-panel">
+        <summary class="references-summary">
+          <div class="ref-title-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            <span>{post.data.lang === 'en' ? 'References & Cited Sources' : 'Daftar Sumber & Referensi Dikutip'} ({post.data.references.length})</span>
+          </div>
+          <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </summary>
+        <ul class="references-list">
+          {post.data.references.map((ref: { title: string; url?: string }) => (
+            <li>
+              <span class="ref-item-title">{ref.title}</span>
+              {ref.url && (
+                <a href={ref.url} target="_blank" rel="noopener noreferrer" class="ref-item-link">
+                  {ref.url} ↗
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </details>
+    )}
+    
     <hr class="divider" />
     <Giscus />
   </article>
