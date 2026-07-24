@@ -37,7 +37,7 @@ startDate: "2026-07-19"
 repoUrl: "https://github.com/fatahilah-mr/blog"
 
 # [OPTIONAL] URL to the live demo (valid URL or "")
-demoUrl: "https://blog.fatahmr.my.id"
+demoUrl: "https://blog.fatah.web.id"
 
 # [OPTIONAL] Path to project cover image. Must be stored in /public/uploads/
 heroImage: "/uploads/project-cover.jpg"

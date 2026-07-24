@@ -2,7 +2,7 @@ backend:
   name: github
   repo: fatahilah-mr/blog
   branch: main
-  base_url: https://blog.fatahmr.my.id
+  base_url: https://blog.fatah.web.id
   auth_endpoint: oauth/auth
 
 logo_url: /favicon.svg

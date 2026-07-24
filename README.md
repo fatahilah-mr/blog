@@ -158,7 +158,7 @@ When deploying to **Cloudflare Pages**, configure the following environment vari
 > Under **GitHub Developer Settings > OAuth Applications**, set the **Authorization callback URL** to match your exact live domain path: `https://YOUR_DOMAIN/oauth/callback`. Omitting `/oauth/callback` will cause redirect URI mismatch errors during CMS login.
 
 > [!NOTE]
-> Signing in to `/admin` via GitHub OAuth relies on Cloudflare Pages Functions (`/functions/oauth/`). It functions on the live environment (`https://blog.fatahmr.my.id/admin`) or when running Wrangler functions emulation locally.
+> Signing in to `/admin` via GitHub OAuth relies on Cloudflare Pages Functions (`/functions/oauth/`). It functions on the live environment (`https://blog.fatah.web.id/admin`) or when running Wrangler functions emulation locally.
 
 ---
 

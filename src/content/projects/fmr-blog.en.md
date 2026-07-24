@@ -20,7 +20,7 @@ techStack:
   - GitHub CLI
   - Termux
 repoUrl: https://github.com/fatahilah-mr/blog
-demoUrl: https://blog.fatahmr.my.id
+demoUrl: https://blog.fatah.web.id
 heroImage: /uploads/Logo Web Blog.png
 featured: true
 startDate: 2026-07-19

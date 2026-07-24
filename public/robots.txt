@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://blog.fatahmr.my.id/sitemap-index.xml
+Sitemap: https://blog.fatah.web.id/sitemap-index.xml
