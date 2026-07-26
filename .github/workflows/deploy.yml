@@ -1,0 +1,43 @@
+name: Build and Deploy Astro to cPanel
+
+on:
+  push:
+    branches:
+      - main  # Ganti dengan 'master' jika nama branch utama Anda 'master'
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy Astro Site
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Ambil source code dari repository
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      # 2. Setup environment Node.js
+      - name: ⚙️ Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # 3. Install dependencies & Build project Astro
+      - name: 🛠️ Install dependencies and Build
+        run: |
+          npm ci
+          npm run build
+
+      # 4. Upload isi folder dist/ ke cPanel via FTP
+      - name: 🚀 Sync dist/ via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps                   # Menggunakan FTPS (Explicit TLS)
+          port: 21                         # Port standar FTPS
+          local-dir: ./dist/               # Mengambil ISI folder dist/
+          server-dir: ./dev.fatah.web.id/  # Target folder di cPanel
+          dangerous-clean-slate: false     # Mengabaikan penghapusan file di luar dist jika ada
+
