@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/readme-logo.svg" height="60" alt="fmr.blog Logo" />
+  <img src="public/favicon.svg" height="60" alt="fmr.blog Logo" />
   <p>
     <b>High-performance, bilingual personal journal and project showcase built with Astro 5, Sveltia CMS, and Cloudflare Pages.</b>
   </p>
