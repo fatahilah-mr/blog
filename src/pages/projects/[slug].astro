@@ -53,33 +53,36 @@ const projectSchema = {
         Bagikan
       </button>
     </div>
-    <header class="post-header">
+    <header class="post-header glass-panel">
       <div class="meta">
         <span class="meta-item date">{proj.data.startDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long' })}</span>
         <span class="dot">•</span>
-        <span class="meta-item status-badge" data-status={proj.data.status}>{proj.data.status}</span>
+        <span class="meta-item status-badge" data-status={proj.data.status}>Status: <strong style="text-transform: capitalize; margin-left: 0.3rem;">{proj.data.status}</strong></span>
         <span class="dot lang-dot">•</span>
         <div class="meta-item lang-item">
           <LangBadge item={proj} />
         </div>
       </div>
       <h1 class="title">{proj.data.title}</h1>
-      <div class="actions">
+      <p class="desc">{proj.data.description}</p>
+      
+      <div class="tech-stack">
+        {proj.data.techStack.map((tech: string) => <span class="tag">{tech}</span>)}
+      </div>
+
+      <div class="links">
         {proj.data.repoUrl && (
-          <a href={proj.data.repoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display:inline-flex; align-items:center; gap:0.4rem;">
-            <GitHubIcon sx={{ fontSize: '1rem' }} />
+          <a href={proj.data.repoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <GitHubIcon sx={{ fontSize: '1.1rem' }} />
             Repository
           </a>
         )}
         {proj.data.demoUrl && (
-          <a href={proj.data.demoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem;">
-            <LaunchIcon sx={{ fontSize: '1rem' }} />
+          <a href={proj.data.demoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <LaunchIcon sx={{ fontSize: '1.1rem' }} />
             Live Demo
           </a>
         )}
-      </div>
-      <div class="tags">
-        {proj.data.techStack.map((tech: string) => <span class="tag">{tech}</span>)}
       </div>
     </header>
     
@@ -162,7 +165,7 @@ const projectSchema = {
     border-color: #10B981;
   }
   .post-header {
-    padding: 2.5rem;
+    padding: 2.5rem 2rem;
     margin-bottom: 3rem;
     text-align: center;
   }
@@ -180,6 +183,9 @@ const projectSchema = {
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
+  }
+  .status-badge {
+    color: var(--color-accent-text);
   }
   .dot {
     opacity: 0.45;
@@ -208,9 +214,11 @@ const projectSchema = {
     margin-bottom: 1rem;
   }
   .desc {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--color-muted);
-    margin-bottom: 2rem;
+    max-width: 620px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
   }
   .tech-stack {
     display: flex;
@@ -240,13 +248,16 @@ const projectSchema = {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 0.45rem;
     white-space: nowrap;
+    text-decoration: none;
   }
   @media (min-width: 640px) {
     .links {
       flex-direction: row;
       justify-content: center;
       max-width: none;
+      gap: 1rem;
     }
     .links .btn {
       width: auto;
@@ -267,14 +278,20 @@ const projectSchema = {
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px var(--color-glow);
+    color: #fff;
+    text-decoration: none;
   }
   .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
-    border: var(--glass-border);
+    background: var(--color-surface-hover);
+    border: 1px solid var(--color-border);
     color: var(--color-text);
   }
   .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--glass-bg);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+    color: var(--color-accent);
+    text-decoration: none;
   }
 </style>
 
