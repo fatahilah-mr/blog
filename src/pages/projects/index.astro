@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
+import SearchIcon from '@mui/icons-material/Search';
+import SearchOffIcon from '@mui/icons-material/SearchOff';
 
 const projects = await getCollection('projects');
 projects.sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf());
@@ -25,10 +27,9 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
   <div class="controls-container">
     <div class="search-container">
       <input type="text" id="search-input" placeholder="Cari proyek..." class="search-input" aria-label="Cari proyek" />
-      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
+      <span class="search-icon">
+        <SearchIcon sx={{ fontSize: '1.25rem' }} />
+      </span>
     </div>
 
     <div class="custom-select-wrapper" id="custom-tag-select">
@@ -52,12 +53,9 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
   </div>
   
   <div class="empty-state" id="empty-state" style="display: none;">
-    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="11" cy="11" r="8"></circle>
-      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      <line x1="9" y1="9" x2="13" y2="13"></line>
-      <line x1="13" y1="9" x2="9" y2="13"></line>
-    </svg>
+    <div class="empty-icon-box">
+      <SearchOffIcon sx={{ fontSize: '3rem', color: 'var(--color-muted)' }} />
+    </div>
     <h3>Tidak ditemukan</h3>
     <p>Coba gunakan kata kunci atau tag lain.</p>
   </div>

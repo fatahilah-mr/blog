@@ -6,6 +6,8 @@ import LangBadge from '../../components/LangBadge.astro';
 import { getReadingTime } from '../../utils/readingTime';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ShareIcon from '@mui/icons-material/Share';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -80,14 +82,7 @@ const articleSchema = {
       <details class="toc glass-panel" open>
         <summary class="toc-summary">
           <div class="toc-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="8" y1="6" x2="21" y2="6"></line>
-              <line x1="8" y1="12" x2="21" y2="12"></line>
-              <line x1="8" y1="18" x2="21" y2="18"></line>
-              <line x1="3" y1="6" x2="3.01" y2="6"></line>
-              <line x1="3" y1="12" x2="3.01" y2="12"></line>
-              <line x1="3" y1="18" x2="3.01" y2="18"></line>
-            </svg>
+            <FormatListBulletedIcon sx={{ fontSize: '1.25rem', color: 'var(--color-accent)' }} />
             <span>Daftar Isi</span>
           </div>
           <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -114,10 +109,7 @@ const articleSchema = {
       <details class="references-accordion glass-panel">
         <summary class="references-summary">
           <div class="ref-title-box">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
+            <MenuBookIcon sx={{ fontSize: '1.25rem', color: 'var(--color-accent)' }} />
             <span>{post.data.lang === 'en' ? 'References & Cited Sources' : 'Daftar Sumber & Referensi Dikutip'} ({post.data.references.length})</span>
           </div>
           <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

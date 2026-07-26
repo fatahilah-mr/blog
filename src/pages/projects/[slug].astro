@@ -6,6 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ShareIcon from '@mui/icons-material/Share';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -52,26 +53,33 @@ const projectSchema = {
         Bagikan
       </button>
     </div>
-    <header class="post-header glass-panel">
+    <header class="post-header">
       <div class="meta">
-        <span class="meta-item status">Status: <strong style="text-transform: capitalize;">{proj.data.status}</strong></span>
-        <span class="dot">•</span>
         <span class="meta-item date">{proj.data.startDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long' })}</span>
+        <span class="dot">•</span>
+        <span class="meta-item status-badge" data-status={proj.data.status}>{proj.data.status}</span>
         <span class="dot lang-dot">•</span>
         <div class="meta-item lang-item">
           <LangBadge item={proj} />
         </div>
       </div>
       <h1 class="title">{proj.data.title}</h1>
-      <p class="desc">{proj.data.description}</p>
-      
-      <div class="tech-stack">
-        {proj.data.techStack.map((tech: string) => <span class="tag">{tech}</span>)}
+      <div class="actions">
+        {proj.data.repoUrl && (
+          <a href={proj.data.repoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display:inline-flex; align-items:center; gap:0.4rem;">
+            <GitHubIcon sx={{ fontSize: '1rem' }} />
+            Repository
+          </a>
+        )}
+        {proj.data.demoUrl && (
+          <a href={proj.data.demoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem;">
+            <LaunchIcon sx={{ fontSize: '1rem' }} />
+            Live Demo
+          </a>
+        )}
       </div>
-      
-      <div class="links">
-        {proj.data.repoUrl && <a href={proj.data.repoUrl} target="_blank" class="btn btn-secondary" style="display:inline-flex; align-items:center; gap:0.4rem;"><GitHubIcon sx={{ fontSize: '1.1rem' }} /> Repository</a>}
-        {proj.data.demoUrl && <a href={proj.data.demoUrl} target="_blank" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem;"><LaunchIcon sx={{ fontSize: '1.1rem' }} /> Live Demo</a>}
+      <div class="tags">
+        {proj.data.techStack.map((tech: string) => <span class="tag">{tech}</span>)}
       </div>
     </header>
     
@@ -83,10 +91,7 @@ const projectSchema = {
       <details class="references-accordion glass-panel">
         <summary class="references-summary">
           <div class="ref-title-box">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
+            <MenuBookIcon sx={{ fontSize: '1.25rem', color: 'var(--color-accent)' }} />
             <span>{proj.data.title.includes('en') ? 'References & Cited Sources' : 'Daftar Sumber & Referensi Dikutip'} ({proj.data.references.length})</span>
           </div>
           <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
