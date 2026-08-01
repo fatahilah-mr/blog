@@ -1,6 +1,6 @@
 ---
 title: "FATAH | Gateway Link Hub & Personal Portal"
-description: "An ultra-fast, responsive, and elegant independent personal link portal and portfolio hub, powered by React 18, Vite, GSAP 3D motion, MUI Material Icons, and Sveltia Headless CMS."
+description: "An ultra‑fast, responsive, elegant personal link portal powered by React 18, Vite, GSAP 3D, Material Icons, and Sveltia CMS."
 status: "active"
 techStack:
   - React 18
@@ -18,7 +18,7 @@ featured: true
 references:
   - title: "Sveltia CMS Documentation"
     url: "https://sveltiacms.dev"
-  - title: "GSAP Documentation & Easing Guide"
+  - title: "GSAP Docs & Easing Guide"
     url: "https://gsap.com/docs/v3/"
   - title: "MUI Material Icons Library"
     url: "https://mui.com/material-ui/material-icons/"
@@ -28,83 +28,62 @@ references:
 
 ## 📌 1. Problem
 
-Popular link aggregator platforms (like Linktree or Lnk.bio) impose 4 critical drawbacks for web developers and IT professionals:
-1. **Rigid & Generic Design:** Default templates lack personal branding customization.
-2. **Monthly Subscription Fees:** Key capabilities (custom domains, custom icons, analytics, watermark removal) require paid tiers.
-3. **Low Performance & Downtime Risks:** Third-party hosted platforms load slowly on mobile networks and are vulnerable to vendor policy shifts.
-4. **Content Editing Friction:** Manual static portals require code edits (*hardcoding*) and redeployments just to update links from a smartphone.
+Link aggregators (Linktree, Lnk.bio) hinder web developers with:
 
----
+1. **Rigid, generic design** – no personal branding.
+2. **Recurring subscription fees** for analytics, custom domains, icons, watermark removal.
+3. **Slow performance & downtime** on mobile networks.
+4. **Cumbersome content updates** – hard‑coding links & redeploying for each change.
 
 ## 👤 2. Target User
 
-- **Recruiters & Potential Clients:** Need 1-click access to work history, interactive projects, and professional resume.
-- **Peers & Developer Community:** Want direct reach to GitHub repos, tech blog posts (`blog.fatah.web.id`), and social channels (LinkedIn, Threads, X).
-- **Project Owner (Fatahilah M.R):** Manages, adds, and updates bilingual links independently without touching code via a mobile-friendly CMS.
-
----
+- **Recruiters & potential clients** – need instant, one‑click access to work history, interactive portfolio, and professional resume.
+- **Developers & community** – want quick links to GitHub, tech blog, and social channels.
+- **Project owner (Fatahilah M.R)** – self‑manage bilingual links via mobile‑friendly CMS.
 
 ## 💡 3. Solution
 
-Built **FATAH Gateway**, an ultra-fast SPA web application blending modern glassmorphism aesthetics with serverless edge reliability.
+Build **FATAH Gateway**, an ultra‑fast SPA that blends modern glassmorphism with serverless edge reliability.
 
-Core technical solutions:
-- **Zero-Cost Serverless Edge:** Hosted on Cloudflare Pages Edge Network with *Cloudflare Functions* for OAuth authentication.
-- **Git-Based Headless CMS:** Integrates **Sveltia CMS** connected directly to GitHub. Content edits trigger automatic Git commits and instant builds.
-- **Glassmorphism & 3D Animations:** Blends custom CSS and GSAP 3 to deliver smooth entrance transitions, 3D hover tilt effects, and elastic click feedback.
-- **Native Dual Theme & Dual Language:** Real-time language switching (ID/EN) and dark/light modes synchronized with OS preferences.
-
----
+Technical highlights:
+- **Free server‑less edge** on Cloudflare Pages with Functions‑based OAuth.
+- **Git‑based headless CMS** – Sveltia CMS auto‑commits content edits and triggers instant builds.
+- **Glassmorphism & 3D GSAP animations** – smooth entrance, hover tilt, click bounce.
+- **Native dual‑theme & dual‑language** – auto‑detect OS preference.
 
 ## ⭐ 4. Key Features
 
-- **⚡ Zero-Code CMS Panel (Sveltia CMS):** Manage links, icons, bilingual descriptions, and card order instantly via `/admin/`.
-- **🎴 GSAP 3D Interactive Cards:** Link cards respond to cursor and touch interactions with smooth 3D perspective physics.
-- **🎨 MUI Material Icons Integration:** Centralized mapping for 30+ official brand icons (GitHub, LinkedIn, WhatsApp, YouTube, Instagram, Threads, etc.).
-- **🔐 Serverless OAuth Authentication:** Secure CMS login powered by Cloudflare Pages Functions (`/api/auth`) without external backend servers.
-- **🌐 Real-Time Theme & Language Sync:** Instant language and theme toggling without page reloads, paired with an elegant loading overlay.
-- **🔍 Triple-Layer SEO & Canonical Enforcement:** Prevents URL duplication in Google Search Console using HTML head canonical tags, React state, HTTP headers, and Cloudflare 301 redirects.
-
----
+- **Zero‑code CMS panel** – manage links, icons, bilingual descriptions, and card order from `/admin/`.
+- **GSAP 3D interactive cards** – physics‑based perspective effects.
+- **30+ official MUI icons** – consistent brand representation.
+- **Serverless OAuth** – secure login via Cloudflare Functions.
+- **Real‑time theme & language sync** – instant switches with loader overlay.
+- **Triple‑layer SEO & canonical enforcement** – prevents duplicate URLs in Google Search Console.
 
 ## 🧱 5. Challenges & Lessons Learned
 
-- **Challenge 1: Decap CMS Blank Screen Issue**
-  - *Issue:* Initial Decap CMS setup produced blank white screen errors in production due to bundling conflicts on Cloudflare Pages.
-  - *Solution:* Migrated fully to **Sveltia CMS**, a lightweight alternative fully compatible with `config.yml` that loads significantly faster.
-- **Challenge 2: Icon Bundle Size Bloat**
-  - *Issue:* Naive icon imports bloated production bundles to over 1,700 unused JavaScript modules.
-  - *Solution:* Migrated to `@mui/icons-material` with a centralized module mapper (`src/data/iconMap.js`), cutting bundle size down to **315 modules** (~109 KB gzip JS) and build time to ~10s.
-- **Challenge 3: Duplicate Canonical Errors in GSC**
-  - *Issue:* Domain migration to `fatah.web.id` caused Googlebot to detect duplicate URL variations (HTTP/HTTPS, WWW).
-  - *Solution:* Enforced triple-layer canonical architecture (Tag `<link rel="canonical">`, HTTP Header `Link`, and Cloudflare 301 Redirect rules).
-
----
+- **Blank screen in Decap CMS** – migrated to lightweight Sveltia CMS for faster load.
+- **Icon bundle bloat** – replaced bulk imports with `@mui/icons-material` mapping, shaving bundle to 315 modules (~109 KB gzip) and cutting build time to ~10 s.
+- **Canonical URL duplication** – implemented three‑layer canonical tags (HTML `<link>`, HTTP `Link` header, Cloudflare 301 redirects).
 
 ## 📈 6. Impact
 
-- **Before:** Dependent on paid third-party aggregators with limited customization, or manual code edits for simple link updates.
-- **After:**
-  - **Extreme Performance:** Achieved 95+ mobile Lighthouse scores with smooth 60 FPS animations.
-  - **100% Free Hosting:** Operates permanently on Cloudflare's Edge Network with zero recurring subscription fees.
-  - **1-Click Management:** Add or edit link cards in under 1 minute directly from a smartphone via `/admin`.
-  - **Consolidated SEO & Identity:** Fully indexed under the clean custom domain `fatah.web.id`.
-
----
+- **Performance:** Lighthouse 95+ mobile, 60 FPS smooth animations.
+- **Cost:** Zero recurring fees, permanently hosted on Cloudflare Edge.
+- **Content management:** Add or edit links in under a minute from any smartphone.
+- **SEO & identity:** Fully indexed under clean domain `fatah.web.id`.
 
 ## 🛠️ Tech Choices
 
-- **React 18 & Vite:** Delivers modern SPA capabilities with instant Hot Module Replacement (HMR) and efficient tree-shaking bundling.
-- **GSAP 3:** Provides precise animation timeline control, smooth GPU rendering, and flexible 3D physics modules.
-- **Sveltia CMS:** Lightweight serverless Git-based CMS with an intuitive YAML configuration.
-- **MUI Material Icons (`@mui/icons-material`):** Offers consistent Google Material Design aesthetics with easy prop customization.
-- **Cloudflare Pages & Functions:** Global static edge hosting with free SSL and serverless JavaScript execution for OAuth handling.
-
----
+- **React 18 & Vite** – modern SPA with fast HMR and tree‑shaking.
+- **GSAP 3** – precise timeline control, GPU‑accelerated animations.
+- **Sveltia CMS** – serverless Git‑based CMS, lightweight YAML config.
+- **MUI Material Icons** – cohesive Google Material Design icons.
+- **Cloudflare Pages & Functions** – global static edge hosting with free SSL and serverless OAuth.
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main Gateway Interface](/uploads/gateway-hero.png)
+![Main FATAH Gateway interface](/uploads/gateway-hero.png)
 *Figure 1: Main FATAH Gateway interface showcasing interactive link cards with dark/light theme toggle and dual-language support.*
 
 ![Sveltia CMS Admin Panel](/uploads/gateway-admin.png)
