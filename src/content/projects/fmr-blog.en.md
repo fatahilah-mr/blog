@@ -116,3 +116,12 @@ Core technical solutions:
 
 ![About Me Profile Page Interface of fmr.blog](/uploads/web-blog/web-blog-4.webp)
 *Figure 4: 'About Me' profile page documenting professional qualifications as a Web Developer, IT Network System Administrator, and technical background.*
+
+![Sveltia CMS Blog Articles Collection Dashboard](/uploads/web-blog/web-blog-5.webp)
+*Figure 5: Sveltia CMS dashboard (`/admin/`) for zero-code blog article collection management.*
+
+![Sveltia CMS Projects Collection Management Panel](/uploads/web-blog/web-blog-6.webp)
+*Figure 6: Sveltia CMS project collection management panel displaying all portfolio showcase entries and new item creation buttons.*
+
+![Sveltia CMS Global Media Asset Manager](/uploads/web-blog/web-blog-7.webp)
+*Figure 7: Sveltia CMS global media asset manager (`/public/uploads`) for uploading, sorting, and organizing image files.*

@@ -116,3 +116,12 @@ Pendekatan teknis utama:
 
 ![Tampilan Halaman Profile dan Tentang Saya fmr.blog](/uploads/web-blog/web-blog-4.webp)
 *Gambar 4: Halaman profil 'Tentang Saya' yang mendokumentasikan latar belakang keahlian Web Developer, IT Network System Administrator, serta riwayat pencapaian.*
+
+![Dasbor Manajemen Artikel Blog Sveltia CMS](/uploads/web-blog/web-blog-5.webp)
+*Gambar 5: Dasbor Sveltia CMS (`/admin/`) untuk pengelolaan koleksi tulisan dan artikel blog tanpa kode.*
+
+![Dasbor Manajemen Koleksi Proyek Sveltia CMS](/uploads/web-blog/web-blog-6.webp)
+*Gambar 6: Panel pengelolaan koleksi entri portofolio proyek pada Sveltia CMS lengkap dengan tombol pembuatan proyek baru.*
+
+![Manajer Aset Media Global Sveltia CMS](/uploads/web-blog/web-blog-7.webp)
+*Gambar 7: Galeri manajemen aset media publik (`/public/uploads`) di Sveltia CMS untuk pengunggahan dan pengorganisasian berkas gambar.*
