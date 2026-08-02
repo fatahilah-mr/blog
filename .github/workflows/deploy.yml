@@ -15,11 +15,11 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      # 2. Setup environment Node.js
-      - name: ⚙️ Use Node.js 20
+      # 2. Setup environment Node.js (LTS v22)
+      - name: ⚙️ Use Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       # 3. Install dependencies & Build project Astro
