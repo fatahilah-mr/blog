@@ -11,7 +11,7 @@ techStack:
 startDate: "2026-07-19"
 repoUrl: "https://github.com/fatahilah-mr/portfolio"
 demoUrl: "https://fatahmr.my.id"
-heroImage: "/uploads/web-portfolio-1.webp"
+heroImage: "/uploads/web-portfolio/web-portfolio-1.webp"
 featured: true
 references:
   - title: "Official Astro 5 Documentation"
@@ -88,23 +88,23 @@ Core technical solutions:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main Hero Section Interface of Fatahilah Portfolio](/uploads/web-portfolio-1.webp)
+![Main Hero Section Interface of Fatahilah Portfolio](/uploads/web-portfolio/web-portfolio-1.webp)
 *Figure 1: Main hero section interface of FATAHILAH.MR portfolio featuring a clean minimalist layout, specialization badge, and call-to-action buttons.*
 
-![Profile & About Me Section Preview](/uploads/web-portfolio-2.webp)
+![Profile & About Me Section Preview](/uploads/web-portfolio/web-portfolio-2.webp)
 *Figure 2: Professional profile section showcasing 6 core technical competency pillars and industry career readiness status.*
 
-![Work Experience & Internship Section Preview](/uploads/web-portfolio-3.webp)
+![Work Experience & Internship Section Preview](/uploads/web-portfolio/web-portfolio-3.webp)
 *Figure 3: Detailed internship track record covering Network & Server administration at UPTD BLK Kebumen and FTTH ISP networking at Fazza Computer.*
 
-![Technical Skills & Competency Matrix Grid](/uploads/web-portfolio-4.webp)
+![Technical Skills & Competency Matrix Grid](/uploads/web-portfolio/web-portfolio-4.webp)
 *Figure 4: Four core technical skill pillars encompassing Hardware & Cabling, Cisco Networking, MikroTik & Wireless, and Server Administration.*
 
-![Interactive Lab Archive & Project Gallery with Google Sheets CMS](/uploads/web-portfolio-5.webp)
+![Interactive Lab Archive & Project Gallery with Google Sheets CMS](/uploads/web-portfolio/web-portfolio-5.webp)
 *Figure 5: Interactive project gallery powered by Google Sheets Headless CMS featuring real-time category filters and cache status indicators.*
 
-![Certificates & LKS Award Verification Modal](/uploads/web-portfolio-6.webp)
+![Certificates & LKS Award Verification Modal](/uploads/web-portfolio/web-portfolio-6.webp)
 *Figure 6: Official certificate modal preview validating 1st Place Gold Medalist achievement in IT Network System Administration LKS 2026.*
 
-![Official Contact Channels & CV Download Section](/uploads/web-portfolio-7.webp)
+![Official Contact Channels & CV Download Section](/uploads/web-portfolio/web-portfolio-7.webp)
 *Figure 7: Direct contact integration cards offering immediate access to WhatsApp, LinkedIn, GitHub, Email, and downloadable CV.*

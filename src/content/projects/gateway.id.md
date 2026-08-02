@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-07-23"
 repoUrl: "https://github.com/fatahilah-mr/gateway"
 demoUrl: "https://fatah.web.id"
-heroImage: "/uploads/web-gateway-1.webp"
+heroImage: "/uploads/web-gateway/web-gateway-1.webp"
 featured: true
 references:
   - title: "Sveltia CMS Documentation"
@@ -83,5 +83,5 @@ Technical highlights:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Utama FATAH Gateway](/uploads/web-gateway-1.webp)
+![Tampilan Utama FATAH Gateway](/uploads/web-gateway/web-gateway-1.webp)
 *Gambar 1: Antarmuka utama FATAH Gateway (`fatah.web.id`) menampilkan kartu tautan interaktif glassmorphism dengan efek tilt 3D, dukungan dwibahasa, dan alih mode tema.*

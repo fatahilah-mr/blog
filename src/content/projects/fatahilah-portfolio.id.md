@@ -11,7 +11,7 @@ techStack:
 startDate: "2026-07-19"
 repoUrl: "https://github.com/fatahilah-mr/portfolio"
 demoUrl: "https://fatahmr.my.id"
-heroImage: "/uploads/web-portfolio-1.webp"
+heroImage: "/uploads/web-portfolio/web-portfolio-1.webp"
 featured: true
 references:
   - title: "Dokumentasi Resmi Astro 5"
@@ -88,23 +88,23 @@ Pendekatan teknis utama:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Beranda Hero Section Portofolio Fatahilah](/uploads/web-portfolio-1.webp)
+![Tampilan Beranda Hero Section Portofolio Fatahilah](/uploads/web-portfolio/web-portfolio-1.webp)
 *Gambar 1: Antarmuka utama beranda portofolio FATAHILAH.MR dengan desain minimalis, lencana spesialisasi, dan tombol navigasi aksi.*
 
-![Tampilan Bagian Profil & About Me](/uploads/web-portfolio-2.webp)
+![Tampilan Bagian Profil & About Me](/uploads/web-portfolio/web-portfolio-2.webp)
 *Gambar 2: Bagian profil profesional yang menampilkan ringkasan 6 pilar kompetensi teknis dan status kesiapan kerja industri.*
 
-![Tampilan Bagian Pengalaman Kerja & Magang PKL](/uploads/web-portfolio-3.webp)
+![Tampilan Bagian Pengalaman Kerja & Magang PKL](/uploads/web-portfolio/web-portfolio-3.webp)
 *Gambar 3: Rekam jejak pengalaman Praktik Kerja Lapangan (PKL) pada bidang Network & Server di UPTD BLK Kebumen serta FTTH & ISP di Fazza Computer.*
 
-![Tampilan Grid Keahlian & Kompetensi Teknis](/uploads/web-portfolio-4.webp)
+![Tampilan Grid Keahlian & Kompetensi Teknis](/uploads/web-portfolio/web-portfolio-4.webp)
 *Gambar 4: Empat pilar keahlian teknis utama meliputi Perangkat Keras & Pengkabelan, Cisco Networking, MikroTik & Wireless, serta Server Administration.*
 
-![Tampilan Galeri Arsip Lab & Proyek Portofolio dengan Google Sheets CMS](/uploads/web-portfolio-5.webp)
+![Tampilan Galeri Arsip Lab & Proyek Portofolio dengan Google Sheets CMS](/uploads/web-portfolio/web-portfolio-5.webp)
 *Gambar 5: Galeri proyek interaktif terintegrasi Google Sheets Headless CMS dilengkapi penyaring kategori instan dan penanda status cache.*
 
-![Tampilan Dokumen Sertifikat & Piagam Penghargaan LKS](/uploads/web-portfolio-6.webp)
+![Tampilan Dokumen Sertifikat & Piagam Penghargaan LKS](/uploads/web-portfolio/web-portfolio-6.webp)
 *Gambar 6: Modal pratinjau dokumen piagam resmi Juara 1 LKS SMK Bidang IT Network System Administration 2026.*
 
-![Tampilan Saluran Kontak Resmi & Download CV](/uploads/web-portfolio-7.webp)
+![Tampilan Saluran Kontak Resmi & Download CV](/uploads/web-portfolio/web-portfolio-7.webp)
 *Gambar 7: Bagian saluran komunikasi resmi yang menyediakan akses langsung ke WhatsApp, LinkedIn, GitHub, Email, serta unduhan CV.*

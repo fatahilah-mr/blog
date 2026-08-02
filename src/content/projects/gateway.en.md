@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-07-23"
 repoUrl: "https://github.com/fatahilah-mr/gateway"
 demoUrl: "https://fatah.web.id"
-heroImage: "/uploads/web-gateway-1.webp"
+heroImage: "/uploads/web-gateway/web-gateway-1.webp"
 featured: true
 references:
   - title: "Sveltia CMS Documentation"
@@ -83,5 +83,5 @@ Technical highlights:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main FATAH Gateway Interface](/uploads/web-gateway-1.webp)
+![Main FATAH Gateway Interface](/uploads/web-gateway/web-gateway-1.webp)
 *Figure 1: Main interface of FATAH Gateway (`fatah.web.id`) featuring glassmorphism interactive link cards with 3D tilt effects, bilingual support, and theme switcher.*

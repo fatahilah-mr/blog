@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-07-28"
 repoUrl: "https://github.com/temonkec-cpu/Media-Sosial"
 demoUrl: "https://perisai-media-sosial.vercel.app"
-heroImage: "/uploads/perisai-temon-1.webp"
+heroImage: "/uploads/perisai-temon/perisai-temon-1.webp"
 featured: true
 references:
   - title: "Next.js 16 App Router Docs"
@@ -94,26 +94,26 @@ Core technical solutions:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main Public Landing Page Interface of PERISAI Kapanewon Temon](/uploads/perisai-temon-1.webp)
+![Main Public Landing Page Interface of PERISAI Kapanewon Temon](/uploads/perisai-temon/perisai-temon-1.webp)
 *Figure 1: Main public landing page interface of PERISAI Kapanewon Temon featuring 24/7 official announcements and primary action buttons.*
 
-![Public Complaint Form Interface](/uploads/perisai-temon-2.webp)
+![Public Complaint Form Interface](/uploads/perisai-temon/perisai-temon-2.webp)
 *Figure 2: Public complaint submission form at `/lapor` route with citizen identification fields, 15-village dropdowns, and submission guidelines.*
 
-![Real-Time Complaint Tracking Interface](/uploads/perisai-temon-3.webp)
+![Real-Time Complaint Tracking Interface](/uploads/perisai-temon/perisai-temon-3.webp)
 *Figure 3: Real-time public complaint tracking page supporting instant lookups via 12-digit unique Tracking Codes (`TKT-2026-XXXX`).*
 
-![Education & Public Information FAQ Interface](/uploads/perisai-temon-4.webp)
+![Education & Public Information FAQ Interface](/uploads/perisai-temon/perisai-temon-4.webp)
 *Figure 4: Education and public service page featuring interactive FAQ accordions and Kapanewon Temon information disclosure guidelines.*
 
-![Command Center Temon Admin Dashboard](/uploads/perisai-temon-5.webp)
+![Command Center Temon Admin Dashboard](/uploads/perisai-temon/perisai-temon-5.webp)
 *Figure 5: Main Command Center Temon admin dashboard presenting real-time Supabase metrics and recent citizen complaint tables.*
 
-![Interactive 15-Village GIS Map & Report Management](/uploads/perisai-temon-6.webp)
+![Interactive 15-Village GIS Map & Report Management](/uploads/perisai-temon/perisai-temon-6.webp)
 *Figure 6: Report management dashboard equipped with an interactive 15-village GIS spatial map around YIA Airport and canvas gesture lock controls.*
 
-![User Directory & Access Control Management](/uploads/perisai-temon-7.webp)
+![User Directory & Access Control Management](/uploads/perisai-temon/perisai-temon-7.webp)
 *Figure 7: User directory management page for controlling administrator roles (Super Admin, Public Relations Operator, Field Staff).*
 
-![System Activity Logs & Security Audit Trail](/uploads/perisai-temon-8.webp)
+![System Activity Logs & Security Audit Trail](/uploads/perisai-temon/perisai-temon-8.webp)
 *Figure 8: System activity log page recording real-time chronological audit events, authentication triggers, and CSV export tools.*

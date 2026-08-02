@@ -12,7 +12,7 @@ techStack:
 startDate: "2026-06-30"
 repoUrl: "https://github.com/fatahilah-mr/web-setia-wati"
 demoUrl: "https://kwettiau.fatah.web.id"
-heroImage: "/uploads/setia-wati-portfolio-1.webp"
+heroImage: "/uploads/web-portfolio-setia-wati/setia-wati-portfolio-1.webp"
 featured: true
 references:
   - title: "Official React Documentation"
@@ -93,21 +93,21 @@ Built a high-speed Single Page Application (SPA) web portfolio powered by **Reac
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main Hero Section Interface of Setia Wati Portfolio](/uploads/setia-wati-portfolio-1.webp)
+![Main Hero Section Interface of Setia Wati Portfolio](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-1.webp)
 *Figure 1: Main hero section interface of Setia Wati (Kwettiau) portfolio featuring soft pink pastel aesthetics, specialization badges, and profile photo.*
 
-![Technical Networking & IT Skills Display](/uploads/setia-wati-portfolio-2.webp)
+![Technical Networking & IT Skills Display](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-2.webp)
 *Figure 2: Technical IT skill breakdown covering Networking Setup, Cisco Packet Tracer, and Hardware & LAN Troubleshooting.*
 
-![Interactive 3D Card Tilt Parallax Idol Showcase](/uploads/setia-wati-portfolio-3.webp)
+![Interactive 3D Card Tilt Parallax Idol Showcase](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-3.webp)
 *Figure 3: Interactive idol showcase featuring 3D mouse tilt parallax card animations (Chen Zhe Yuan, Park Ji-Sung NCT Dream, Harry Vaughan).*
 
-![Motivation & Creative Life Philosophy Quote Section](/uploads/setia-wati-portfolio-4.webp)
+![Motivation & Creative Life Philosophy Quote Section](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-4.webp)
 *Figure 4: Life philosophy and personal motivation quote section reflecting creative harmony between Cisco networking and web development.*
 
-![Interactive Favorite Music Playlist Widget](/uploads/setia-wati-portfolio-5.webp)
+![Interactive Favorite Music Playlist Widget](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-5.webp)
 *Figure 5: Interactive music playlist widget showcasing focus-enhancing tracks (NCT Dream, Dhruv, NCT 2021) with real-time like toggles.*
 
-![Interactive Contact Letter Modal Dialog](/uploads/setia-wati-portfolio-6.webp)
+![Interactive Contact Letter Modal Dialog](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-6.webp)
 *Figure 6: Interactive popup modal dialog 'Send a Letter to Kwettiau' enabling direct email communication via native mail clients.*
 

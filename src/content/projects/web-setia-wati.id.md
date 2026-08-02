@@ -12,7 +12,7 @@ techStack:
 startDate: "2026-06-30"
 repoUrl: "https://github.com/fatahilah-mr/web-setia-wati"
 demoUrl: "https://kwettiau.fatah.web.id"
-heroImage: "/uploads/setia-wati-portfolio-1.webp"
+heroImage: "/uploads/web-portfolio-setia-wati/setia-wati-portfolio-1.webp"
 featured: true
 references:
   - title: "Dokumentasi Resmi React"
@@ -93,21 +93,21 @@ Membangun web portofolio *Single Page Application* (SPA) berbasis **React 19** d
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Beranda Utama Portofolio Setia Wati](/uploads/setia-wati-portfolio-1.webp)
+![Tampilan Beranda Utama Portofolio Setia Wati](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-1.webp)
 *Gambar 1: Antarmuka utama beranda portofolio Setia Wati (Kwettiau) bertema pink pastel dengan lencana spesialisasi dan foto profil.*
 
-![Tampilan Bagian Keahlian Jaringan & IT TKJ](/uploads/setia-wati-portfolio-2.webp)
+![Tampilan Bagian Keahlian Jaringan & IT TKJ](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-2.webp)
 *Gambar 2: Pengelompokan fondasi keahlian teknis TKJ meliputi Networking Setup, Cisco Packet Tracer, serta Hardware & LAN Troubleshooting.*
 
-![Tampilan 3D Card Tilt Parallax Kartu Idola](/uploads/setia-wati-portfolio-3.webp)
+![Tampilan 3D Card Tilt Parallax Kartu Idola](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-3.webp)
 *Gambar 3: Galeri tokoh idola interaktif berteknologi 3D mouse tilt parallax (Chen Zhe Yuan, Park Ji-Sung NCT Dream, Harry Vaughan).*
 
-![Tampilan Bagian Motivasi & Filosofi Berkarya](/uploads/setia-wati-portfolio-4.webp)
+![Tampilan Bagian Motivasi & Filosofi Berkarya](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-4.webp)
 *Gambar 4: Pilar impian, semangat hidup, dan kutipan motivasi sederhana Setia Wati dalam menyelaraskan sirkuit jaringan dan kode web.*
 
-![Tampilan Widget Pemutar Lagu Favorit dengan Fitur Like](/uploads/setia-wati-portfolio-5.webp)
+![Tampilan Widget Pemutar Lagu Favorit dengan Fitur Like](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-5.webp)
 *Gambar 5: Pemutar musik favorit penyemangat belajar TI (NCT Dream, Dhruv, NCT 2021) dilengkapi saklar sukai (like system).*
 
-![Tampilan Modal Popup Kirim Surat Interaktif](/uploads/setia-wati-portfolio-6.webp)
+![Tampilan Modal Popup Kirim Surat Interaktif](/uploads/web-portfolio-setia-wati/setia-wati-portfolio-6.webp)
 *Gambar 6: Popup dialog surat interaktif 'Kirim Surat Untuk Kwettiau' untuk komunikasi langsung via mail client bawaan.*
 
