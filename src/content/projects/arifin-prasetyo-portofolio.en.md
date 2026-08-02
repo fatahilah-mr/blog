@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-06-28"
 repoUrl: "https://github.com/fatahilah-mr/arifin-prasetyo-portofolio"
 demoUrl: "https://arifin.fatah.web.id"
-heroImage: "/assets/profile.webp"
+heroImage: "/uploads/arifin-prasetyo-portfolio-1.webp"
 featured: true
 references:
   - title: "React 19 Documentation"
@@ -96,6 +96,18 @@ Engineered a high-performance web portfolio built with **React 19**, **Vite**, a
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Arifin Prasetyo Portfolio Cover](/assets/profile.webp)
-*Figure 1: Main hero interface of Arifin Prasetyo's culinary portfolio website.*
+![Main Hero Section Interface of Arifin Prasetyo Portfolio](/uploads/arifin-prasetyo-portfolio-1.webp)
+*Figure 1: Main hero section interface of Arifin Prasetyo culinary portfolio featuring professional chef profile, experience summary, and action buttons.*
+
+![Official Credentials & Internship Certificates Preview](/uploads/arifin-prasetyo-portfolio-2.webp)
+*Figure 2: Official credentials section displaying the Best Graduate Certificate from SMK Patriot Pituruh and 6-Month Internship Certificate at KinKEN Bakery.*
+
+![Hard Skills & Soft Skills Culinary Competency Matrix](/uploads/arifin-prasetyo-portfolio-3.webp)
+*Figure 3: Core competency matrix categorizing hard skills (Hot Kitchen, Plating, Baking) and soft skills (Kitchen Management).*
+
+![Culinary Menu Gallery Showcase](/uploads/arifin-prasetyo-portfolio-4.webp)
+*Figure 4: Interactive culinary menu gallery with category filters showcasing gourmet dishes like Chicken Cordon Bleu and Salad.*
+
+![Contact Channels & Culinary Collaboration Section](/uploads/arifin-prasetyo-portfolio-5.webp)
+*Figure 5: Official contact section providing direct links to WhatsApp, Email, phone number, and location details.*
 

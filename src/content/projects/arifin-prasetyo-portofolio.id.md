@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-06-28"
 repoUrl: "https://github.com/fatahilah-mr/arifin-prasetyo-portofolio"
 demoUrl: "https://arifin.fatah.web.id"
-heroImage: "/assets/profile.webp"
+heroImage: "/uploads/arifin-prasetyo-portfolio-1.webp"
 featured: true
 references:
   - title: "React 19 Documentation"
@@ -96,6 +96,18 @@ Membangun platform portofolio digital berbasis **React 19**, **Vite**, dan **Typ
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Arifin Prasetyo Portfolio Cover](/assets/profile.webp)
-*Gambar 1: Antarmuka utama halaman beranda portofolio kuliner Arifin Prasetyo.*
+![Tampilan Beranda Utama Portofolio Kuliner Arifin Prasetyo](/uploads/arifin-prasetyo-portfolio-1.webp)
+*Gambar 1: Antarmuka utama beranda portofolio kuliner Arifin Prasetyo menampilkan foto profil koki profesional, ringkasan pengalaman, dan tombol aksi.*
+
+![Tampilan Dokumen Sertifikat Kredensial Resmi dan PKL](/uploads/arifin-prasetyo-portfolio-2.webp)
+*Gambar 2: Bagian kredensial resmi menampilkan sertifikat Lulusan Terbaik SMK Patriot Pituruh dan Sertifikat Magang 6 Bulan di KinKEN Cake & Bakery.*
+
+![Tampilan Bagian Keahlian Utama Hard Skills dan Soft Skills Kuliner](/uploads/arifin-prasetyo-portfolio-3.webp)
+*Gambar 3: Pengelompokan kompetensi teknis (Hot Kitchen, Plating, Baking) dan keahlian personal manajemen operasional dapur.*
+
+![Tampilan Galeri Menu Hidangan Kuliner Unggulan](/uploads/arifin-prasetyo-portfolio-4.webp)
+*Gambar 4: Galeri portofolio menu kuliner interaktif berfitur filter kategori menampilkan hidangan estetis seperti Chicken Cordon Bleu dan Salad.*
+
+![Tampilan Bagian Kontak dan Form Kolaborasi Kuliner](/uploads/arifin-prasetyo-portfolio-5.webp)
+*Gambar 5: Bagian komunikasi resmi dan kolaborasi dapur yang menyediakan akses langsung WhatsApp, Email, serta informasi lokasi.*
 
