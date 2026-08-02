@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-07-23"
 repoUrl: "https://github.com/fatahilah-mr/gateway"
 demoUrl: "https://fatah.web.id"
-heroImage: "/uploads/gateway-hero.png"
+heroImage: "/uploads/web-gateway-1.webp"
 featured: true
 references:
   - title: "Sveltia CMS Documentation"
@@ -83,8 +83,5 @@ Technical highlights:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Utama Gateway](/uploads/gateway-hero.png)
-*Gambar 1: Antarmuka utama FATAH Gateway menampilkan kartu tautan interaktif dengan tema gelap/terang dan dukungan dwibahasa.*
-
-![Sveltia CMS Admin Panel](/uploads/gateway-admin.png)
-*Gambar 2: Dasbor Sveltia CMS (`/admin/`) untuk pengelolaan tautan dan konfigurasi konten tanpa kode.*
+![Tampilan Utama FATAH Gateway](/uploads/web-gateway-1.webp)
+*Gambar 1: Antarmuka utama FATAH Gateway (`fatah.web.id`) menampilkan kartu tautan interaktif glassmorphism dengan efek tilt 3D, dukungan dwibahasa, dan alih mode tema.*

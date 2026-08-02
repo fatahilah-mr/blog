@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-07-23"
 repoUrl: "https://github.com/fatahilah-mr/gateway"
 demoUrl: "https://fatah.web.id"
-heroImage: "/uploads/gateway-hero.png"
+heroImage: "/uploads/web-gateway-1.webp"
 featured: true
 references:
   - title: "Sveltia CMS Documentation"
@@ -83,8 +83,5 @@ Technical highlights:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main FATAH Gateway interface](/uploads/gateway-hero.png)
-*Figure 1: Main FATAH Gateway interface showcasing interactive link cards with dark/light theme toggle and dual-language support.*
-
-![Sveltia CMS Admin Panel](/uploads/gateway-admin.png)
-*Figure 2: Sveltia CMS dashboard (/admin/) for zero-code link management and content configuration.*
+![Main FATAH Gateway Interface](/uploads/web-gateway-1.webp)
+*Figure 1: Main interface of FATAH Gateway (`fatah.web.id`) featuring glassmorphism interactive link cards with 3D tilt effects, bilingual support, and theme switcher.*
