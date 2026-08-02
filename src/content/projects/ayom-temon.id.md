@@ -15,7 +15,7 @@ techStack:
 startDate: "2026-07-20"
 repoUrl: "https://github.com/fatahilah-mr/AYOM-TEMON"
 demoUrl: "https://ayom-temon.vercel.app"
-heroImage: "/uploads/ayom-temon-hero.png"
+heroImage: "/uploads/ayom-temon-1.webp"
 featured: true
 references:
   - title: "Undang-Undang RI Nomor 12 Tahun 2022 tentang TPKS"
@@ -111,12 +111,27 @@ Kekerasan terhadap perempuan dan anak di tingkat kecamatan sering kali menjadi f
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Dashboard Command Center AYOM TEMON](/uploads/ayom-temon-dashboard.png)
-*Gambar 1: Antarmuka Utama Command Center Satgas PPA Kapanewon Temon dengan Statistik Bento Grid dan Saklar Email Alert.*
+![Tampilan Beranda Landing Page Publik AYOM TEMON](/uploads/ayom-temon-1.webp)
+*Gambar 1: Antarmuka utama halaman beranda AYOM TEMON menampilkan jaminan privasi korban, hotline darurat SAPA 129, dan tombol Kabur Cepat (ESC).*
 
-![Peta Digital GIS 15 Kalurahan Temon](/uploads/ayom-temon-map.png)
-*Gambar 2: Visualisasi Peta Digital GIS Distribusi Aduan di 15 Kalurahan se-Kapanewon Temon.*
+![Tampilan Formulir Pengaduan Anonim PPA](/uploads/ayom-temon-2.webp)
+*Gambar 2: Formulir pengaduan anonim PPA pada rute `/lapor` dilengkapi deteksi lokasi 15 Kalurahan, kategori kekerasan, dan perlindungan bebas jejak digital.*
 
-![Form Pengaduan Publik Anonim](/uploads/ayom-temon-lapor.png)
-*Gambar 3: Form Pengaduan Publik Anonim terintegrasi Cloudflare Turnstile CAPTCHA dan Kode Tracking Unik.*
+![Tampilan Halaman Lacak Progres Status Aduan](/uploads/ayom-temon-3.webp)
+*Gambar 3: Halaman pelacakan status aduan anonim terenkripsi menggunakan Kode Tracking ID (`AYOM-2026-XXXX`) dan PIN 4-Digit rahasia.*
+
+![Tampilan Halaman Edukasi Hak Korban & Keselamatan Digital](/uploads/ayom-temon-4.webp)
+*Gambar 4: Halaman edukasi literasi hukum UU TPKS No. 12/2022, hak pemulihan korban, dan panduan mitigasi keamanan perangkat seluler.*
+
+![Tampilan Dasbor Pemantauan & Respon Aduan Command Center Satgas](/uploads/ayom-temon-5.webp)
+*Gambar 5: Dasbor utama Command Center Satgas PPA menampilkan statistik Bento Grid real-time Supabase, saklar notifikasi email Resend API, dan peta GIS 15 Kalurahan.*
+
+![Tampilan Dasbor Kelola Pengaduan Kekerasan Terverifikasi Gemini AI](/uploads/ayom-temon-6.webp)
+*Gambar 6: Dasbor kelola aduan warga dilengkapi triase analisis Gemini AI, filter urgensi & rentang tanggal, serta fitur ekspor CSV.*
+
+![Tampilan Direktori Pengguna & Manajemen Hak Akses RBAC 3-Tier](/uploads/ayom-temon-7.webp)
+*Gambar 7: Halaman manajemen direktori pengguna menampilkan panduan hak akses RBAC (Super Admin, Operator Humas, Staf Lapangan Read-Only).*
+
+![Tampilan Log Aktivitas Sistem & Audit Trail Keamanan](/uploads/ayom-temon-8.webp)
+*Gambar 8: Halaman log aktivitas sistem merekam kronologi tindakan administrator secara real-time dilengkapi filter keparahan dan ekspor CSV.*
 

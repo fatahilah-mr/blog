@@ -15,7 +15,7 @@ techStack:
 startDate: "2026-07-20"
 repoUrl: "https://github.com/fatahilah-mr/AYOM-TEMON"
 demoUrl: "https://ayom-temon.vercel.app"
-heroImage: "/uploads/ayom-temon-hero.png"
+heroImage: "/uploads/ayom-temon-1.webp"
 featured: true
 references:
   - title: "Indonesian Law No. 12 of 2022 on Sexual Violence Crimes (UU TPKS)"
@@ -111,12 +111,27 @@ Violence against women and children at the sub-district level often remains hidd
 
 ## 🖼️ Screenshots & Visual Demo
 
-![AYOM TEMON Command Center Dashboard](/uploads/ayom-temon-dashboard.png)
-*Figure 1: Main Command Center Dashboard for Kapanewon Temon Task Force with Bento Grid stats and Email Alert Toggle.*
+![Main Public Landing Page Interface of AYOM TEMON](/uploads/ayom-temon-1.webp)
+*Figure 1: Main public landing page interface of AYOM TEMON showcasing victim safety guarantees, SAPA 129 emergency hotlines, and Quick Exit (ESC) buttons.*
 
-![15 Kalurahan Digital GIS Map](/uploads/ayom-temon-map.png)
-*Figure 2: Interactive Digital GIS Map visualizing report distribution across 15 Kalurahan in Kapanewon Temon.*
+![Anonymous Public Complaint Submission Form](/uploads/ayom-temon-2.webp)
+*Figure 2: Anonymous public reporting form at `/lapor` route with 15-village geolocation detection, abuse categorization, and zero-digital-footprint protections.*
 
-![Anonymous Public Reporting Form](/uploads/ayom-temon-lapor.png)
-*Figure 3: Anonymous Public Reporting Form integrated with Cloudflare Turnstile CAPTCHA and Unique Tracking Code.*
+![Encrypted Anonymous Complaint Tracking Page](/uploads/ayom-temon-3.webp)
+*Figure 3: Encrypted anonymous complaint tracking page requiring unique Tracking Codes (`AYOM-2026-XXXX`) and secret 4-digit PINs.*
+
+![Victim Rights & Digital Safety Education Page](/uploads/ayom-temon-4.webp)
+*Figure 4: Education page covering legal literacy under Law No. 12 of 2022 (UU TPKS), victim recovery rights, and digital device safety guides.*
+
+![Command Center Task Force Dashboard](/uploads/ayom-temon-5.webp)
+*Figure 5: Main Command Center Task Force dashboard presenting real-time Supabase Bento Grid metrics, Resend API email alert toggles, and 15-village GIS map.*
+
+![Report Management Dashboard with Gemini AI Triage](/uploads/ayom-temon-6.webp)
+*Figure 6: Report management dashboard featuring Gemini AI automated triage, urgency and date-range filters, and CSV export functionality.*
+
+![User Directory & 3-Tier RBAC Access Control Management](/uploads/ayom-temon-7.webp)
+*Figure 7: User directory page displaying 3-tier Role-Based Access Control (RBAC) rules for Super Admin, PR Operator, and Read-Only Field Staff.*
+
+![System Activity Logs & Security Audit Trail](/uploads/ayom-temon-8.webp)
+*Figure 8: System activity log page tracking real-time officer audit trails, administrative actions, severity filters, and CSV exports.*
 
