@@ -85,3 +85,9 @@ Technical highlights:
 
 ![Main FATAH Gateway Interface](/uploads/web-gateway/web-gateway-1.webp)
 *Figure 1: Main interface of FATAH Gateway (`fatah.web.id`) featuring glassmorphism interactive link cards with 3D tilt effects, bilingual support, and theme switcher.*
+
+![Sveltia CMS Dashboard Panel](/uploads/web-gateway/web-gateway-2.webp)
+*Figure 2: Sveltia CMS dashboard panel (`/admin/`) for zero-code site configuration management.*
+
+![Sveltia CMS Editor & Real-Time Preview](/uploads/web-gateway/web-gateway-3.webp)
+*Figure 3: Sveltia CMS content editor displaying bilingual site configuration fields (ID/EN), link card order settings, and side-by-side live preview.*

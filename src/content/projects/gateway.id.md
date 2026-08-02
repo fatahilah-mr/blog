@@ -85,3 +85,9 @@ Technical highlights:
 
 ![Tampilan Utama FATAH Gateway](/uploads/web-gateway/web-gateway-1.webp)
 *Gambar 1: Antarmuka utama FATAH Gateway (`fatah.web.id`) menampilkan kartu tautan interaktif glassmorphism dengan efek tilt 3D, dukungan dwibahasa, dan alih mode tema.*
+
+![Dasbor Sveltia CMS FATAH Gateway](/uploads/web-gateway/web-gateway-2.webp)
+*Gambar 2: Dasbor Sveltia CMS (`/admin/`) untuk pengelolaan koleksi data konfigurasi situs tanpa kode.*
+
+![Editor Konten & Real-Time Preview Sveltia CMS](/uploads/web-gateway/web-gateway-3.webp)
+*Gambar 3: Editor konten Sveltia CMS menampilkan formulir pengeditan data situs dwibahasa (ID/EN) dan daftar kartu tautan lengkap dengan pratinjau langsung.*
