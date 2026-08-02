@@ -1,0 +1,24 @@
+# fmr.blog — Fatahilah Portfolio & Technical Journal
+
+> Technical blog and professional portfolio of Fatahilah, specialized in IT Network System Administration (Cisco & MikroTik), Server Infrastructure, and Full-Stack Web Development.
+
+## Core Technical Guides & Articles
+
+- [Setup Gateway & Keamanan Jaringan MikroTik](https://blog.fatah.web.id/blog/setup-gateway-keamanan-mikrotikid/): Step-by-step guide for MikroTik RB951Ui gateway setup, NAT masquerade, DHCP server pools, and 2.4GHz Wi-Fi RTO troubleshooting.
+- [Rancang Bangun Jaringan Kantor 3 Lantai (Cisco)](https://blog.fatah.web.id/blog/rancang-bangun-jaringan-kantor-ciscoid/): 3-story enterprise campus network simulation using Cisco Packet Tracer, Multi-Area OSPF, Inter-VLAN Routing, and DHCP Relay Agents.
+- [Panduan Hosting Website Statis (Untuk Pemula)](https://blog.fatah.web.id/blog/panduan-hosting-website-statis-pemulaid/): Comparison and deployment guide for Cloudflare Pages, Vercel, Netlify, GitHub Pages, and Surge.sh.
+- [Riset Komparatif Platform Hosting Cloud Modern](https://blog.fatah.web.id/blog/riset-komparatif-platform-hosting-cloud-modernid/): Architectural comparative analysis of modern serverless and static hosting platforms.
+
+## Key Portfolio Projects
+
+- [Fatahilah Portfolio](https://blog.fatah.web.id/projects/fatahilah-portfolioid/): Personal portfolio built with Astro 5, Vanilla CSS, and Google Sheets Headless CMS.
+- [FATAH Gateway](https://blog.fatah.web.id/projects/gatewayid/): High-speed personal landing page portal integrated with Sveltia CMS and Netlify Forms.
+- [PERISAI Media Sosial](https://blog.fatah.web.id/projects/perisai-media-sosialid/): Rapid emergency response portal featuring SOS one-click dispatch and offline PWA support.
+- [AYOM TEMON](https://blog.fatah.web.id/projects/ayom-temonid/): Violence reporting app for Women & Children Empowerment Office with encrypted submissions.
+
+## About the Author
+
+Fatahilah is a network and system administrator holding 1st Place Gold Medalist in IT Network System Administration LKS 2026. Specializing in Cisco IOS, MikroTik RouterOS, Linux/Windows Server, Astro, and cloud edge hosting.
+
+- Website: https://blog.fatah.web.id
+- Primary Domain: https://fatah.web.id
