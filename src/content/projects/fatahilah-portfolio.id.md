@@ -98,7 +98,7 @@ Pendekatan teknis utama:
 *Gambar 3: Rekam jejak pengalaman Praktik Kerja Lapangan (PKL) pada bidang Network & Server di UPTD BLK Kebumen serta FTTH & ISP di Fazza Computer.*
 
 ![Tampilan Grid Keahlian & Kompetensi Teknis](/uploads/web-portfolio/web-portfolio-4.webp)
-*Gambar 4: Empat pilar keahlian teknis utama meliputi Perangkat Keras & Pengkabelan, Cisco Networking, MikroTik & Wireless, serta Server Administration.*
+*Gambar 4: Enam pilar keahlian teknis utama meliputi Perangkat Keras & Pengkabelan, Cisco Networking, MikroTik & Wireless, Linux & Windows Server, serta AI & Web Development.*
 
 ![Tampilan Galeri Arsip Lab & Proyek Portofolio dengan Google Sheets CMS](/uploads/web-portfolio/web-portfolio-5.webp)
 *Gambar 5: Galeri proyek interaktif terintegrasi Google Sheets Headless CMS dilengkapi penyaring kategori instan dan penanda status cache.*

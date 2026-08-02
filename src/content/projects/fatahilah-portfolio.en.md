@@ -98,7 +98,7 @@ Core technical solutions:
 *Figure 3: Detailed internship track record covering Network & Server administration at UPTD BLK Kebumen and FTTH ISP networking at Fazza Computer.*
 
 ![Technical Skills & Competency Matrix Grid](/uploads/web-portfolio/web-portfolio-4.webp)
-*Figure 4: Four core technical skill pillars encompassing Hardware & Cabling, Cisco Networking, MikroTik & Wireless, and Server Administration.*
+*Figure 4: Six core technical skill pillars encompassing Hardware & Cabling, Cisco Networking, MikroTik & Wireless, Linux & Windows Server, and AI & Web Development.*
 
 ![Interactive Lab Archive & Project Gallery with Google Sheets CMS](/uploads/web-portfolio/web-portfolio-5.webp)
 *Figure 5: Interactive project gallery powered by Google Sheets Headless CMS featuring real-time category filters and cache status indicators.*
