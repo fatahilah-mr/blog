@@ -38,3 +38,7 @@ scratch/
 
 # Migrasi
 migrasi/
+
+#  ai agent skills
+.agents/
+.claude/
