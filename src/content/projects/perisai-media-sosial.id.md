@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-07-28"
 repoUrl: "https://github.com/temonkec-cpu/Media-Sosial"
 demoUrl: "https://perisai-media-sosial.vercel.app"
-heroImage: "/uploads/perisai-cover.png"
+heroImage: "/uploads/perisai-temon-1.webp"
 featured: true
 references:
   - title: "Next.js 16 App Router Docs"
@@ -94,8 +94,26 @@ Pendekatan teknis utama:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Dasbor Admin PERISAI](/uploads/perisai-dashboard.png)
-*Gambar 1: Dasbor Utama Admin PERISAI Kapanewon Temon dengan metrik laporan real-time dan panel peta interaktif.*
+![Tampilan Beranda Landing Page Publik PERISAI Kapanewon Temon](/uploads/perisai-temon-1.webp)
+*Gambar 1: Antarmuka utama halaman beranda PERISAI Kapanewon Temon menampilkan pengumuman resmi 24/7 dan tombol aksi utama.*
 
-![Formulir Pengaduan Warga](/uploads/perisai-form-lapor.png)
-*Gambar 2: Formulir pengaduan publik warga di rute `/lapor` dilengkapi petunjuk notifikasi email otomatis.*
+![Tampilan Formulir Pengaduan Publik](/uploads/perisai-temon-2.webp)
+*Gambar 2: Formulir pengaduan publik warga pada rute `/lapor` dilengkapi bidang data pelapor, rincian aduan 15 Kalurahan, serta panduan laporan.*
+
+![Tampilan Halaman Pelacakan Real-Time Status Aduan](/uploads/perisai-temon-3.webp)
+*Gambar 3: Halaman pelacakan status aduan warga berfitur pencarian real-time menggunakan 12-digit Kode Lacak unik (`TKT-2026-XXXX`).*
+
+![Tampilan Halaman Edukasi & Layanan Informasi Publik FAQ](/uploads/perisai-temon-4.webp)
+*Gambar 4: Halaman informasi dan edukasi publik yang memuat accordion FAQ tata cara pengaduan serta keterbukaan informasi Kapanewon Temon.*
+
+![Tampilan Dasbor Command Center Temon Admin](/uploads/perisai-temon-5.webp)
+*Gambar 5: Dasbor utama Command Center Temon menampilkan statistik laporan terhubung real-time Supabase dan tabel aduan terbaru.*
+
+![Tampilan Peta GIS Geografis 15 Kalurahan dan Pengelolaan Laporan](/uploads/perisai-temon-6.webp)
+*Gambar 6: Dasbor kelola laporan warga dilengkapi peta GIS interaktif 15 Kalurahan wilayah Bandara YIA dan fitur pengunci kanvas peta.*
+
+![Tampilan Direktori Pengguna & Manajemen Hak Akses Admin](/uploads/perisai-temon-7.webp)
+*Gambar 7: Halaman manajemen direktori pengguna untuk mengelola peran administrator (Super Admin, Operator Humas, Staf Lapangan).*
+
+![Tampilan Log Aktivitas Sistem & Audit Trail Keamanan](/uploads/perisai-temon-8.webp)
+*Gambar 8: Halaman audit log aktivitas sistem merekam kronologi peristiwa real-time, autentikasi, serta tombol ekspor CSV.*
