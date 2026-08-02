@@ -10,9 +10,9 @@ lang: id
 project: "fmr-blog"
 ---
 
-Halo dunia! Selamat datang di **fmr.blog**, rumah digital baru tempat saya membagikan catatan laboratorium, coretan kode, hingga dokumentasi infrastruktur IT. 
+Halo dunia! Selamat datang di **fmr.blog**, rumah digital baru tempat saya membagikan catatan laboratorium, coretan kode, hingga dokumentasi infrastruktur IT secara terbuka. 
 
-Artikel ini merupakan tonggak sejarah (_milestone_) pertama bagi blog ini. Sengaja saya tulis bukan hanya sebagai formalitas "Hello World", tetapi juga sebagai pengingat mengapa platform ini dibangun.
+Artikel pertama ini menandai awal perjalanan **fmr.blog**—bukan sekadar formalitas "Hello World", melainkan komitmen untuk mendokumentasikan riset jaringan, arsitektur server, dan pengembangan web secara berkala.
 
 ### Mengapa Membangun Blog (Lagi)?
 

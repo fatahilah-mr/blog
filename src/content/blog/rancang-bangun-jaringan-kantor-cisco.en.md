@@ -114,3 +114,8 @@ exit
 * **Issue:** OSPF neighbor relationship between backbone routers failed to reach the `FULL` state.
 * **Analysis:** A mismatch in Maximum Transmission Unit (MTU) sizes existed on the interconnecting physical interfaces.
 * **Solution:** Aligned interface MTU values or injected `ip ospf mtu-ignore` on mismatched interface links.
+
+---
+
+## 💬 Discussion & Community Input
+Are you currently designing multi-story campus network topologies or troubleshooting OSPF route exchanges in Cisco Packet Tracer? Share your ideas or questions in the comments section below!

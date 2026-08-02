@@ -479,3 +479,8 @@ Pemilihan platform hosting modern membutuhkan evaluasi kritis terhadap arsitektu
 3. **Database & BaaS:** Pada ranah BaaS, **Supabase** menjadi fondasi terbaik bagi aplikasi berorientasi data relasional dengan kebutuhan `pgvector` dan RLS, sedangkan **Firebase** tetap menjadi pilihan utama untuk ekosistem seluler NoSQL.
 
 Langkah terbaik bagi tim pengembang adalah memulai prototipe pada paket gratis yang menyediakan alokasi batas aman, memantau konsumsi *egress* dan waktu CPU secara berkala melalui dasbor pengawasan, serta menyusun arsitektur aplikasi agar tidak terikat secara kaku (*vendor lock-in*) pada satu runtime spesifik saat aplikasi siap berskala ke tingkat produksi.
+
+---
+
+## 💬 Diskusi & Pertanyaan
+Platform PaaS mana yang paling sering Anda gunakan untuk mendistribusikan aplikasi web atau backend Anda? Tuliskan pengalaman atau perbandingan favorit Anda di kolom komentar di bawah!

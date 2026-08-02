@@ -114,3 +114,8 @@ exit
 * **Masalah:** Proses *adjacency* OSPF antar-router backbone tidak pernah mencapai status `FULL`.
 * **Analisis:** Terjadi ketidakcocokan ukuran *Maximum Transmission Unit* (MTU) pada interface tetangga.
 * **Solusi:** Menyelaraskan ukuran MTU interface atau menerapkan perintah `ip ospf mtu-ignore` pada interface serial/gigabit yang terhubung.
+
+---
+
+## 💬 Diskusi & Pertanyaan
+Apakah Anda sedang merancang arsitektur jaringan multi-floor atau mengalami kendala pertukaran rute OSPF di Cisco Packet Tracer? Tuliskan ide atau pertanyaan Anda pada kolom komentar di bawah!

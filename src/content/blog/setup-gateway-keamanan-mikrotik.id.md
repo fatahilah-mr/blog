@@ -100,3 +100,8 @@ Verifikasi koneksi outbound dilakukan dari terminal MikroTik dengan mengirimkan 
 * **Masalah:** Perangkat komputer di port `ether2-LAN` mendapatkan alokasi IP APIPA (`169.254.x.x`).
 * **Analisis:** Status `dhcp1` menjadi *invalid* karena port `ether2-LAN` secara tidak sengaja dimasukkan ke dalam anggota *Bridge Interface*.
 * **Solusi:** Mengeluarkan port `ether2-LAN` dari anggota *bridge*, lalu mengarahkan layanan *DHCP Server* secara langsung ke port fisik `ether2-LAN`. Setelah penyesuaian, klien langsung mendapatkan IP presisi `192.168.10.x/26`.
+
+---
+
+## 💬 Diskusi & Pertanyaan
+Apakah Anda pernah mengalami kendala latensi tinggi (RTO) pada frekuensi Wi-Fi 2.4GHz atau masalah alokasi IP di jaringan MikroTik Anda? Bagikan pengalaman atau pertanyaan Anda di kolom komentar di bawah!

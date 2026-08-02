@@ -479,3 +479,8 @@ Choosing a modern cloud hosting platform requires critical evaluation of applica
 3. **Database & BaaS:** On the BaaS front, **Supabase** is the premier choice for relational data workloads requiring `pgvector` and RLS, while **Firebase** remains the go-to standard for NoSQL mobile ecosystems.
 
 The optimal strategy for engineering teams is to launch prototypes on generous free tiers, actively monitor egress consumption and CPU runtime via dashboards, and architect applications to avoid strict vendor lock-in before scaling to production.
+
+---
+
+## 💬 Discussion & Community Input
+Which PaaS platform is your preferred choice for deploying modern web apps or backend services? Share your thoughts or favorite comparisons in the comments section below!

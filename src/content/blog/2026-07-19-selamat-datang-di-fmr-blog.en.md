@@ -11,9 +11,9 @@ draft: false
 project: "fmr-blog"
 ---
 
-Hello world! Welcome to **fmr.blog**, my new digital home where I share lab notes, code snippets and IT infrastructure documentation. 
+Hello world! Welcome to **fmr.blog**, my new digital home for sharing lab notes, production code snippets, and IT infrastructure documentation. 
 
-This article marks the first milestone for this blog. I’ve deliberately written it not just as a ‘Hello World’ formality, but also as a reminder of why this platform was built.
+This inaugural article marks the launch of **fmr.blog**—written not merely as a "Hello World" formality, but as an ongoing commitment to document open-source network engineering, server architecture, and full-stack web development.
 
 ### Why Build a Blog (Again)?
 

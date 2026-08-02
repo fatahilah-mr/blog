@@ -92,4 +92,9 @@ Situs web statis terdiri dari berkas-berkas siap saji:
 ---
 
 ## 🎯 Kesimpulan & Rekomendasi
-Untuk pemula yang baru belajar HTML/CSS, **Netlify (Drag & Drop)** atau **Vercel** adalah pilihan paling cepat. Namun untuk penggunaan jangka panjang dengan performa maksimal dan tanpa khawatir batas kuota *bandwidth*, **Cloudflare Pages** merupakan pilihan terbaik.
+Jika Anda baru memublikasikan situs HTML/CSS pertama Anda, mulailah dengan **Netlify (Drag & Drop)** atau **Vercel** untuk hasil instan dalam 2 menit. Namun untuk performa jangka panjang tanpa batas kuota bandwidth, **Cloudflare Pages** merupakan pilihan terbaik.
+
+---
+
+## 💬 Diskusi & Pertanyaan
+Platform hosting mana yang menjadi favorit Anda untuk proyek website statis pertama Anda? Tuliskan pendapat atau kendala deploy Anda di kolom komentar di bawah!

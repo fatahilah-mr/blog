@@ -99,4 +99,9 @@ Verifying outbound internet routing directly from the MikroTik terminal by trans
 ### Problem 2: Wired LAN Clients Failing to Receive Automatic DHCP Leases
 * **Issue:** Client workstations connected to `ether2-LAN` received APIPA self-assigned IP addresses (`169.254.x.x`).
 * **Analysis:** The `dhcp1` server status entered an *invalid* state because `ether2-LAN` was accidentally bound inside a *Bridge Interface*.
-* **Solution:** Removed `ether2-LAN` from the bridge member ports, assigning the DHCP Server service directly to physical port `ether2-LAN`. Clients immediately received valid IP leases in the `192.168.10.x/26` pool.
+* **Solution:** Unbound `ether2-LAN` from the bridge interface, then assigned the DHCP Server directly to physical port `ether2-LAN`. Following this adjustment, client devices immediately acquired precise leases in `192.168.10.x/26`.
+
+---
+
+## 💬 Discussion & Community Input
+Have you encountered 2.4GHz Wi-Fi latency spikes (RTO) or DHCP lease allocation issues on your MikroTik deployment? Share your experience or questions in the comments section below!
