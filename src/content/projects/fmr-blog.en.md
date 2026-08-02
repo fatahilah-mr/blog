@@ -12,7 +12,7 @@ techStack:
 startDate: "2026-07-19"
 repoUrl: "https://github.com/fatahilah-mr/blog"
 demoUrl: "https://blog.fatah.web.id"
-heroImage: "/uploads/Logo Web Blog.png"
+heroImage: "/uploads/web-blog-1.webp"
 featured: true
 references:
   - title: "Official Astro 5 Documentation"
@@ -105,8 +105,14 @@ Core technical solutions:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main fmr.blog Interface](/uploads/Logo Web Blog.png)
-*Figure 1: Main fmr.blog interface featuring dark mode aesthetics and interactive gallery layout.*
+![Main Landing Page Interface of fmr.blog](/uploads/web-blog-1.webp)
+*Figure 1: Main landing page of fmr.blog showcasing a responsive hero section, LKS IT Network 2026 achievement badge, and primary action buttons.*
 
-![Project Showcase Page Preview](/uploads/project-cover.jpg)
-*Figure 2: Project showcase gallery displaying tech stack tags and MUI action buttons.*
+![Blog Article Directory Page Interface of fmr.blog](/uploads/web-blog-2.webp)
+*Figure 2: Interactive blog directory page featuring real-time live search, category filtering, language indicator badges (IND/ENG), and reading time estimation.*
+
+![Project Showcase Gallery Interface of fmr.blog](/uploads/web-blog-3.webp)
+*Figure 3: Project showcase gallery displaying structured portfolio cards complete with keyword search and tech stack tag filters.*
+
+![About Me Profile Page Interface of fmr.blog](/uploads/web-blog-4.webp)
+*Figure 4: 'About Me' profile page documenting professional qualifications as a Web Developer, IT Network System Administrator, and technical background.*

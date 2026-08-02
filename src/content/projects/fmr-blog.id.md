@@ -12,7 +12,7 @@ techStack:
 startDate: "2026-07-19"
 repoUrl: "https://github.com/fatahilah-mr/blog"
 demoUrl: "https://blog.fatah.web.id"
-heroImage: "/uploads/Logo Web Blog.png"
+heroImage: "/uploads/web-blog-1.webp"
 featured: true
 references:
   - title: "Dokumentasi Resmi Astro 5"
@@ -105,8 +105,14 @@ Pendekatan teknis utama:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Beranda fmr.blog](/uploads/Logo Web Blog.png)
-*Gambar 1: Tampilan antarmuka utama fmr.blog dengan tema gelap dan layout galeri interaktif.*
+![Tampilan Beranda Halaman Utama fmr.blog](/uploads/web-blog-1.webp)
+*Gambar 1: Halaman beranda utama fmr.blog menampilkan header hero section responsif, lencana pencapaian LKS IT Network 2026, dan tombol navigasi aksi.*
 
-![Pratinjau Halaman Proyek](/uploads/project-cover.jpg)
-*Gambar 2: Tampilan galeri portofolio proyek lengkap dengan tag teknologi dan tombol aksi.*
+![Tampilan Halaman Direktori Artikel Blog fmr.blog](/uploads/web-blog-2.webp)
+*Gambar 2: Halaman indeks blog interaktif dilengkapi fitur live search real-time, filter kategori, badge bahasa (IND/ENG), serta estimasi waktu membaca.*
+
+![Tampilan Halaman Showcase Portofolio Proyek fmr.blog](/uploads/web-blog-3.webp)
+*Gambar 3: Galeri proyek fmr.blog yang menampilkan kartu portofolio terstruktur lengkap dengan pencarian kata kunci dan tag stack teknologi.*
+
+![Tampilan Halaman Profile dan Tentang Saya fmr.blog](/uploads/web-blog-4.webp)
+*Gambar 4: Halaman profil 'Tentang Saya' yang mendokumentasikan latar belakang keahlian Web Developer, IT Network System Administrator, serta riwayat pencapaian.*
