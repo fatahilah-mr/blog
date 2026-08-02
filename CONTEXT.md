@@ -186,9 +186,12 @@ In this workspace session, the user and AI agent executed a systematic refactori
 7. **Refactored `web-setia-wati.id.md` & `web-setia-wati.en.md` (6 Screenshots):**
    * Refined pink pastel glassmorphism portfolio entries with active tone, 3D tilt transform math explanations, and concise component state management (`setia-wati-portfolio-1.webp` through `6.webp`).
 8. **Media Asset Sub-Directory Organization:**
-   * Organized all WebP screenshots in `public/uploads/` into dedicated project folders (`web-blog/`, `web-portfolio/`, `perisai-temon/`, `ayom-temon/`, `web-gateway/`, `web-portfolio-arifin-prasetyo/`, `web-portfolio-setia-wati/`).
-   * Updated all 14 markdown files in `src/content/projects/` to point to `/uploads/<subfolder>/<filename>.webp`.
-9. **Verification & Build:**
-   * Executed `astro check` and `astro build` successfully with **0 Errors** across all 30 generated static pages.
-10. **Version Control:**
+   * Organized all WebP screenshots in `public/uploads/` into dedicated project folders (`web-blog/`, `web-portfolio/`, `perisai-temon/`, `ayom-temon/`, `web-gateway/`, `web-portfolio-arifin-prasetyo/`, `web-portfolio-setia-wati/`, `weather-app/`, `blog/`).
+   * Updated markdown files to point to `/uploads/<subfolder>/<filename>.webp`.
+9. **Migrated Weather App & 3 Technical Blog Articles from `migrasi/`:**
+   * Added `weather-app.id.md` & `weather-app.en.md` with 8-H2 schema compliance.
+   * Added 3 bilingual blog articles: `setup-gateway-keamanan-mikrotik`, `rancang-bangun-jaringan-kantor-cisco`, and `panduan-hosting-website-statis-pemula`.
+10. **Verification & Build:**
+   * Executed `astro check` and `astro build` successfully with **0 Errors** across all 47 generated static pages.
+11. **Version Control:**
    * Cleanly staged, committed, and pushed changes to `main` branch on GitHub (`fatahilah-mr/blog`).
