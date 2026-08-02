@@ -2,7 +2,7 @@
 title: "Panduan Hosting Cloud Modern: Komparasi 9 Platform PaaS"
 description: "Panduan komparatif mendalam 9 platform hosting cloud (Vercel, Cloudflare, Render, Railway, dll.) dari arsitektur, batas gratis, hingga biaya."
 pubDate: 2026-07-23
-heroImage: "/uploads/cloud-hosting-comparison.jpg"
+heroImage: "/uploads/blog/cloud-hosting-comparison.jpg"
 tags:
   - hosting
   - devops

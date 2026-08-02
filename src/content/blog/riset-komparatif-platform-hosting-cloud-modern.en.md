@@ -2,7 +2,7 @@
 title: "Modern Cloud Hosting Guide: 9 PaaS Platforms Compared"
 description: "An in-depth comparative guide covering 9 modern cloud hosting platforms (Vercel, Cloudflare, Render, Railway, etc.) across architecture, limits, and pricing."
 pubDate: 2026-07-23
-heroImage: "/uploads/cloud-hosting-comparison.jpg"
+heroImage: "/uploads/blog/cloud-hosting-comparison.jpg"
 tags:
   - hosting
   - devops

@@ -2,7 +2,7 @@
 title: "Beginner Guide to Free Static Website Hosting"
 description: "A practical guide comparing 5 top free edge hosting platforms for static websites: Cloudflare Pages, Vercel, Netlify, GitHub Pages, and Surge."
 pubDate: "2026-06-23"
-heroImage: "/uploads/cloud-hosting-comparison.jpg"
+heroImage: "/uploads/blog/cloud-hosting-comparison.jpg"
 tags: ["hosting", "webdev", "tutorial", "cloud"]
 lang: "en"
 draft: false

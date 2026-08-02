@@ -2,7 +2,7 @@
 title: "Panduan Hosting Website Statis (Untuk Pemula)"
 description: "Panduan memilih dan menggunakan 5 platform hosting gratis terbaik untuk website statis: Vercel, Netlify, Cloudflare Pages, GitHub Pages, dan Surge."
 pubDate: "2026-06-23"
-heroImage: "/uploads/cloud-hosting-comparison.jpg"
+heroImage: "/uploads/blog/cloud-hosting-comparison.jpg"
 tags: ["hosting", "webdev", "tutorial", "cloud"]
 lang: "id"
 draft: false
