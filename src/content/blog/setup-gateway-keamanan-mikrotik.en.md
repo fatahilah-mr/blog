@@ -42,6 +42,13 @@ The network topology is partitioned into three main segments: WAN Internet uplin
 
 ---
 
+## 🖼️ WinBox Interface & Configuration Proof
+
+![MikroTik RB951Ui-2HnD WinBox Interface Preview](/uploads/blog/mikrotik-01.webp)
+*Figure 1: WinBox (64-bit) v6.49.6 interface displaying IP Address list, Firewall NAT masquerade rules, DHCP Server pools, and terminal ping test.*
+
+---
+
 ## 💻 Core Configuration Parameters (WinBox & CLI)
 
 ### 1. Firewall NAT (Network Address Translation)

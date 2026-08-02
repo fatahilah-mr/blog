@@ -42,6 +42,13 @@ Infrastruktur dibagi menjadi tiga segmen utama: jalur koneksi internet (WAN), ja
 
 ---
 
+## 🖼️ Antarmuka WinBox & Bukti Konfigurasi
+
+![Tampilan Antarmuka WinBox MikroTik RB951Ui-2HnD](/uploads/blog/mikrotik-01.webp)
+*Gambar 1: Antarmuka WinBox (64-bit) v6.49.6 menampilkan tabel IP Address, Firewall NAT masquerade, DHCP Server, dan pengujian terminal ping.*
+
+---
+
 ## 💻 Parameter Konfigurasi Inti (WinBox & CLI)
 
 ### 1. Konfigurasi Firewall NAT (Network Address Translation)

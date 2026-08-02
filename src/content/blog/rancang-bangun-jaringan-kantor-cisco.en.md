@@ -29,6 +29,13 @@ This infrastructure handles inter-departmental traffic segmentation across a thr
 
 ---
 
+## 🗺️ Network Topology & Architecture
+
+![Cisco Packet Tracer 3-Story Campus Network Topology](/uploads/blog/topologi-cisco-pt-01.webp)
+*Figure 1: 3-story enterprise campus network topology diagram in Cisco Packet Tracer (VLAN 10, 20, 30, Multi-Area OSPF, Core Switch, and Server).*
+
+---
+
 ## 📊 IP Addressing Scheme (Addressing Table)
 
 The table below outlines IP subnet allocations and OSPF area assignments across all primary core devices:

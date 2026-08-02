@@ -29,6 +29,13 @@ Infrastruktur ini dibangun untuk menangani isolasi lalu lintas data antar-depart
 
 ---
 
+## 🗺️ Topologi Jaringan & Arsitektur
+
+![Topologi Jaringan Kantor 3 Lantai Cisco Packet Tracer](/uploads/blog/topologi-cisco-pt-01.webp)
+*Gambar 1: Diagram topologi arsitektur jaringan kantor 3 lantai pada Cisco Packet Tracer (VLAN 10, 20, 30, Multi-Area OSPF, Core Switch, dan Server).*
+
+---
+
 ## 📊 Skema Pengalamatan IP (Addressing Table)
 
 Berikut adalah tabel pengalokasian segmen IP address dan area OSPF pada seluruh perangkat jaringan utama:
