@@ -38,6 +38,6 @@ jobs:
           protocol: ftps                   # Menggunakan FTPS (Explicit TLS)
           port: 21                         # Port standar FTPS
           local-dir: ./dist/               # Mengambil ISI folder dist/
-          server-dir: ./dev.fatah.web.id/  # Target folder di cPanel
+          server-dir: ./website/test.fatah.web.id/  # Target folder di cPanel
           dangerous-clean-slate: false     # Mengabaikan penghapusan file di luar dist jika ada
 
