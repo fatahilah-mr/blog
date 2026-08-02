@@ -29,7 +29,14 @@
 │   └── PORTFOLIO.md             # Portfolio overview and guidelines
 ├── public/                       # Static public assets
 │   ├── admin/                   # Sveltia CMS configuration (`config.yml`, `index.html`)
-│   └── uploads/                 # Uploaded media assets, screenshots, and cover images
+│   └── uploads/                 # Uploaded media assets, organized into dedicated project sub-directories
+│       ├── web-blog/            # fmr.blog screenshots (1-7)
+│       ├── web-portfolio/       # Fatahilah Portfolio screenshots (1-7)
+│       ├── perisai-temon/       # PERISAI screenshots (1-8)
+│       ├── ayom-temon/          # AYOM TEMON screenshots (1-8)
+│       ├── web-gateway/         # FATAH Gateway screenshots (1-3)
+│       ├── web-portfolio-arifin-prasetyo/ # Arifin Prasetyo Portfolio screenshots (1-5)
+│       └── web-portfolio-setia-wati/     # Setia Wati Portfolio screenshots (1-6)
 ├── src/                          # Application source code
 │   ├── components/              # Reusable Astro & React UI components
 │   ├── content/                 # Astro Content Collections
@@ -160,23 +167,28 @@ git push origin main
 
 ## 📜 7. Conversation & Refactoring History Summary
 
-In this workspace session, the user and AI agent executed a systematic refactoring of all project showcase entries in `src/content/projects/` to achieve 100% compliance with `guide/GUIDE-PROJECT-AI.md` and apply high-impact **Conversion & Active Copywriting** principles.
+In this workspace session, the user and AI agent executed a systematic refactoring of all 7 project showcase entries in `src/content/projects/` to achieve 100% compliance with `guide/GUIDE-PROJECT-AI.md` and apply high-impact **Conversion & Active Copywriting** principles, alongside categorizing all uploaded image assets into dedicated sub-directories.
 
 ### Key Work Completed:
-1. **Refactored `gateway.id.md` & `gateway.en.md`:**
-   * Restructured into the 8 mandatory H2 sections.
-   * Applied active copywriting to highlight real-time API monitoring, authentication, and sub-800ms performance.
-2. **Refactored `fatahilah-portfolio.id.md` & `fatahilah-portfolio.en.md`:**
-   * Formatted to strict 8-H2 schema with active, punchy bullet points.
-3. **Refactored `perisai-media-sosial.id.md` & `perisai-media-sosial.en.md`:**
-   * Enhanced copywriting to focus on social media toxicity defense, real-time protection, and privacy mechanisms.
-4. **Refactored `ayom-temon.id.md` & `ayom-temon.en.md`:**
-   * Updated violence reporting platform documentation with active voice, emergency alert response (<15 mins), 100% victim confidentiality, and 90% faster reporting efficiency.
-5. **Refactored `arifin-prasetyo-portofolio.id.md` & `arifin-prasetyo-portofolio.en.md`:**
-   * Transformed culinary portfolio entries to highlight mobile-first plating showcase, TanStack Router zero page-reload latency, and canonical SEO optimization.
-6. **Refactored `web-setia-wati.id.md` & `web-setia-wati.en.md`:**
-   * Refined pink pastel glassmorphism portfolio entries with active tone, 3D tilt transform math explanations, and concise component state management.
-7. **Verification & Build:**
+1. **Refactored `gateway.id.md` & `gateway.en.md` (3 Screenshots):**
+   * Restructured into 8 mandatory H2 sections.
+   * Added main landing page and Sveltia CMS dashboard/editor screenshots (`web-gateway-1.webp` through `3.webp`).
+2. **Refactored `fmr-blog.id.md` & `fmr-blog.en.md` (7 Screenshots):**
+   * Updated with 4 main UI screenshots and 3 Sveltia CMS collection & media manager screenshots (`web-blog-1.webp` through `7.webp`).
+3. **Refactored `fatahilah-portfolio.id.md` & `fatahilah-portfolio.en.md` (7 Screenshots):**
+   * Formatted to strict 8-H2 schema with active, punchy bullet points and 7 WebP screenshots (`web-portfolio-1.webp` through `7.webp`).
+4. **Refactored `perisai-media-sosial.id.md` & `perisai-media-sosial.en.md` (8 Screenshots):**
+   * Enhanced copywriting to focus on social media toxicity defense, real-time protection, and privacy mechanisms (`perisai-temon-1.webp` through `8.webp`).
+5. **Refactored `ayom-temon.id.md` & `ayom-temon.en.md` (8 Screenshots):**
+   * Updated violence reporting platform documentation with active voice, emergency alert response (<15 mins), 100% victim confidentiality, and 90% faster reporting efficiency (`ayom-temon-1.webp` through `8.webp`).
+6. **Refactored `arifin-prasetyo-portofolio.id.md` & `arifin-prasetyo-portofolio.en.md` (5 Screenshots):**
+   * Transformed culinary portfolio entries to highlight mobile-first plating showcase, TanStack Router zero page-reload latency, and canonical SEO optimization (`arifin-prasetyo-portfolio-1.webp` through `5.webp`).
+7. **Refactored `web-setia-wati.id.md` & `web-setia-wati.en.md` (6 Screenshots):**
+   * Refined pink pastel glassmorphism portfolio entries with active tone, 3D tilt transform math explanations, and concise component state management (`setia-wati-portfolio-1.webp` through `6.webp`).
+8. **Media Asset Sub-Directory Organization:**
+   * Organized all WebP screenshots in `public/uploads/` into dedicated project folders (`web-blog/`, `web-portfolio/`, `perisai-temon/`, `ayom-temon/`, `web-gateway/`, `web-portfolio-arifin-prasetyo/`, `web-portfolio-setia-wati/`).
+   * Updated all 14 markdown files in `src/content/projects/` to point to `/uploads/<subfolder>/<filename>.webp`.
+9. **Verification & Build:**
    * Executed `astro check` and `astro build` successfully with **0 Errors** across all 30 generated static pages.
-8. **Version Control:**
+10. **Version Control:**
    * Cleanly staged, committed, and pushed changes to `main` branch on GitHub (`fatahilah-mr/blog`).
