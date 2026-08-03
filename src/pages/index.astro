@@ -4,6 +4,10 @@ import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
 
 const posts = await getCollection('blog');
 const projects = await getCollection('projects');
@@ -48,63 +52,91 @@ const featuredProjects = PINNED_PROJECT_SLUGS
     </div>
   </section>
 
-  <div class="grid-container">
-    <section class="recent-posts">
-      <div class="section-header">
-        <h2>Tulisan Terbaru</h2>
-        <a href="/blog" class="view-all group" style="display:inline-flex; align-items:center;">
-          <span>Lihat Semua</span>
-          <div class="icon-pill" style="width:1.5rem; height:1.5rem; margin-left:0.35rem;">
-            <ArrowForwardIcon sx={{ fontSize: '0.85rem' }} />
-          </div>
-        </a>
-      </div>
-      <div class="cards-list">
-        {recentPosts.map(post => <ArticleCard post={post} />)}
-      </div>
-    </section>
+  <div class="homepage-layout">
+    <!-- Main Content Column (Left ~70%) -->
+    <div class="main-content">
+      <section class="recent-posts">
+        <div class="section-header">
+          <h2>Tulisan Terbaru</h2>
+          <a href="/blog" class="view-all group" style="display:inline-flex; align-items:center;">
+            <span>Lihat Semua</span>
+            <div class="icon-pill" style="width:1.5rem; height:1.5rem; margin-left:0.35rem;">
+              <ArrowForwardIcon sx={{ fontSize: '0.85rem' }} />
+            </div>
+          </a>
+        </div>
+        <div class="cards-list">
+          {recentPosts.map(post => <ArticleCard post={post} />)}
+        </div>
+      </section>
 
-    <section class="featured-projects">
-      <div class="section-header">
-        <h2>Proyek Pilihan</h2>
-        <a href="/projects" class="view-all group" style="display:inline-flex; align-items:center;">
-          <span>Lihat Semua</span>
-          <div class="icon-pill" style="width:1.5rem; height:1.5rem; margin-left:0.35rem;">
-            <ArrowForwardIcon sx={{ fontSize: '0.85rem' }} />
-          </div>
-        </a>
-      </div>
-      <div class="cards-grid">
-        {featuredProjects.map(proj => <ProjectCard proj={proj} />)}
-      </div>
-    </section>
-  </div>
-
-  <section class="home-teasers">
-    <div class="teaser-glass glass-panel">
-      <div class="teaser-col teaser-about">
-        <h2>Tentang Saya</h2>
-        <p>Lulusan TKJ SMK Patriot Pituruh 2026. Suka ngulik jaringan, server, dan bikin website. Blog ini tempat saya mendokumentasikan hal-hal teknis yang saya kerjakan.</p>
-        <a href="/about" class="btn btn-secondary group" style="display:inline-flex; align-items:center;">
-          <span>Profil Lengkap</span>
-          <div class="icon-pill">
-            <ArrowForwardIcon sx={{ fontSize: '0.95rem' }} />
-          </div>
-        </a>
-      </div>
-      <div class="teaser-divider"></div>
-      <div class="teaser-col teaser-contact">
-        <h2>Kerja Sama?</h2>
-        <p>Terbuka untuk freelance web, proyek jaringan, atau sekadar diskusi teknis. Hubungi lewat email.</p>
-        <a href="mailto:fatahilah.f10@gmail.com" class="btn btn-primary group" style="display:inline-flex; align-items:center;">
-          <span>Kirim Email</span>
-          <div class="icon-pill">
-            <ArrowForwardIcon sx={{ fontSize: '0.95rem' }} />
-          </div>
-        </a>
-      </div>
+      <section class="featured-projects">
+        <div class="section-header">
+          <h2>Proyek Pilihan</h2>
+          <a href="/projects" class="view-all group" style="display:inline-flex; align-items:center;">
+            <span>Lihat Semua</span>
+            <div class="icon-pill" style="width:1.5rem; height:1.5rem; margin-left:0.35rem;">
+              <ArrowForwardIcon sx={{ fontSize: '0.85rem' }} />
+            </div>
+          </a>
+        </div>
+        <div class="cards-grid">
+          {featuredProjects.map(proj => <ProjectCard proj={proj} />)}
+        </div>
+      </section>
     </div>
-  </section>
+
+    <!-- Sidebar Column (Right ~30%) -->
+    <aside class="sidebar">
+      <!-- Profile Widget -->
+      <div class="sidebar-widget glass-panel">
+        <h3 class="widget-title">Tentang Penulis</h3>
+        <p class="widget-desc">
+          Fatahilah Miftahul Rahman — Praktisi IT Network &amp; System Administrator (Juara 1 LKS 2026) dan Web Developer.
+        </p>
+        <a href="/about" class="sidebar-link">
+          <span>Profil Lengkap</span>
+          <ArrowForwardIcon sx={{ fontSize: '0.9rem' }} />
+        </a>
+      </div>
+
+      <!-- Core Skills Widget -->
+      <div class="sidebar-widget glass-panel">
+        <h3 class="widget-title">Keahlian Utama</h3>
+        <div class="skill-chips">
+          <span class="chip">Hardware &amp; Cabling</span>
+          <span class="chip">Cisco Networking</span>
+          <span class="chip">MikroTik &amp; Wireless</span>
+          <span class="chip">Linux Server</span>
+          <span class="chip">Windows Server</span>
+          <span class="chip">AI &amp; Web Dev</span>
+        </div>
+      </div>
+
+      <!-- Social & Connect Widget -->
+      <div class="sidebar-widget glass-panel">
+        <h3 class="widget-title">Terhubung</h3>
+        <div class="social-links">
+          <a href="https://github.com/fatahilah-mr" target="_blank" rel="noopener noreferrer" class="social-item">
+            <GitHubIcon sx={{ fontSize: '1.1rem' }} />
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/fatahilah-miftahul-rahman" target="_blank" rel="noopener noreferrer" class="social-item">
+            <LinkedInIcon sx={{ fontSize: '1.1rem' }} />
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:fatahilah.f10@gmail.com" class="social-item">
+            <EmailIcon sx={{ fontSize: '1.1rem' }} />
+            <span>Email</span>
+          </a>
+          <a href="/rss.xml" target="_blank" class="social-item">
+            <RssFeedIcon sx={{ fontSize: '1.1rem' }} />
+            <span>RSS Feed</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
 </Base>
 
 <style>
@@ -179,19 +211,105 @@ const featuredProjects = PINNED_PROJECT_SLUGS
     background: var(--color-surface);
   }
   
-  .grid-container {
+  .homepage-layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4.5rem;
+    gap: 3rem;
   }
-  @media (min-width: 768px) {
-    .grid-container {
-      grid-template-columns: 1fr 1fr;
+  @media (min-width: 900px) {
+    .homepage-layout {
+      grid-template-columns: 1fr 310px;
       gap: 2.5rem;
+      align-items: start;
     }
   }
-  
 
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 5rem;
+  }
+
+  .sidebar-widget {
+    padding: 1.5rem;
+    border-radius: var(--radius-lg, 16px);
+  }
+
+  .widget-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .widget-desc {
+    font-size: 0.925rem;
+    color: var(--color-muted);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: transform var(--transition-fast);
+  }
+  .sidebar-link:hover {
+    transform: translateX(3px);
+  }
+
+  .skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .chip {
+    background: var(--color-accent-muted);
+    color: var(--color-accent-text);
+    border: 1px solid rgba(74, 120, 86, 0.3);
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .social-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.85rem;
+    border-radius: var(--radius-md, 8px);
+    background: var(--glass-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+  }
+  .social-item:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent-text);
+    transform: translateX(3px);
+  }
 
   .section-header {
     display: flex;
