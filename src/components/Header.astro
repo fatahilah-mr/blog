@@ -10,8 +10,8 @@ const pathname = Astro.url.pathname;
       <nav id="nav-menu" aria-label="Navigasi Utama">
         <a href="/" class={`nav-link ${pathname === '/' ? 'active' : ''}`} aria-current={pathname === '/' ? 'page' : undefined}>Beranda</a>
         <a href="/blog" class={`nav-link ${pathname.startsWith('/blog') ? 'active' : ''}`} aria-current={pathname.startsWith('/blog') ? 'page' : undefined}>Blog</a>
-        <a href="/projects" class={`nav-link ${pathname.startsWith('/projects') ? 'active' : ''}`} aria-current={pathname.startsWith('/projects') ? 'page' : undefined}>Projects</a>
-        <a href="/about" class={`nav-link ${pathname.startsWith('/about') ? 'active' : ''}`} aria-current={pathname.startsWith('/about') ? 'page' : undefined}>About</a>
+        <a href="/projects" class={`nav-link ${pathname.startsWith('/projects') ? 'active' : ''}`} aria-current={pathname.startsWith('/projects') ? 'page' : undefined}>Proyek</a>
+        <a href="/about" class={`nav-link ${pathname.startsWith('/about') ? 'active' : ''}`} aria-current={pathname.startsWith('/about') ? 'page' : undefined}>Tentang Saya</a>
       </nav>
       
       <div class="nav-controls">

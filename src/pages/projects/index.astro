@@ -33,8 +33,8 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
     </div>
 
     <div class="lang-filter" id="lang-filter" role="group" aria-label="Filter bahasa">
-      <button class="lang-btn active" data-lang="all">Semua</button>
-      <button class="lang-btn" data-lang="id">🇮🇩 ID</button>
+      <button class="lang-btn" data-lang="all">Semua</button>
+      <button class="lang-btn active" data-lang="id">🇮🇩 ID</button>
       <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
     </div>
 
@@ -336,7 +336,7 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
   const categorySearchInput = customSelectWrapper?.querySelector('.category-search-input') as HTMLInputElement;
 
   let activeTag = 'all';
-  let activeLang = 'all';
+  let activeLang = 'id';
 
   function filterCards() {
     const term = searchInput?.value.toLowerCase() || '';
@@ -363,6 +363,9 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
       emptyState.style.display = hasVisibleCards ? 'none' : 'flex';
     }
   }
+
+  // Initial filter on load
+  filterCards();
 
   if (searchInput) {
     searchInput.addEventListener('input', filterCards);

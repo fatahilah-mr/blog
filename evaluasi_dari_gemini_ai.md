@@ -1,35 +1,16 @@
-Mengenai struktur layout dan penggunaan gambar pada feed, berikut analisis objektif mengenai efektivitasnya untuk tipe blog/portofolio teknikal kamu:
-1. Evaluasi Layout Desktop (2 Kolom Saat Ini)
-Layout 2 kolom simetris (50:50) yang kamu gunakan di homepage (Tulisan Terbaru vs Proyek Pilihan) maupun di halaman feed memiliki kelemahan dari segi hirarki visual: dua bagian tersebut saling berebut perhatian pengunjung.
-Rekomendasi Layout yang Lebih Cocok
-A. Untuk Homepage (/)
- * Layout Asimetris (Main Content + Sidebar) — Nisbah ~70:30 atau 65:35:
-   * Kolom Utama (Kiri/Besar): Fokus pada Tulisan Terbaru dan Proyek Pilihan Utama secara berurutan ke bawah (vertikal).
-   * Sidebar (Kanan/Kecil): Isi dengan profil singkat, tautan media sosial, tech stack/skills, dan tautan newsletter/RSS.
-   * Alasan: Mata manusia saat membaca di layar desktop cenderung mengikuti pola garis (F-pattern). Kolom utama yang lebih lebar memberi ruang napas bagi teks, sementara sidebar menyimpan informasi pendukung tanpa memotong arus membaca.
-B. Untuk Halaman Feed Blog (/blog)
- * Layout 1 Kolom Ringkas (Single-Column List):
-   * Tampilkan artikel secara vertikal ke bawah dalam satu kolom terpusat (max-width ~720px - 800px).
-   * Setiap item berisi: Judul, Tanggal, Estimasi Waktu Baca, Tag Bahasa/Kategori, dan Ringkasan Singkat (Excerpt).
-   * Alasan: Untuk blog teknikal (jaringan, sysadmin, development), pola daftar 1 kolom jauh lebih mudah dipindai (scannable) daripada grid 2 kolom yang memaksa mata bergerak zig-zag.
-C. Untuk Halaman Feed Proyek (/proyek)
- * Layout Grid 2 atau 3 Kolom (Symmetric Grid):
-   * Tetap gunakan grid 2 atau 3 kolom khusus untuk halaman proyek.
-   * Proyek bersifat visual dan independen satu sama lain, sehingga format kartu (card grid) sangat cocok di sini.
-2. Haruskah Menambahkan Gambar/Thumbnail?
-Jawabannya bergantung pada jenis kontennya (Proyek vs Artikel Blog):
-A. Untuk Halaman Proyek (/proyek) — SANGAT DISARANKAN (YA)
- * Alasan: Proyek web/aplikasi adalah produk visual. Kartu proyek yang hanya berisi teks dan badge terasa abstrak dan kurang menarik.
- * Saran Implementasi:
-   * Tambahkan mockup/screenshot tampilan antarmuka (UI) aplikasi atau diagram arsitektur sistem di bagian atas setiap kartu proyek.
-   * Gunakan rasio gambar yang konsisten (misalnya 16:9) dengan opsi lazy loading agar tidak memberatkan initial load.
-B. Untuk Halaman Blog (/blog) — TIDAK WAJIB / SEBAIKNYA HINDARI GAMBAR GENERIK
- * Alasan: Artikel blog kamu berfokus pada topik teknis (MikroTik, Cloud Hosting, Arsitektur Jaringan). Jika kamu memaksakan gambar pada setiap artikel, kamu akan cenderung menggunakan stock photo generik (gambar server, kode abstrak) yang tidak memberikan nilai informasi tambahan dan justru mengalihkan perhatian dari judul.
- * Saran Implementasi:
-   * Pertahankan pendekatan berorientasi tipografi (tanpa gambar di feed blog).
-   * Gambar hanya perlu dimasukkan di dalam isi artikel jika berupa diagram jaringan, tangkapan layar terminal, atau arsitektur sistem yang relevan.
-Ringkasan Langkah Perbaikan
- * Ubah feed blog menjadi 1 kolom terpusat tanpa gambar thumbnail agar fokus pada keterbacaan judul dan deskripsi teknis.
- * Tambahkan gambar screenshot/mockup pada kartu di halaman proyek untuk meningkatkan daya tarik visual.
- * Ubah homepage dari rasio 50:50 menjadi layout asimetris (konten utama + sidebar) untuk memperjelas hirarki informasi.
+Berikut evaluasi menyeluruh setelah melihat penelusuran lengkap dari halaman depan hingga Tentang Saya:
+1. Showcase Proyek (/proyek) — Sangat Bagus
+ * Penambahan Preview Gambar: Keputusan memasukkan gambar/screenshot UI pada setiap kartu proyek memberikan dampak visual yang besar. Halaman ini sekarang terlihat seperti portofolio profesional yang hidup.
+ * Layout Grid: Format 2 kolom sangat pas untuk memamerkan proyek visual beserta badge tech stack-nya.
+2. Feed Blog (/blog) — Masih Perlu Penyesuaian
+ * Fitur Filter Bahasa Berfungsi: Saat tombol filter ID diklik (terlihat pada detik 00:30), daftar artikel terfilter dengan rapi.
+ * Saran Layout List: Saat ini feed blog masih berbentuk grid 2 kolom. Untuk tulisan teknis, format 1 kolom (list vertikal ke bawah) akan jauh lebih scannable dan nyaman dibaca ketimbang format 2 kolom yang memaksa mata berpindah-pindah kanan-kiri.
+ * Isu Default "Semua Bahasa": Pada mode default ("Semua"), setiap artikel muncul 2 kali (versi ID & ENG berturut-turut). Sebaiknya tetapkan preferensi bahasa default (misal hanya tampilkan versi bahasa yang dipilih user atau sistem), ketimbang menampilkan artikel yang sama dua kali di feed utama.
+3. Halaman Tentang Saya (/about) — Sangat Rapi
+ * Keahlian Utama (Grid 3x2): Pembagian 6 area keahlian (Hardware & Cabling, Cisco, MikroTik, Linux Server, Windows Server, AI & Web Dev) sangat terstruktur, padat, dan langsung menyampaikan keahlian utama kamu secara efisien.
+ * Call to Action (CTA): Bagian Mari Terhubung & Berkolaborasi di bagian bawah diposisikan dengan tepat sebagai penutup halaman.
+4. Catatan Konsistensi Navigasi Header
+ * Bahasa Navigasi Header: Masih ada pencampuran bahasa (Beranda, Blog, Projects, About). Samakan dengan bahasa pada footer (Beranda, Blog, Proyek, Tentang Saya).
+Kesimpulan
+Secara umum, penerapan layout asimetris di homepage dan penambahan thumbnail gambar di halaman proyek mengubah tampilan situs menjadi jauh lebih matang dan profesional. Fokus perbaikan tersisa tinggal pada penyempurnaan layout feed blog (menjadi 1 kolom) dan penataan default konten multibahasa.
 
