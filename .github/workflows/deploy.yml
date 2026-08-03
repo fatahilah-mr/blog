@@ -39,5 +39,5 @@ jobs:
           port: 21                         # Port standar FTPS
           local-dir: ./dist/               # Mengambil ISI folder dist/
           server-dir: ./website/test.fatah.web.id/  # Target folder di cPanel
-          dangerous-clean-slate: true      # Bersihkan dan buat ulang struktur folder secara otomatis jika terhapus
+          dangerous-clean-slate: false      # Bersihkan dan buat ulang struktur folder secara otomatis jika terhapus
 
