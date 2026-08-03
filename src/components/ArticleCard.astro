@@ -9,7 +9,7 @@ interface Props {
 const { post } = Astro.props;
 const readingTime = getReadingTime(post.body || post.data.description);
 ---
-<a href={`/blog/${post.slug}`} class="card-link group" data-tags={post.data.tags?.join(',') || ''}>
+<a href={`/blog/${post.slug}`} class="card-link group" data-tags={post.data.tags?.join(',') || ''} data-lang={post.data.lang || 'id'}>
   <div class="outer-shell">
     <article class="glass-panel card">
       <div class="meta">

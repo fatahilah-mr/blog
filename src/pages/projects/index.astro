@@ -32,9 +32,22 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
       </span>
     </div>
 
+    <div class="lang-filter" id="lang-filter" role="group" aria-label="Filter bahasa">
+      <button class="lang-btn active" data-lang="all">Semua</button>
+      <button class="lang-btn" data-lang="id">🇮🇩 ID</button>
+      <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+    </div>
+
     <div class="custom-select-wrapper" id="custom-tag-select">
       <div class="custom-select-trigger" tabindex="0" aria-label="Filter berdasarkan tag">
         <span class="custom-select-value">Semua Kategori</span>
+        <input
+          type="text"
+          class="category-search-input"
+          placeholder="Cari kategori..."
+          aria-label="Cari kategori"
+          autocomplete="off"
+        />
         <svg class="select-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
@@ -107,17 +120,19 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 700px;
     margin: 0 auto 3rem auto;
   }
   @media (min-width: 640px) {
     .controls-container {
       flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
     }
   }
   .search-container {
     position: relative;
     flex: 1;
+    min-width: 160px;
   }
   .search-input {
     width: 100%;
@@ -236,6 +251,56 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
     font-weight: 600;
   }
   
+  /* Lang Filter Pills */
+  .lang-filter {
+    display: flex;
+    gap: 0.35rem;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  .lang-btn {
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    background: var(--glass-bg);
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+  }
+  @media (hover: hover) {
+    .lang-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent-text);
+    }
+  }
+  .lang-btn:active { transform: scale(0.96); }
+  .lang-btn.active {
+    background: var(--color-accent-muted);
+    border-color: var(--color-accent-muted);
+    color: var(--color-accent-text);
+    font-weight: 600;
+  }
+
+  /* Searchable Dropdown */
+  .category-search-input {
+    display: none;
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-family: inherit;
+    min-width: 0;
+    width: 100%;
+  }
+  .custom-select-wrapper.open .custom-select-value { display: none; }
+  .custom-select-wrapper.open .category-search-input { display: block; }
+  .custom-option.hidden { display: none; }
+
   .empty-state {
     display: flex;
     flex-direction: column;
@@ -263,26 +328,30 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
   const searchInput = document.getElementById('search-input') as HTMLInputElement;
   const cards = document.querySelectorAll('.card-link') as NodeListOf<HTMLElement>;
   const emptyState = document.getElementById('empty-state');
-  
+
   const customSelectWrapper = document.getElementById('custom-tag-select');
   const customSelectTrigger = customSelectWrapper?.querySelector('.custom-select-trigger');
   const customSelectValue = customSelectWrapper?.querySelector('.custom-select-value');
   const customOptions = customSelectWrapper?.querySelectorAll('.custom-option');
-  
+  const categorySearchInput = customSelectWrapper?.querySelector('.category-search-input') as HTMLInputElement;
+
   let activeTag = 'all';
+  let activeLang = 'all';
 
   function filterCards() {
     const term = searchInput?.value.toLowerCase() || '';
     let hasVisibleCards = false;
-    
+
     cards.forEach(card => {
       const text = card.textContent?.toLowerCase() || '';
       const tags = card.dataset.tags || '';
-      
+      const lang = card.dataset.lang || 'id';
+
       const matchesSearch = text.includes(term);
-      const matchesTag = activeTag === 'all' || tags.includes(activeTag);
-      
-      if (matchesSearch && matchesTag) {
+      const matchesTag    = activeTag === 'all' || tags.includes(activeTag);
+      const matchesLang   = activeLang === 'all' || lang === activeLang;
+
+      if (matchesSearch && matchesTag && matchesLang) {
         card.style.display = '';
         hasVisibleCards = true;
       } else {
@@ -291,11 +360,7 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
     });
 
     if (emptyState) {
-      if (hasVisibleCards) {
-        emptyState.style.display = 'none';
-      } else {
-        emptyState.style.display = 'flex';
-      }
+      emptyState.style.display = hasVisibleCards ? 'none' : 'flex';
     }
   }
 
@@ -303,27 +368,59 @@ const allTags = [...new Set(projects.flatMap(p => p.data.techStack || []))];
     searchInput.addEventListener('input', filterCards);
   }
 
+  // Lang filter pills
+  const langBtns = document.querySelectorAll('.lang-btn') as NodeListOf<HTMLButtonElement>;
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeLang = btn.dataset.lang || 'all';
+      langBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterCards();
+    });
+  });
+
+  // Searchable category dropdown
   if (customSelectTrigger && customOptions && customSelectWrapper) {
     customSelectTrigger.addEventListener('click', () => {
-      customSelectWrapper.classList.toggle('open');
+      const isOpen = customSelectWrapper.classList.toggle('open');
+      if (isOpen && categorySearchInput) {
+        categorySearchInput.value = '';
+        categorySearchInput.focus();
+        customOptions.forEach(opt => opt.classList.remove('hidden'));
+      }
     });
+
+    categorySearchInput?.addEventListener('input', () => {
+      const term = categorySearchInput.value.toLowerCase();
+      customOptions.forEach(opt => {
+        const isAll = opt.getAttribute('data-value') === 'all';
+        const text  = opt.textContent?.toLowerCase() || '';
+        if (isAll || text.includes(term)) {
+          opt.classList.remove('hidden');
+        } else {
+          opt.classList.add('hidden');
+        }
+      });
+    });
+
+    categorySearchInput?.addEventListener('click', e => e.stopPropagation());
 
     customOptions.forEach(option => {
       option.addEventListener('click', () => {
         activeTag = option.getAttribute('data-value') || 'all';
-        if (customSelectValue) {
-          customSelectValue.textContent = option.textContent;
-        }
-        
+        if (customSelectValue) customSelectValue.textContent = option.textContent;
         customOptions.forEach(opt => opt.classList.remove('active'));
         option.classList.add('active');
-        
         customSelectWrapper.classList.remove('open');
+        if (categorySearchInput) {
+          categorySearchInput.value = '';
+          customOptions.forEach(opt => opt.classList.remove('hidden'));
+        }
         filterCards();
       });
     });
 
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', e => {
       if (!customSelectWrapper.contains(e.target as Node)) {
         customSelectWrapper.classList.remove('open');
       }

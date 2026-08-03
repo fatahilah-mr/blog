@@ -6,7 +6,7 @@ interface Props {
 }
 const { proj } = Astro.props;
 ---
-<a href={`/projects/${proj.slug}`} class="card-link" data-tags={proj.data.techStack?.join(',') || ''}>
+<a href={`/projects/${proj.slug}`} class="card-link" data-tags={proj.data.techStack?.join(',') || ''} data-lang={proj.slug.endsWith('.en') ? 'en' : 'id'}>
   <div class="outer-shell">
     <div class="glass-panel card">
       <div class="header">
