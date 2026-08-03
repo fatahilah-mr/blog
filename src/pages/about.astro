@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import CodeIcon from '@mui/icons-material/Code';
+import RouterIcon from '@mui/icons-material/Router';
+import WifiIcon from '@mui/icons-material/Wifi';
 import DnsIcon from '@mui/icons-material/Dns';
-import PsychologyIcon from '@mui/icons-material/Psychology';
+import MonitorIcon from '@mui/icons-material/Monitor';
 import CableIcon from '@mui/icons-material/Cable';
 import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -32,42 +34,60 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
     <!-- Core Pillars Grid -->
     <section class="section-container">
-      <h2 class="section-title">Fokus & Keahlian Utama</h2>
+      <h2 class="section-title">Fokus &amp; Keahlian Utama</h2>
       <div class="grid-container">
-        <!-- Web Development Card -->
-        <div class="glass-panel skill-card highlight-card">
-          <div class="skill-icon">
-            <CodeIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
-          </div>
-          <h3>Web Development</h3>
-          <p>Pengembangan web modern & cepat (Astro 5, React, TypeScript), UI/UX Design System responsif, serta optimasi performa web.</p>
-        </div>
-
-        <!-- Network Infrastructure Card -->
-        <div class="glass-panel skill-card">
-          <div class="skill-icon">
-            <DnsIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
-          </div>
-          <h3>IT Network & Server</h3>
-          <p>Konfigurasi Cisco (VLAN/OSPF/BGP), MikroTik Gateway, Linux Debian Server (Nginx/HAProxy), & Windows Server ADDS.</p>
-        </div>
-
-        <!-- AI & Automation Card -->
-        <div class="glass-panel skill-card">
-          <div class="skill-icon">
-            <PsychologyIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
-          </div>
-          <h3>AI Prompt Engineering</h3>
-          <p>Rekayasa prompt LLM (System Prompts, Chain-of-Thought) dan otomatisasi skrip shell untuk manajemen sistem presisi.</p>
-        </div>
-
-        <!-- Hardware & Fiber Optic Card -->
+        <!-- Hardware & Cabling -->
         <div class="glass-panel skill-card">
           <div class="skill-icon">
             <CableIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
           </div>
-          <h3>Hardware & Cabling</h3>
-          <p>Penataan rack server, pengkabelan UTP, penyambungan Fiber Optik (Splicing), serta pengujian instrumen OPM/VFL.</p>
+          <h3>Hardware &amp; Cabling</h3>
+          <p>PC Assembly &amp; Hardware Troubleshooting, UTP Crimping &amp; LAN Testing, Fiber Optic Splicing &amp; Fast Connector, pengujian OPM &amp; VFL, serta penataan Rack Server.</p>
+        </div>
+
+        <!-- Cisco Networking -->
+        <div class="glass-panel skill-card">
+          <div class="skill-icon">
+            <RouterIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
+          </div>
+          <h3>Cisco Networking</h3>
+          <p>Konfigurasi dasar &amp; keamanan device, Switching VLAN &amp; Trunking, STP Portfast, EtherChannel, pengalamatan IPv4/IPv6, serta routing statis &amp; dinamis (OSPF, BGP, EIGRP, RIP).</p>
+        </div>
+
+        <!-- MikroTik & Wireless -->
+        <div class="glass-panel skill-card">
+          <div class="skill-icon">
+            <WifiIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
+          </div>
+          <h3>MikroTik &amp; Wireless</h3>
+          <p>Internet Gateway (DHCP, DNS, SNTP), User Privilege &amp; Password Hardening, Firewall NAT Masquerade, Port Forwarding, AP-Bridge Mode, SOHO Wireless, serta Hotspot Gateway.</p>
+        </div>
+
+        <!-- Linux Server -->
+        <div class="glass-panel skill-card">
+          <div class="skill-icon">
+            <DnsIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
+          </div>
+          <h3>Linux Server</h3>
+          <p>Debian 12/13 — SSH Server, Bind9 DNS, Nginx &amp; Apache2 Web Server (Virtual Host), Nftables Firewall, VRRP Redundancy, serta HAProxy Load Balancing.</p>
+        </div>
+
+        <!-- Windows Server -->
+        <div class="glass-panel skill-card">
+          <div class="skill-icon">
+            <MonitorIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
+          </div>
+          <h3>Windows Server</h3>
+          <p>Windows Server 2022 — ADDS, DNS Server, DHCP Server, IIS, File Sharing, RAID Storage, serta manajemen Organizational Units (OU) &amp; User/Group.</p>
+        </div>
+
+        <!-- AI & Web Development -->
+        <div class="glass-panel skill-card">
+          <div class="skill-icon">
+            <CodeIcon sx={{ fontSize: '1.5rem', color: 'var(--color-accent)' }} />
+          </div>
+          <h3>AI &amp; Web Development</h3>
+          <p>AI Prompt Engineering untuk otomatisasi skrip &amp; troubleshooting sistem. Front-end dengan Astro, HTML, dan CSS murni. Implementasi UI/UX &amp; Design System modern.</p>
         </div>
       </div>
     </section>
@@ -190,10 +210,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
   .skill-card:hover {
     transform: translateY(-3px);
     border-color: var(--color-accent);
-  }
-  .skill-card.highlight-card {
-    border-color: var(--color-accent-muted);
-    background: linear-gradient(135deg, var(--glass-bg), var(--color-surface-hover));
   }
   .skill-icon {
     display: inline-flex;
