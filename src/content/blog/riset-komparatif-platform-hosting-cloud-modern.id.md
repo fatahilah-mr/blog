@@ -103,9 +103,9 @@ references:
     url: "https://makerkit.dev/blog/saas/supabase-pricing"
 ---
 
-Bingung memilih platform hosting terbaik untuk proyek web, API, atau backend Anda di tahun 2026? Jangan sampai salah pilih—salah memperhitungkan *free-tier limits*, *egress bandwidth*, atau waktu *cold start* bisa membuat aplikasi Anda mendadak mati (*hard stop*) atau terkena tagihan yang tak terduga (*overage fees*).
+Bingung memilih platform hosting terbaik untuk proyek web, API, atau backend Anda di tahun 2026? Jangan sampai salah pilih. Salah memperhitungkan *free-tier limits*, *egress bandwidth*, atau waktu *cold start* bisa membuat aplikasi Anda mendadak mati (*hard stop*) atau terkena tagihan yang tak terduga (*overage fees*).
 
-Dalam panduan ini, kita bedah secara mendalam **9 platform cloud hosting modern**—**Vercel**, **Netlify**, **Cloudflare Pages/Workers**, **Render**, **Railway**, **Koyeb**, **Firebase Hosting**, **Supabase**, dan **GitHub Pages**—mulai dari arsitektur teknis, batasan gratis asli, hingga tutorial *deployment* siap pakai.
+Dalam panduan ini, kita bedah secara mendalam **9 platform cloud hosting modern**: **Vercel**, **Netlify**, **Cloudflare Pages/Workers**, **Render**, **Railway**, **Koyeb**, **Firebase Hosting**, **Supabase**, dan **GitHub Pages**. Kita kupas mulai dari arsitektur teknis, batasan gratis asli, hingga tutorial *deployment* siap pakai.
 
 ---
 

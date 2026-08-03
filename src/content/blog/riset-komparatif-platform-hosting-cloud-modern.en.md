@@ -105,7 +105,7 @@ references:
 
 Confused about choosing the best cloud hosting platform for your web, API, or backend project in 2026? A single miscalculation around free-tier limits, egress bandwidth, or cold start latency can unexpectedly crash your application (*hard pause*) or trigger expensive bill shocks (*overage fees*).
 
-In this comprehensive guide, we break down **9 modern cloud hosting platforms**—**Vercel**, **Netlify**, **Cloudflare Pages/Workers**, **Render**, **Railway**, **Koyeb**, **Firebase Hosting**, **Supabase**, and **GitHub Pages**—covering technical architecture, real free-tier limits, and step-by-step deployment tutorials.
+In this comprehensive guide, we break down **9 modern cloud hosting platforms**: **Vercel**, **Netlify**, **Cloudflare Pages/Workers**, **Render**, **Railway**, **Koyeb**, **Firebase Hosting**, **Supabase**, and **GitHub Pages**. We cover technical architecture, real free-tier limits, and step-by-step deployment tutorials.
 
 ---
 

@@ -17,7 +17,7 @@ This inaugural article marks the launch of **fmr.blog**—written not merely as 
 
 ### Why Build a Blog (Again)?
 
-In an era where information flits by so quickly on social media in the form of short videos, having a well-indexed text-based _blog_ might sound old-fashioned. However, for an IT practitioner—be it a _System Administrator_, a _Network Engineer_, or an LLM enthusiast—written documentation is everything. 
+In an era where information flits by so quickly on social media in the form of short videos, having a well-indexed text-based _blog_ might sound old-fashioned. However, for an IT practitioner (be it a _System Administrator_, a _Network Engineer_, or an LLM enthusiast), written documentation is everything. 
 
 This blog serves as:
 
