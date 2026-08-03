@@ -13,7 +13,7 @@ project: "fmr-blog"
 
 Hello world! Welcome to **fmr.blog**, my new digital home for sharing lab notes, production code snippets, and IT infrastructure documentation. 
 
-This inaugural article marks the launch of **fmr.blog**—written not merely as a "Hello World" formality, but as an ongoing commitment to document open-source network engineering, server architecture, and full-stack web development.
+This inaugural article marks the launch of **fmr.blog**, written not merely as a "Hello World" formality, but as an ongoing commitment to document open-source network engineering, server architecture, and full-stack web development.
 
 ### Why Build a Blog (Again)?
 

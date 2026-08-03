@@ -12,7 +12,7 @@ project: "fmr-blog"
 
 Halo dunia! Selamat datang di **fmr.blog**, rumah digital baru tempat saya membagikan catatan laboratorium, coretan kode, hingga dokumentasi infrastruktur IT secara terbuka. 
 
-Artikel pertama ini menandai awal perjalanan **fmr.blog**—bukan sekadar formalitas "Hello World", melainkan komitmen untuk mendokumentasikan riset jaringan, arsitektur server, dan pengembangan web secara berkala.
+Artikel pertama ini menandai awal perjalanan **fmr.blog**, bukan sekadar formalitas "Hello World", melainkan komitmen untuk mendokumentasikan riset jaringan, arsitektur server, dan pengembangan web secara berkala.
 
 ### Mengapa Membangun Blog (Lagi)?
 

@@ -1,5 +1,5 @@
 ---
-title: "Arifin Prasetyo — Website Portofolio Kuliner Premium"
+title: "Arifin Prasetyo: Website Portofolio Kuliner Premium"
 description: "Platform portofolio digital mobile-first untuk chef & professional cook Arifin Prasetyo, menampilkan 14 hidangan kuliner, sertifikasi resmi, serta optimasi SEO tingkat lanjut."
 status: "completed"
 techStack:

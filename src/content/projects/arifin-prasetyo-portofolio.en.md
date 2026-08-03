@@ -1,5 +1,5 @@
 ---
-title: "Arifin Prasetyo — Premium Culinary Portfolio Website"
+title: "Arifin Prasetyo: Premium Culinary Portfolio Website"
 description: "A mobile-first digital portfolio platform for professional cook Arifin Prasetyo, showcasing 14 culinary creations, official certifications, and advanced SEO optimization."
 status: "completed"
 techStack:
