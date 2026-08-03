@@ -14,13 +14,13 @@ const recentPosts = posts
   .filter(p => p.data.lang === 'id' && !p.data.draft)
   .slice(0, 3);
 
-// Proyek pilihan manual — ubah slug di sini untuk mengganti tampilan
+// Proyek pilihan manual — ubah slug/id di sini untuk mengganti tampilan
 const PINNED_PROJECT_SLUGS = [
-  'perisai-media-sosial.id',
-  'ayom-temon.id',
+  'perisai-media-sosial',
+  'ayom-temon',
 ];
 const featuredProjects = PINNED_PROJECT_SLUGS
-  .map(slug => projects.find(p => p.slug === slug))
+  .map(baseSlug => projects.find(p => p.slug === `${baseSlug}id` || p.slug === `${baseSlug}.id` || p.id.startsWith(baseSlug)))
   .filter(Boolean);
 ---
 

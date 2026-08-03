@@ -5,8 +5,12 @@ interface Props {
   proj: any;
 }
 const { proj } = Astro.props;
+const projId = proj?.id || '';
+const projSlug = proj?.slug || '';
+const isEn = projId.endsWith('.en.md') || projId.endsWith('.en') || projSlug.endsWith('en') || proj?.data?.lang === 'en';
+const lang = isEn ? 'en' : 'id';
 ---
-<a href={`/projects/${proj.slug}`} class="card-link" data-tags={proj.data.techStack?.join(',') || ''} data-lang={proj.slug.endsWith('.en') ? 'en' : 'id'}>
+<a href={`/projects/${proj.slug}`} class="card-link" data-tags={proj.data.techStack?.join(',') || ''} data-lang={lang}>
   <div class="outer-shell">
     <div class="glass-panel card">
       <div class="header">
