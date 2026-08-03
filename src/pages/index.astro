@@ -8,12 +8,20 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const posts = await getCollection('blog');
 const projects = await getCollection('projects');
 
-// Sort & limit
+// Sort & limit — hanya artikel bahasa Indonesia
 posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const recentPosts = posts.slice(0, 3);
+const recentPosts = posts
+  .filter(p => p.data.lang === 'id' && !p.data.draft)
+  .slice(0, 3);
 
-projects.sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf());
-const featuredProjects = projects.filter(p => p.data.featured).slice(0, 2);
+// Proyek pilihan manual — ubah slug di sini untuk mengganti tampilan
+const PINNED_PROJECT_SLUGS = [
+  'perisai-media-sosial.id',
+  'ayom-temon.id',
+];
+const featuredProjects = PINNED_PROJECT_SLUGS
+  .map(slug => projects.find(p => p.slug === slug))
+  .filter(Boolean);
 ---
 
 <Base title="fmr.blog | Fatahilah Miftahul Rahman" description="Personal blog dan proyek Fatahilah Miftahul Rahman - IT Network System Administration, Web Development">
