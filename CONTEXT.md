@@ -167,30 +167,23 @@ git push origin main
 
 ## 📜 7. Conversation & Refactoring History Summary
 
-In this workspace session, the user and AI agent executed a systematic refactoring of all 7 project showcase entries in `src/content/projects/` to achieve 100% compliance with `guide/GUIDE-PROJECT-AI.md` and apply high-impact **Conversion & Active Copywriting** principles, alongside categorizing all uploaded image assets into dedicated sub-directories.
+### Phase 1: Project Showcase & Media Refactoring
+1. **Refactored 7 Showcase Projects to 8-H2 Schema:** Standardized `gateway`, `fmr-blog`, `fatahilah-portfolio`, `perisai-media-sosial`, `ayom-temon`, `arifin-prasetyo-portofolio`, and `web-setia-wati` across both `.id.md` and `.en.md` files. Applied active copywriting and problem-solution framing.
+2. **Media Asset Directory Organization:** Organized WebP screenshots in `public/uploads/` into dedicated sub-directories (`web-blog/`, `web-portfolio/`, `perisai-temon/`, `ayom-temon/`, `web-gateway/`, `web-portfolio-arifin-prasetyo/`, `web-portfolio-setia-wati/`, `blog/`).
+3. **Migrated Technical Blog Articles:** Integrated bilingual articles (`setup-gateway-keamanan-mikrotik`, `rancang-bangun-jaringan-kantor-cisco`, `panduan-hosting-website-statis-pemula`).
 
-### Key Work Completed:
-1. **Refactored `gateway.id.md` & `gateway.en.md` (3 Screenshots):**
-   * Restructured into 8 mandatory H2 sections.
-   * Added main landing page and Sveltia CMS dashboard/editor screenshots (`web-gateway-1.webp` through `3.webp`).
-2. **Refactored `fmr-blog.id.md` & `fmr-blog.en.md` (7 Screenshots):**
-   * Updated with 4 main UI screenshots and 3 Sveltia CMS collection & media manager screenshots (`web-blog-1.webp` through `7.webp`).
-3. **Refactored `fatahilah-portfolio.id.md` & `fatahilah-portfolio.en.md` (7 Screenshots):**
-   * Formatted to strict 8-H2 schema with active, punchy bullet points and 7 WebP screenshots (`web-portfolio-1.webp` through `7.webp`).
-4. **Refactored `perisai-media-sosial.id.md` & `perisai-media-sosial.en.md` (8 Screenshots):**
-   * Enhanced copywriting to focus on social media toxicity defense, real-time protection, and privacy mechanisms (`perisai-temon-1.webp` through `8.webp`).
-5. **Refactored `ayom-temon.id.md` & `ayom-temon.en.md` (8 Screenshots):**
-   * Updated violence reporting platform documentation with active voice, emergency alert response (<15 mins), 100% victim confidentiality, and 90% faster reporting efficiency (`ayom-temon-1.webp` through `8.webp`).
-6. **Refactored `arifin-prasetyo-portofolio.id.md` & `arifin-prasetyo-portofolio.en.md` (5 Screenshots):**
-   * Transformed culinary portfolio entries to highlight mobile-first plating showcase, TanStack Router zero page-reload latency, and canonical SEO optimization (`arifin-prasetyo-portfolio-1.webp` through `5.webp`).
-7. **Refactored `web-setia-wati.id.md` & `web-setia-wati.en.md` (6 Screenshots):**
-   * Refined pink pastel glassmorphism portfolio entries with active tone, 3D tilt transform math explanations, and concise component state management (`setia-wati-portfolio-1.webp` through `6.webp`).
-8. **Media Asset Sub-Directory Organization:**
-   * Organized all WebP screenshots in `public/uploads/` into dedicated project folders (`web-blog/`, `web-portfolio/`, `perisai-temon/`, `ayom-temon/`, `web-gateway/`, `web-portfolio-arifin-prasetyo/`, `web-portfolio-setia-wati/`, `blog/`).
-   * Updated markdown files to point to `/uploads/<subfolder>/<filename>.webp`.
-9. **Migrated 3 Technical Blog Articles from `migrasi/`:**
-   * Added 3 bilingual blog articles: `setup-gateway-keamanan-mikrotik`, `rancang-bangun-jaringan-kantor-cisco`, and `panduan-hosting-website-statis-pemula`.
-10. **Verification & Build:**
-   * Executed `astro check` and `astro build` successfully with **0 Errors** across all 45 generated static pages.
-11. **Version Control:**
-   * Cleanly staged, committed, and pushed changes to `main` branch on GitHub (`fatahilah-mr/blog`).
+### Phase 2: AI Slop Cleaning & Homepage Personalization
+4. **Purity & Copywriting Audit:** Removed 100% of em-dashes (`—`), generic achievement badges, and AI-slop cliché slogans from markdown files and pages.
+5. **Skill Pillar Synchronization:** Synchronized 6 core technical pillars in `about.astro` with verified portfolio experience (Hardware & Cabling, Cisco Networking, MikroTik & Wireless, Linux Server, Windows Server, AI & Web Dev).
+6. **Homepage Pinned Projects:** Replaced automatic `featured: true` detection with manual `PINNED_PROJECT_SLUGS` in `index.astro` (pinned: `perisai-media-sosial` & `ayom-temon`). Filtered homepage recent articles to `lang: 'id'`.
+
+### Phase 3: Layout Refactoring & UX Improvements (Gemini AI Evaluation)
+7. **Asymmetrical Homepage (70:30):** Refactored `index.astro` layout to an asymmetric 70:30 structure on desktop: Main Content (Recent Articles + Pinned Projects) on the left (~70%), and a sticky Sidebar (Author Bio, Core Skill Chips, Social Links & RSS) on the right (~30%).
+8. **Language Filter Pills:** Added `Semua`, `🇮🇩 ID`, and `🇬🇧 EN` pills to `/blog` and `/projects`. Configured **`🇮🇩 ID` as the default active filter** on initial load to eliminate side-by-side duplicate entries of bilingual posts/projects.
+9. **Searchable Category Dropdown:** Transformed the category filter dropdown on `/blog` and `/projects` so clicking it turns the trigger into a real-time text input (auto-focusing keyboard on mobile).
+10. **Project Card Thumbnails (`heroImage`):** Upgraded `ProjectCard.astro` to render 16:9 thumbnail previews with `loading="lazy"`, `decoding="async"`, and smooth hover scale micro-animations. Fixed Astro 5 dotless slug detection (`proj.id.endsWith('.en.md')`).
+11. **Full-Site Container Width Expansion (1200px):** Expanded `.container` in `Base.astro` and `.footer-content` in `Footer.astro` from `900px` to **`1200px`**. Removed inner max-width bottlenecks across `/blog`, `/projects`, `/about`, `/blog/[slug]`, and `/projects/[slug]` so desktop screens utilize wide space gracefully without empty side margins.
+
+### Phase 4: CI/CD & Deployment Fixes
+12. **GitHub Actions FTP Deploy Fix:** Updated `.github/workflows/deploy.yml` with `dangerous-clean-slate: true` to prevent `FTPError: 553` when target cPanel web hosting directories are emptied/recreated.
+13. **Verification & Deployment:** Passed `astro check` (0 errors, 0 warnings) and `astro build` (45 static pages built). All changes committed and pushed to GitHub `main` branch.
