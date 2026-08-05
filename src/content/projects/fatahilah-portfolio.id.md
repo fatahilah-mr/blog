@@ -10,7 +10,7 @@ techStack:
   - TypeScript
 repoUrl: https://github.com/fatahilah-mr/portfolio
 demoUrl: https://fatahmr.my.id
-heroImage: /uploads/web-portfolio/web-portfolio-1.webp
+heroImage: https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio/web-portfolio-1.webp
 featured: true
 startDate: 2026-07-19
 references:
@@ -90,30 +90,30 @@ Pendekatan teknis utama:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Beranda Hero Section Portofolio Fatahilah](/uploads/web-portfolio/web-portfolio-1.webp)
+![Tampilan Beranda Hero Section Portofolio Fatahilah](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio/web-portfolio-1.webp)
 
 _Gambar 1: Antarmuka utama beranda portofolio FATAHILAH.MR dengan desain minimalis, lencana spesialisasi, dan tombol navigasi aksi._
 
-![Tampilan Bagian Profil & About Me](/uploads/web-portfolio/web-portfolio-2.webp)
+![Tampilan Bagian Profil & About Me](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio/web-portfolio-2.webp)
 
 _Gambar 2: Bagian profil profesional yang menampilkan ringkasan 6 pilar kompetensi teknis dan status kesiapan kerja industri._
 
-![Tampilan Bagian Pengalaman Kerja & Magang PKL](/uploads/web-portfolio/web-portfolio-3.webp)
+![Tampilan Bagian Pengalaman Kerja & Magang PKL](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio/web-portfolio-3.webp)
 
 _Gambar 3: Rekam jejak pengalaman Praktik Kerja Lapangan (PKL) pada bidang Network & Server di UPTD BLK Kebumen serta FTTH & ISP di Fazza Computer._
 
-![Tampilan Grid Keahlian & Kompetensi Teknis](/uploads/web-portfolio/web-portfolio-4.webp)
+![Tampilan Grid Keahlian & Kompetensi Teknis](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio/web-portfolio-4.webp)
 
 _Gambar 4: Enam pilar keahlian teknis utama meliputi Perangkat Keras & Pengkabelan, Cisco Networking, MikroTik & Wireless, Linux & Windows Server, serta AI & Web Development._
 
-![Tampilan Galeri Arsip Lab & Proyek Portofolio dengan Google Sheets CMS](/uploads/web-portfolio/web-portfolio-5.webp)
+![Tampilan Galeri Arsip Lab & Proyek Portofolio dengan Google Sheets CMS](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio/web-portfolio-5.webp)
 
 _Gambar 5: Galeri proyek interaktif terintegrasi Google Sheets Headless CMS dilengkapi penyaring kategori instan dan penanda status cache._
 
-![Tampilan Dokumen Sertifikat & Piagam Penghargaan LKS](/uploads/web-portfolio/web-portfolio-6.webp)
+![Tampilan Dokumen Sertifikat & Piagam Penghargaan LKS](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio/web-portfolio-6.webp)
 
 _Gambar 6: Modal pratinjau dokumen piagam resmi Juara 1 LKS SMK Bidang IT Network System Administration 2026._
 
-![Tampilan Saluran Kontak Resmi & Download CV](/uploads/web-portfolio/web-portfolio-7.webp)
+![Tampilan Saluran Kontak Resmi & Download CV](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio/web-portfolio-7.webp)
 
 _Gambar 7: Bagian saluran komunikasi resmi yang menyediakan akses langsung ke WhatsApp, LinkedIn, GitHub, Email, serta unduhan CV._

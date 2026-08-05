@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-07-23"
 repoUrl: "https://github.com/fatahilah-mr/gateway"
 demoUrl: "https://fatah.web.id"
-heroImage: "/uploads/web-gateway/web-gateway-1.webp"
+heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/web-gateway/web-gateway-1.webp"
 featured: true
 references:
   - title: "Sveltia CMS Documentation"
@@ -83,11 +83,11 @@ Technical highlights:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Utama FATAH Gateway](/uploads/web-gateway/web-gateway-1.webp)
+![Tampilan Utama FATAH Gateway](https://cdn.fatah.web.id/portfolio/assets/projects/web-gateway/web-gateway-1.webp)
 *Gambar 1: Antarmuka utama FATAH Gateway (`fatah.web.id`) menampilkan kartu tautan interaktif glassmorphism dengan efek tilt 3D, dukungan dwibahasa, dan alih mode tema.*
 
-![Dasbor Sveltia CMS FATAH Gateway](/uploads/web-gateway/web-gateway-2.webp)
+![Dasbor Sveltia CMS FATAH Gateway](https://cdn.fatah.web.id/portfolio/assets/projects/web-gateway/web-gateway-2.webp)
 *Gambar 2: Dasbor Sveltia CMS (`/admin/`) untuk pengelolaan koleksi data konfigurasi situs tanpa kode.*
 
-![Editor Konten & Real-Time Preview Sveltia CMS](/uploads/web-gateway/web-gateway-3.webp)
+![Editor Konten & Real-Time Preview Sveltia CMS](https://cdn.fatah.web.id/portfolio/assets/projects/web-gateway/web-gateway-3.webp)
 *Gambar 3: Editor konten Sveltia CMS menampilkan formulir pengeditan data situs dwibahasa (ID/EN) dan daftar kartu tautan lengkap dengan pratinjau langsung.*

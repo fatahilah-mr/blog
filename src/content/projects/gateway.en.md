@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-07-23"
 repoUrl: "https://github.com/fatahilah-mr/gateway"
 demoUrl: "https://fatah.web.id"
-heroImage: "/uploads/web-gateway/web-gateway-1.webp"
+heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/web-gateway/web-gateway-1.webp"
 featured: true
 references:
   - title: "Sveltia CMS Documentation"
@@ -83,11 +83,11 @@ Technical highlights:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main FATAH Gateway Interface](/uploads/web-gateway/web-gateway-1.webp)
+![Main FATAH Gateway Interface](https://cdn.fatah.web.id/portfolio/assets/projects/web-gateway/web-gateway-1.webp)
 *Figure 1: Main interface of FATAH Gateway (`fatah.web.id`) featuring glassmorphism interactive link cards with 3D tilt effects, bilingual support, and theme switcher.*
 
-![Sveltia CMS Dashboard Panel](/uploads/web-gateway/web-gateway-2.webp)
-*Figure 2: Sveltia CMS dashboard panel (`/admin/`) for zero-code site configuration management.*
+![Sveltia CMS Dashboard Panel](https://cdn.fatah.web.id/portfolio/assets/projects/web-gateway/web-gateway-2.webp)
+*Figure 2: Sveltia CMS dashboard (`/admin/`) for zero-code site configuration data management.*
 
-![Sveltia CMS Editor & Real-Time Preview](/uploads/web-gateway/web-gateway-3.webp)
+![Sveltia CMS Editor & Real-Time Preview](https://cdn.fatah.web.id/portfolio/assets/projects/web-gateway/web-gateway-3.webp)
 *Figure 3: Sveltia CMS content editor displaying bilingual site configuration fields (ID/EN), link card order settings, and side-by-side live preview.*

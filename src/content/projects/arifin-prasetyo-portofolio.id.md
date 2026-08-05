@@ -13,7 +13,7 @@ techStack:
 startDate: "2026-06-28"
 repoUrl: "https://github.com/fatahilah-mr/arifin-prasetyo-portofolio"
 demoUrl: "https://arifin.fatah.web.id"
-heroImage: "/uploads/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-1.webp"
+heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-1.webp"
 featured: true
 references:
   - title: "React 19 Documentation"
@@ -96,18 +96,18 @@ Membangun platform portofolio digital berbasis **React 19**, **Vite**, dan **Typ
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Beranda Utama Portofolio Kuliner Arifin Prasetyo](/uploads/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-1.webp)
+![Tampilan Beranda Utama Portofolio Kuliner Arifin Prasetyo](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-1.webp)
 *Gambar 1: Antarmuka utama beranda portofolio kuliner Arifin Prasetyo menampilkan foto profil koki profesional, ringkasan pengalaman, dan tombol aksi.*
 
-![Tampilan Dokumen Sertifikat Kredensial Resmi dan PKL](/uploads/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-2.webp)
+![Tampilan Dokumen Sertifikat Kredensial Resmi dan PKL](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-2.webp)
 *Gambar 2: Bagian kredensial resmi menampilkan sertifikat Lulusan Terbaik SMK Patriot Pituruh dan Sertifikat Magang 6 Bulan di KinKEN Cake & Bakery.*
 
-![Tampilan Bagian Keahlian Utama Hard Skills dan Soft Skills Kuliner](/uploads/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-3.webp)
+![Tampilan Bagian Keahlian Utama Hard Skills dan Soft Skills Kuliner](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-3.webp)
 *Gambar 3: Pengelompokan kompetensi teknis (Hot Kitchen, Plating, Baking) dan keahlian personal manajemen operasional dapur.*
 
-![Tampilan Galeri Menu Hidangan Kuliner Unggulan](/uploads/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-4.webp)
+![Tampilan Galeri Menu Hidangan Kuliner Unggulan](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-4.webp)
 *Gambar 4: Galeri portofolio menu kuliner interaktif berfitur filter kategori menampilkan hidangan estetis seperti Chicken Cordon Bleu dan Salad.*
 
-![Tampilan Bagian Kontak dan Form Kolaborasi Kuliner](/uploads/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-5.webp)
+![Tampilan Bagian Kontak dan Form Kolaborasi Kuliner](https://cdn.fatah.web.id/portfolio/assets/projects/web-portfolio-arifin-prasetyo/arifin-prasetyo-portfolio-5.webp)
 *Gambar 5: Bagian komunikasi resmi dan kolaborasi dapur yang menyediakan akses langsung WhatsApp, Email, serta informasi lokasi.*
 
