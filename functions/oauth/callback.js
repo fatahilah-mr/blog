@@ -54,9 +54,9 @@ export async function onRequest(context) {
       return new Response(errorHtml, { status: 400, headers: { "Content-Type": "text/html;charset=UTF-8" } });
     }
     
-    // HTML callback sending token directly to window.opener
-    const html = `
-      <!DOCTYPE html>
+    // Official Sveltia CMS postMessage format
+    const content = JSON.stringify({ provider, token });
+    const html = `<!doctype html>
       <html lang="id">
       <head>
         <meta charset="utf-8" />
@@ -65,45 +65,42 @@ export async function onRequest(context) {
         <style>
           body { font-family: system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #0f172a; color: #f8fafc; text-align: center; padding: 1rem; }
           .card { background: #1e293b; padding: 2.5rem 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 420px; width: 100%; border: 1px solid #334155; }
-          .spinner { border: 3px solid #334155; border-top: 3px solid #38bdf8; border-radius: 50%; width: 36px; height: 36px; animation: spin 0.8s linear infinite; margin: 0 auto 1.25rem; }
-          @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+          .icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
           h2 { margin: 0 0 0.5rem 0; font-size: 1.25rem; color: #f8fafc; }
           p { font-size: 0.925rem; color: #94a3b8; line-height: 1.5; margin: 0; }
         </style>
       </head>
       <body>
         <div class="card">
-          <div class="spinner" id="spinner"></div>
-          <h2>Login Berhasil! 🎉</h2>
-          <p id="sub">Mengalihkan ke Admin CMS...</p>
+          <div class="icon">🎉</div>
+          <h2>Login Berhasil!</h2>
+          <p>Sesi otentikasi telah dikirim ke CMS. Jendela ini akan tertutup otomatis...</p>
         </div>
         <script>
-          (function() {
+          (() => {
             const provider = "${provider}";
-            const token = "${token}";
-            const payload = JSON.stringify({ token: token, provider: provider });
+            const content = ${JSON.stringify(content)};
 
-            if (window.opener) {
-              // Send postMessage directly to Sveltia CMS window
-              try {
-                window.opener.postMessage('authorizing:' + provider, '*');
-                window.opener.postMessage('authorization:' + provider + ':success:' + payload, '*');
-              } catch(e) {}
-              
-              setTimeout(function() {
-                try { window.close(); } catch(e) {}
-                setTimeout(function() {
-                  window.location.href = "/admin/";
-                }, 400);
-              }, 600);
-            } else {
-              window.location.href = "/admin/";
-            }
+            window.addEventListener('message', ({ data, origin }) => {
+              if (data === 'authorizing:' + provider) {
+                window.opener?.postMessage(
+                  'authorization:' + provider + ':success:' + content,
+                  origin
+                );
+              }
+            });
+
+            // Send immediately to opener
+            window.opener?.postMessage('authorizing:' + provider, '*');
+            window.opener?.postMessage('authorization:' + provider + ':success:' + content, '*');
+
+            setTimeout(() => {
+              try { window.close(); } catch(e) {}
+            }, 800);
           })();
         </script>
       </body>
-      </html>
-    `;
+      </html>`;
     
     return new Response(html, {
       headers: { "Content-Type": "text/html;charset=UTF-8" }
