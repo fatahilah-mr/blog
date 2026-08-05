@@ -12,7 +12,7 @@ techStack:
 startDate: "2026-07-19"
 repoUrl: "https://github.com/fatahilah-mr/blog"
 demoUrl: "https://blog.fatah.web.id"
-heroImage: "/uploads/web-blog/web-blog-1.webp"
+heroImage: "/uploads/Logo Web Blog.png"
 featured: true
 references:
   - title: "Dokumentasi Resmi Astro 5"
