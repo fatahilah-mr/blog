@@ -187,3 +187,7 @@ git push origin main
 ### Phase 4: CI/CD & Deployment Fixes
 12. **GitHub Actions FTP Deploy Fix:** Updated `.github/workflows/deploy.yml` with `dangerous-clean-slate: true` to prevent `FTPError: 553` when target cPanel web hosting directories are emptied/recreated.
 13. **Verification & Deployment:** Passed `astro check` (0 errors, 0 warnings) and `astro build` (45 static pages built). All changes committed and pushed to GitHub `main` branch.
+
+### Phase 5: Removal of Legacy Sveltia CMS Configuration
+14. **Clean Removal of Sveltia CMS & OAuth Functions:** Removed legacy `/public/admin/` configuration (`config.yml`, `index.html`, `preview.css`) and `/functions/oauth/` Cloudflare Pages Functions (`auth.js`, `callback.js`) to allow a fresh, clean rebuild of the CMS setup.
+
