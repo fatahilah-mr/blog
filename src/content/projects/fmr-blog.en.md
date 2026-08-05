@@ -12,7 +12,7 @@ techStack:
 startDate: "2026-07-19"
 repoUrl: "https://github.com/fatahilah-mr/blog"
 demoUrl: "https://blog.fatah.web.id"
-heroImage: "/uploads/Logo Web Blog.png"
+heroImage: ""
 featured: true
 references:
   - title: "Official Astro 5 Documentation"
@@ -105,23 +105,3 @@ Core technical solutions:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main Landing Page Interface of fmr.blog](/uploads/web-blog/web-blog-1.webp)
-*Figure 1: Main landing page of fmr.blog showcasing a responsive hero section, LKS IT Network 2026 achievement badge, and primary action buttons.*
-
-![Blog Article Directory Page Interface of fmr.blog](/uploads/web-blog/web-blog-2.webp)
-*Figure 2: Interactive blog directory page featuring real-time live search, category filtering, language indicator badges (IND/ENG), and reading time estimation.*
-
-![Project Showcase Gallery Interface of fmr.blog](/uploads/web-blog/web-blog-3.webp)
-*Figure 3: Project showcase gallery displaying structured portfolio cards complete with keyword search and tech stack tag filters.*
-
-![About Me Profile Page Interface of fmr.blog](/uploads/web-blog/web-blog-4.webp)
-*Figure 4: 'About Me' profile page documenting professional qualifications as a Web Developer, IT Network System Administrator, and technical background.*
-
-![Sveltia CMS Blog Articles Collection Dashboard](/uploads/web-blog/web-blog-5.webp)
-*Figure 5: Sveltia CMS dashboard (`/admin/`) for zero-code blog article collection management.*
-
-![Sveltia CMS Projects Collection Management Panel](/uploads/web-blog/web-blog-6.webp)
-*Figure 6: Sveltia CMS project collection management panel displaying all portfolio showcase entries and new item creation buttons.*
-
-![Sveltia CMS Global Media Asset Manager](/uploads/web-blog/web-blog-7.webp)
-*Figure 7: Sveltia CMS global media asset manager (`/public/uploads`) for uploading, sorting, and organizing image files.*
