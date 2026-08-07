@@ -205,7 +205,11 @@ git push origin main
 ### Phase 9: Full Viewport Hero Section & CDN Cache Busting
 20. **Homepage Full Viewport Vertically Centered Hero:** Refactored `.hero` CSS in `index.astro` with `min-height: calc(100dvh - 8rem)` and `justify-content: center` so the hero section fills 100% device viewport height and centers content vertically on initial load.
 21. **CDN Image Cache Busting (`?v=2`):** Appended `?v=2` query string parameters to all `fmr-blog` CDN image URLs in `fmr-blog.id.md` and `fmr-blog.en.md` to bypass Cloudflare edge cache and force immediate browser asset re-fetching.
-22. **Verification & Deployment:** Passed `astro check` (0 errors, 0 warnings). All changes committed and pushed to GitHub `main` branch.
+
+### Phase 10: `fmr-blog` CDN Image Filename Standardization
+22. **Padded 2-Digit WebP Image Filename Standardization:** Updated all CDN image URLs in `fmr-blog.id.md` and `fmr-blog.en.md` from `web-blog-1.webp` to `web-blog-01.webp` through `web-blog-07.webp` (removing query parameters), guaranteeing instant edge cache invalidation across global PoPs.
+23. **Verification & Deployment:** Passed `astro check` (0 errors, 0 warnings). All changes committed and pushed to GitHub `main` branch.
+
 
 
 
