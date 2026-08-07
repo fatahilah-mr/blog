@@ -105,24 +105,23 @@ Pendekatan teknis utama:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Beranda Halaman Utama fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-1.webp)
+![Tampilan Beranda Halaman Utama fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-1.webp?v=2)
 *Gambar 1: Halaman beranda utama fmr.blog menampilkan header hero section responsif, profil penulis, dan tombol navigasi aksi.*
 
-![Tampilan Halaman Direktori Artikel Blog fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-2.webp)
+![Tampilan Halaman Direktori Artikel Blog fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-2.webp?v=2)
 *Gambar 2: Halaman indeks blog interaktif dilengkapi fitur live search real-time, filter kategori, badge bahasa (IND/ENG), serta estimasi waktu membaca.*
 
-![Tampilan Halaman Showcase Portofolio Proyek fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-3.webp)
+![Tampilan Halaman Showcase Portofolio Proyek fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-3.webp?v=2)
 *Gambar 3: Galeri proyek fmr.blog yang menampilkan kartu portofolio terstruktur lengkap dengan pencarian kata kunci dan tag stack teknologi.*
 
-![Tampilan Halaman Profile dan Tentang Saya fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-4.webp)
+![Tampilan Halaman Profile dan Tentang Saya fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-4.webp?v=2)
 *Gambar 4: Halaman profil 'Tentang Saya' yang mendokumentasikan latar belakang keahlian Web Developer, IT Network System Administrator, serta riwayat pencapaian.*
 
-![Dasbor Manajemen Artikel Blog Sveltia CMS](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-5.webp)
+![Dasbor Manajemen Artikel Blog Sveltia CMS](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-5.webp?v=2)
 *Gambar 5: Dasbor Sveltia CMS (`/admin/`) untuk pengelolaan koleksi tulisan dan artikel blog tanpa kode.*
 
-![Dasbor Manajemen Koleksi Proyek Sveltia CMS](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-6.webp)
+![Dasbor Manajemen Koleksi Proyek Sveltia CMS](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-6.webp?v=2)
 *Gambar 6: Panel pengelolaan koleksi entri portofolio proyek pada Sveltia CMS lengkap dengan tombol pembuatan proyek baru.*
 
-![Manajer Aset Media Global Sveltia CMS](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-7.webp)
+![Manajer Aset Media Global Sveltia CMS](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-7.webp?v=2)
 *Gambar 7: Galeri manajemen aset media publik (`/public/uploads`) di Sveltia CMS untuk pengunggahan dan pengorganisasian berkas gambar.*
-

@@ -105,24 +105,23 @@ Core technical solutions:
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main Landing Page Interface of fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-1.webp)
+![Main Landing Page Interface of fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-1.webp?v=2)
 *Figure 1: Main landing page of fmr.blog showcasing a responsive hero section, author profile, and primary action buttons.*
 
-![Blog Article Directory Page Interface of fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-2.webp)
+![Blog Article Directory Page Interface of fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-2.webp?v=2)
 *Figure 2: Interactive blog directory page featuring real-time live search, category filtering, language indicator badges (IND/ENG), and reading time estimation.*
 
-![Project Showcase Gallery Interface of fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-3.webp)
+![Project Showcase Gallery Interface of fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-3.webp?v=2)
 *Figure 3: Project showcase gallery displaying structured portfolio cards complete with keyword search and tech stack tag filters.*
 
-![About Me Profile Page Interface of fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-4.webp)
+![About Me Profile Page Interface of fmr.blog](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-4.webp?v=2)
 *Figure 4: 'About Me' profile page documenting professional qualifications as a Web Developer, IT Network System Administrator, and technical background.*
 
-![Sveltia CMS Blog Articles Collection Dashboard](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-5.webp)
+![Sveltia CMS Blog Articles Collection Dashboard](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-5.webp?v=2)
 *Figure 5: Sveltia CMS dashboard (`/admin/`) for zero-code blog article collection management.*
 
-![Sveltia CMS Projects Collection Management Panel](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-6.webp)
+![Sveltia CMS Projects Collection Management Panel](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-6.webp?v=2)
 *Figure 6: Sveltia CMS project collection management panel displaying all portfolio showcase entries and new item creation buttons.*
 
-![Sveltia CMS Global Media Asset Manager](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-7.webp)
+![Sveltia CMS Global Media Asset Manager](https://cdn.fatah.web.id/portfolio/assets/projects/web-blog/web-blog-7.webp?v=2)
 *Figure 7: Sveltia CMS global media asset manager (`/public/uploads`) for uploading, sorting, and organizing image files.*
-
