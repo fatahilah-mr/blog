@@ -29,14 +29,14 @@
 │   └── PORTFOLIO.md             # Portfolio overview and guidelines
 ├── public/                       # Static public assets
 │   ├── admin/                   # Sveltia CMS configuration (`config.yml`, `index.html`)
-│   └── uploads/                 # Uploaded media assets, organized into dedicated project sub-directories
-│       ├── web-blog/            # fmr.blog screenshots (1-7)
-│       ├── web-portfolio/       # Fatahilah Portfolio screenshots (1-7)
-│       ├── perisai-temon/       # PERISAI screenshots (1-8)
-│       ├── ayom-temon/          # AYOM TEMON screenshots (1-8)
-│       ├── web-gateway/         # FATAH Gateway screenshots (1-3)
-│       ├── web-portfolio-arifin-prasetyo/ # Arifin Prasetyo Portfolio screenshots (1-5)
-│       └── web-portfolio-setia-wati/     # Setia Wati Portfolio screenshots (1-6)
+│   └── uploads/                 # Global public asset storage (Showcase images served via Cloudflare CDN `https://cdn.fatah.web.id/portfolio/assets/projects/`)
+│       ├── web-blog/            # fmr.blog image assets
+│       ├── web-portfolio/       # Fatahilah Portfolio image assets
+│       ├── perisai-temon/       # PERISAI image assets
+│       ├── ayom-temon/          # AYOM TEMON image assets
+│       ├── web-gateway/         # FATAH Gateway image assets
+│       ├── web-portfolio-arifin-prasetyo/ # Arifin Prasetyo Portfolio image assets
+│       └── web-portfolio-setia-wati/     # Setia Wati Portfolio image assets
 ├── src/                          # Application source code
 │   ├── components/              # Reusable Astro & React UI components
 │   ├── content/                 # Astro Content Collections
@@ -190,4 +190,13 @@ git push origin main
 
 ### Phase 5: Removal of Legacy Sveltia CMS Configuration
 14. **Clean Removal of Sveltia CMS & OAuth Functions:** Removed legacy `/public/admin/` configuration (`config.yml`, `index.html`, `preview.css`) and `/functions/oauth/` Cloudflare Pages Functions (`auth.js`, `callback.js`) to allow a fresh, clean rebuild of the CMS setup.
+
+### Phase 6: Full Cloudflare CDN Image Migration
+15. **100% CDN Image Migration Across All Projects:** Migrated all `heroImage` frontmatter properties and Section 8 screenshot markdown links across all 7 showcase projects (`fmr-blog`, `gateway`, `ayom-temon`, `perisai-media-sosial`, `arifin-prasetyo-portofolio`, `web-setia-wati`, `fatahilah-portfolio`) in both `.id.md` and `.en.md` files to Cloudflare CDN URLs (`https://cdn.fatah.web.id/portfolio/assets/projects/...`). Completely eliminated relative `/uploads/` path dependencies in project markdown files.
+
+### Phase 7: Project Screenshot Expansion & Visual Realignment
+16. **AYOM TEMON Screenshot Expansion (10 CDN Images):** Replaced legacy assets with 10 high-resolution CDN images (`web-ayom-temon-01.webp` to `10.webp`). Analyzed all 10 interface screens (Public Hero Section, SOS 1-Click Form, Tracking Portal, Education Page, Officer Login Portal, Command Center Bento Grid, Kanban Board, Data Table + Gemini AI summary, 3-Tier RBAC Users Directory, Real-time Security Audit Logs) and synchronized bilingual captions across `ayom-temon.id.md` and `ayom-temon.en.md`.
+17. **Fatahilah Portfolio Visual Realignment (7 CDN Images):** Replaced legacy assets with 7 new CDN images (`web-portfolio-fatahilah-01.webp` to `07.webp`). Analyzed hero section, About Me profile, Internship experience, 6 Technical Skills pillars, Google Sheets CMS Lab Archive, LKS Award certificate modal, and official contact channels, updating bilingual captions across `fatahilah-portfolio.id.md` and `fatahilah-portfolio.en.md`.
+18. **Verification & Deployment:** Passed `astro check` (0 errors, 0 warnings). All changes committed and pushed to GitHub `main` branch.
+
 
