@@ -21,7 +21,7 @@ const recentPosts = posts
 // Proyek pilihan manual — ubah slug/id di sini untuk mengganti tampilan
 const PINNED_PROJECT_SLUGS = [
   'perisai-media-sosial',
-  'ayom-temon',
+  'perisai-ayom-temon',
 ];
 const featuredProjects = PINNED_PROJECT_SLUGS
   .map(baseSlug => projects.find(p => p.slug === `${baseSlug}id` || p.slug === `${baseSlug}.id` || p.id.startsWith(baseSlug)))

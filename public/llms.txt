@@ -14,7 +14,7 @@
 - [Fatahilah Portfolio](https://blog.fatah.web.id/projects/fatahilah-portfolioid/): Personal portfolio built with Astro 5, Vanilla CSS, and Google Sheets Headless CMS.
 - [FATAH Gateway](https://blog.fatah.web.id/projects/gatewayid/): High-speed personal landing page portal integrated with Sveltia CMS and Netlify Forms.
 - [PERISAI Media Sosial](https://blog.fatah.web.id/projects/perisai-media-sosialid/): Rapid emergency response portal featuring SOS one-click dispatch and offline PWA support.
-- [AYOM TEMON](https://blog.fatah.web.id/projects/ayom-temonid/): Violence reporting app for Women & Children Empowerment Office with encrypted submissions.
+- [PERISAI AYOM TEMON](https://blog.fatah.web.id/projects/perisai-ayom-temonid/): Violence reporting app for Women & Children Empowerment Office with encrypted submissions.
 
 ## About the Author
 
