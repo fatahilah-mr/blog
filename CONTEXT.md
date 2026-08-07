@@ -197,6 +197,15 @@ git push origin main
 ### Phase 7: Project Screenshot Expansion & Visual Realignment
 16. **AYOM TEMON Screenshot Expansion (10 CDN Images):** Replaced legacy assets with 10 high-resolution CDN images (`web-ayom-temon-01.webp` to `10.webp`). Analyzed all 10 interface screens (Public Hero Section, SOS 1-Click Form, Tracking Portal, Education Page, Officer Login Portal, Command Center Bento Grid, Kanban Board, Data Table + Gemini AI summary, 3-Tier RBAC Users Directory, Real-time Security Audit Logs) and synchronized bilingual captions across `ayom-temon.id.md` and `ayom-temon.en.md`.
 17. **Fatahilah Portfolio Visual Realignment (7 CDN Images):** Replaced legacy assets with 7 new CDN images (`web-portfolio-fatahilah-01.webp` to `07.webp`). Analyzed hero section, About Me profile, Internship experience, 6 Technical Skills pillars, Google Sheets CMS Lab Archive, LKS Award certificate modal, and official contact channels, updating bilingual captions across `fatahilah-portfolio.id.md` and `fatahilah-portfolio.en.md`.
-18. **Verification & Deployment:** Passed `astro check` (0 errors, 0 warnings). All changes committed and pushed to GitHub `main` branch.
+
+### Phase 8: Project Narrative Alignment & Slug Renaming (`perisai-ayom-temon`)
+18. **Specification & Narrative Alignment:** Updated project narrative and technical specifications to the official PERISAI AYOM TEMON architecture (PWA Panic Button SOS 1-Klik, Zero-Victim Email Architecture, Spiral Coordinate Offset Leaflet GIS, Pre-Save Profile Modal, Next.js 16 / React 19) while preserving all 10 high-resolution CDN images.
+19. **Slug & Filename Renaming to `perisai-ayom-temon`:** Renamed project markdown entries from `ayom-temon.id.md` / `ayom-temon.en.md` to `perisai-ayom-temon.id.md` / `perisai-ayom-temon.en.md`. Updated `PINNED_PROJECT_SLUGS` in `src/pages/index.astro` and portfolio references in `public/llms.txt`.
+
+### Phase 9: Full Viewport Hero Section & CDN Cache Busting
+20. **Homepage Full Viewport Vertically Centered Hero:** Refactored `.hero` CSS in `index.astro` with `min-height: calc(100dvh - 8rem)` and `justify-content: center` so the hero section fills 100% device viewport height and centers content vertically on initial load.
+21. **CDN Image Cache Busting (`?v=2`):** Appended `?v=2` query string parameters to all `fmr-blog` CDN image URLs in `fmr-blog.id.md` and `fmr-blog.en.md` to bypass Cloudflare edge cache and force immediate browser asset re-fetching.
+22. **Verification & Deployment:** Passed `astro check` (0 errors, 0 warnings). All changes committed and pushed to GitHub `main` branch.
+
 
 
