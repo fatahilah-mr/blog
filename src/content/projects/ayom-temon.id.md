@@ -15,7 +15,7 @@ techStack:
 startDate: "2026-07-20"
 repoUrl: "https://github.com/fatahilah-mr/AYOM-TEMON"
 demoUrl: "https://ayom-temon.vercel.app"
-heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-1.webp"
+heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-01.webp"
 featured: true
 references:
   - title: "Undang-Undang RI Nomor 12 Tahun 2022 tentang TPKS"
@@ -111,27 +111,33 @@ Kekerasan terhadap perempuan dan anak di tingkat kecamatan sering kali menjadi f
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Tampilan Beranda Landing Page Publik AYOM TEMON](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-1.webp)
-*Gambar 1: Antarmuka utama halaman beranda AYOM TEMON menampilkan jaminan privasi korban, hotline darurat SAPA 129, dan tombol Kabur Cepat (ESC).*
+![Antarmuka Utama Beranda Publik PERISAI AYOM TEMON](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-01.webp)
+*Gambar 1: Antarmuka utama beranda publik PERISAI AYOM TEMON menampilkan jaminan privasi Safety-First UX, hotline darurat 24 jam, dan tombol Kabur Cepat (ESC).*
 
-![Tampilan Formulir Pengaduan Anonim PPA](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-2.webp)
-*Gambar 2: Formulir pengaduan anonim PPA pada rute `/lapor` dilengkapi deteksi lokasi 15 Kalurahan, kategori kekerasan, dan perlindungan bebas jejak digital.*
+![Formulir Pengaduan Anonim PPA & SOS Darurat 1-Klik](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-02.webp)
+*Gambar 2: Formulir pengaduan anonim pada rute `/lapor` dilengkapi banner SOS Darurat 1-Klik, deteksi otomatis titik GPS presisi 15 Kalurahan, dan proteksi bebas jejak digital.*
 
-![Tampilan Halaman Lacak Progres Status Aduan](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-3.webp)
-*Gambar 3: Halaman pelacakan status aduan anonim terenkripsi menggunakan Kode Tracking ID (`AYOM-2026-XXXX`) dan PIN 4-Digit rahasia.*
+![Portal Pelacakan Progres Status Aduan Anonim Terenkripsi](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-03.webp)
+*Gambar 3: Halaman pelacakan progres aduan anonim terenkripsi menggunakan Kode Tracking ID (`AYOM-2026-XXXX`) dan PIN rahasia 4-digit.*
 
-![Tampilan Halaman Edukasi Hak Korban & Keselamatan Digital](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-4.webp)
+![Halaman Edukasi Hak Korban & Panduan Keselamatan Digital](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-04.webp)
 *Gambar 4: Halaman edukasi literasi hukum UU TPKS No. 12/2022, hak pemulihan korban, dan panduan mitigasi keamanan perangkat seluler.*
 
-![Tampilan Dasbor Pemantauan & Respon Aduan Command Center Satgas](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-5.webp)
-*Gambar 5: Dasbor utama Command Center Satgas PPA menampilkan statistik Bento Grid real-time Supabase, saklar notifikasi email Resend API, dan peta GIS 15 Kalurahan.*
+![Portal Otentikasi Login Petugas Satgas PPA](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-05.webp)
+*Gambar 5: Portal otentikasi login khusus petugas Satgas PPA Kapanewon Temon terintegrasi Supabase Auth Google OAuth SSO.*
 
-![Tampilan Dasbor Kelola Pengaduan Kekerasan Terverifikasi Gemini AI](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-6.webp)
-*Gambar 6: Dasbor kelola aduan warga dilengkapi triase analisis Gemini AI, filter urgensi & rentang tanggal, serta fitur ekspor CSV.*
+![Dasbor Utama Command Center Satgas PPA](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-06.webp)
+*Gambar 6: Dasbor utama Command Center Satgas PPA menampilkan statistik Bento Grid realtime Supabase, saklar notifikasi email Resend API, dan peta GIS 15 Kalurahan.*
 
-![Tampilan Direktori Pengguna & Manajemen Hak Akses RBAC 3-Tier](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-7.webp)
-*Gambar 7: Halaman manajemen direktori pengguna menampilkan panduan hak akses RBAC (Super Admin, Operator Humas, Staf Lapangan Read-Only).*
+![Manajemen Aduan Warga Tampilan Kanban Board](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-07.webp)
+*Gambar 7: Tampilan Kanban Board manajemen aduan warga dilengkapi filter urgensi & rentang tanggal, indikator rujukan (Medis, Hukum, Rumah Aman), dan pemindahan status interaktif.*
 
-![Tampilan Log Aktivitas Sistem & Audit Trail Keamanan](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-8.webp)
-*Gambar 8: Halaman log aktivitas sistem merekam kronologi tindakan administrator secara real-time dilengkapi filter keparahan dan ekspor CSV.*
+![Manajemen Aduan Warga Tampilan Tabel Data & Ringkasan Gemini AI](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-08.webp)
+*Gambar 8: Tampilan Tabel Data aduan warga menampilkan ringkasan kronologi otomatis oleh Gemini AI, status penanganan, dan fitur ekspor CSV.*
+
+![Direktori Pengguna & Manajemen Hak Akses RBAC 3-Tier](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-09.webp)
+*Gambar 9: Halaman direktori pengguna menampilkan panduan hak akses RBAC 3-Tier (Super Admin, Operator Humas, Staf Lapangan Read-Only) dan manajemen akun petugas.*
+
+![Log Aktivitas Sistem & Audit Trail Keamanan Realtime](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-10.webp)
+*Gambar 10: Halaman log aktivitas sistem merekam kronologi tindakan administrator secara realtime dilengkapi filter keparahan dan ekspor CSV.*
 

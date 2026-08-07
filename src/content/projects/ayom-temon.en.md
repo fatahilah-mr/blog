@@ -15,7 +15,7 @@ techStack:
 startDate: "2026-07-20"
 repoUrl: "https://github.com/fatahilah-mr/AYOM-TEMON"
 demoUrl: "https://ayom-temon.vercel.app"
-heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-1.webp"
+heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-01.webp"
 featured: true
 references:
   - title: "Indonesian Law No. 12 of 2022 on Sexual Violence Crimes (UU TPKS)"
@@ -111,27 +111,33 @@ Violence against women and children at the sub-district level often remains hidd
 
 ## 🖼️ Screenshots & Visual Demo
 
-![Main Public Landing Page Interface of AYOM TEMON](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-1.webp)
-*Figure 1: Main public landing page interface of AYOM TEMON showcasing victim safety guarantees, SAPA 129 emergency hotlines, and Quick Exit (ESC) buttons.*
+![Main Public Landing Page Interface of PERISAI AYOM TEMON](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-01.webp)
+*Figure 1: Main public landing page interface of PERISAI AYOM TEMON showcasing Safety-First UX privacy guarantees, 24-hour emergency hotlines, and Quick Exit (ESC) buttons.*
 
-![Anonymous Public Complaint Submission Form](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-2.webp)
-*Figure 2: Anonymous public reporting form at `/lapor` route with 15-village geolocation detection, abuse categorization, and zero-digital-footprint protections.*
+![Anonymous Public Complaint Submission Form & 1-Click Emergency SOS Banner](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-02.webp)
+*Figure 2: Anonymous public reporting form at `/lapor` route featuring a 1-Click Emergency SOS banner, automatic 15-village GPS geolocation detection, and zero-digital-footprint protections.*
 
-![Encrypted Anonymous Complaint Tracking Page](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-3.webp)
+![Encrypted Anonymous Complaint Tracking Portal](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-03.webp)
 *Figure 3: Encrypted anonymous complaint tracking page requiring unique Tracking Codes (`AYOM-2026-XXXX`) and secret 4-digit PINs.*
 
-![Victim Rights & Digital Safety Education Page](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-4.webp)
+![Victim Rights & Digital Safety Education Page](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-04.webp)
 *Figure 4: Education page covering legal literacy under Law No. 12 of 2022 (UU TPKS), victim recovery rights, and digital device safety guides.*
 
-![Command Center Task Force Dashboard](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-5.webp)
-*Figure 5: Main Command Center Task Force dashboard presenting real-time Supabase Bento Grid metrics, Resend API email alert toggles, and 15-village GIS map.*
+![Task Force Officer Login Authentication Portal](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-05.webp)
+*Figure 5: Dedicated authentication portal for Kapanewon Temon Task Force officers integrated with Supabase Auth Google OAuth SSO.*
 
-![Report Management Dashboard with Gemini AI Triage](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-6.webp)
-*Figure 6: Report management dashboard featuring Gemini AI automated triage, urgency and date-range filters, and CSV export functionality.*
+![Command Center Task Force Dashboard](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-06.webp)
+*Figure 6: Main Command Center Task Force dashboard presenting real-time Supabase Bento Grid metrics, Resend API email alert toggles, and 15-village GIS map.*
 
-![User Directory & 3-Tier RBAC Access Control Management](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-7.webp)
-*Figure 7: User directory page displaying 3-tier Role-Based Access Control (RBAC) rules for Super Admin, PR Operator, and Read-Only Field Staff.*
+![Public Complaint Management Kanban Board View](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-07.webp)
+*Figure 7: Kanban Board view for complaint management featuring urgency and date-range filters, referral tags (Medical, Legal, Safe House), and interactive status transitions.*
 
-![System Activity Logs & Security Audit Trail](https://cdn.fatah.web.id/portfolio/assets/projects/ayom-temon/ayom-temon-8.webp)
-*Figure 8: System activity log page tracking real-time officer audit trails, administrative actions, severity filters, and CSV exports.*
+![Public Complaint Management Data Table & Gemini AI Summary View](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-08.webp)
+*Figure 8: Structured Data Table view displaying Gemini AI automated incident summaries, handling status, and CSV export functionality.*
+
+![User Directory & 3-Tier RBAC Access Control Management](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-09.webp)
+*Figure 9: User directory page displaying 3-Tier Role-Based Access Control (RBAC) rules for Super Admin, PR Operator, and Read-Only Field Staff.*
+
+![System Activity Logs & Realtime Security Audit Trail](https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-10.webp)
+*Figure 10: System activity log page tracking real-time officer audit trails, administrative actions, severity filters, and CSV exports.*
 
