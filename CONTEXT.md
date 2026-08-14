@@ -210,6 +210,10 @@ git push origin main
 22. **Padded 2-Digit WebP Image Filename Standardization:** Updated all CDN image URLs in `fmr-blog.id.md` and `fmr-blog.en.md` from `web-blog-1.webp` to `web-blog-01.webp` through `web-blog-07.webp` (removing query parameters), guaranteeing instant edge cache invalidation across global PoPs.
 23. **Verification & Deployment:** Passed `astro check` (0 errors, 0 warnings). All changes committed and pushed to GitHub `main` branch.
 
+### Phase 11: PERISAI Legal Framework & SK No. 104/2025 Integration
+24. **Legal Framework Synchronization:** Integrated **Keputusan Panewu Temon Nomor 104 Tahun 2025** across both PERISAI project entries (`perisai-media-sosial` & `perisai-ayom-temon`) in both `.id.md` and `.en.md` files. Added official decree entries to frontmatter `references:` array and highlighted legal basis callouts under Section 1 (Problem), solidifying the official e-Government status and Fatahilah Miftahul Rahman's appointment as **Technical Consultant**.
+
+
 
 
 

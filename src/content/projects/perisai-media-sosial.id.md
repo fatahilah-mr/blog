@@ -16,6 +16,7 @@ demoUrl: "https://perisai-media-sosial.vercel.app"
 heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/perisai-temon/perisai-temon-1.webp"
 featured: true
 references:
+  - title: "Keputusan Panewu Temon No. 104 Tahun 2025 (Penetapan Web Aplikasi PERISAI)"
   - title: "Next.js 16 App Router Docs"
     url: "https://nextjs.org/docs"
   - title: "Supabase PostgreSQL & Row Level Security"
@@ -27,6 +28,8 @@ references:
 ---
 
 ## 📌 1. Problem (Latar Belakang & Masalah)
+
+> ⚖️ **Dasar Hukum & Status Resmi:** Platform ini secara resmi ditetapkan melalui **Keputusan Panewu Temon Nomor 104 Tahun 2025** sebagai sistem informasi elektronik resmi pusat pengelolaan data dan pelayanan umum di lingkungan Kapanewon Temon, dengan Fatahilah Miftahul Rahman bertindak sebagai **Konsultan Teknis**.
 
 Kapanewon Temon menaungi 15 Kalurahan dan objek vital nasional Bandara Internasional Yogyakarta (YIA). Tingginya dinamika infrastruktur dan sosial memicu lonjakan aduan publik (jalan rusak, penerangan, drainase, hingga layanan instansi).
 

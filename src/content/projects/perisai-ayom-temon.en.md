@@ -17,6 +17,7 @@ demoUrl: "https://ayom-temon.vercel.app"
 heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-01.webp"
 featured: true
 references:
+  - title: "Decree of Panewu Temon No. 104/2025 (Legal Designation of PERISAI Web Application)"
   - title: "Indonesian Law No. 12 of 2022 on Sexual Violence Crimes (UU TPKS)"
     url: "https://peraturan.go.id/id/uu-no-12-tahun-2022"
   - title: "SAPA 129 Hotline - Ministry of Women Empowerment and Child Protection RI"
@@ -28,6 +29,8 @@ references:
 ---
 
 ## 📌 1. Problem (Background & Problem Statement)
+
+> ⚖️ **Legal Basis & Official Framework:** As a specialized social welfare & violence protection subsystem, this application fulfills **Decree of Panewu Temon No. 104 of 2025** (Second Dictum item b), designating the PERISAI ecosystem as the sole official data center and operational instrument for Temon District, with Fatahilah Miftahul Rahman serving as **Technical Consultant**.
 
 Violence against women and children (PPA) is a critical societal crisis that frequently remains underreported. In **Temon District, Kulon Progo Regency** (encompassing 15 villages/Kalurahan), victims and witnesses face severe psychological and logistical barriers when attempting to report incidents:
 

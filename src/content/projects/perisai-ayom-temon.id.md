@@ -17,6 +17,7 @@ demoUrl: "https://ayom-temon.vercel.app"
 heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/web-ayom-temon/web-ayom-temon-01.webp"
 featured: true
 references:
+  - title: "Keputusan Panewu Temon No. 104 Tahun 2025 (Penetapan Web Aplikasi PERISAI)"
   - title: "Undang-Undang No. 12 Tahun 2022 tentang Tindak Pidana Kekerasan Seksual (UU TPKS)"
     url: "https://peraturan.go.id/id/uu-no-12-tahun-2022"
   - title: "Layanan Hotline SAPA 129 KPPPA Republik Indonesia"
@@ -28,6 +29,8 @@ references:
 ---
 
 ## 📌 1. Problem (Latar Belakang & Masalah)
+
+> ⚖️ **Dasar Hukum & Payung Resmi:** Sebagai modul spesialisasi penanganan kesejahteraan sosial & PPA, sistem ini memacu amanat **Keputusan Panewu Temon Nomor 104 Tahun 2025** (Diktum Kedua poin b) yang menetapkan Web Aplikasi PERISAI sebagai pusat pangkalan data tunggal dan instrumen operasional pelayanan di Kapanewon Temon, dengan Fatahilah Miftahul Rahman bertindak sebagai **Konsultan Teknis**.
 
 Kekerasan terhadap perempuan dan anak (PPA) merupakan salah satu isu sosial yang krusial namun sering kali berada di bawah bayang-bayang ketakutan dan bungkamnya korban (*underreported cases*). Di wilayah **Kapanewon Temon, Kabupaten Kulon Progo** (yang membawahi 15 Kalurahan), korban atau saksi sering mengalami kendala dan hambatan psikologis dalam melaporkan kasus kekerasan:
 

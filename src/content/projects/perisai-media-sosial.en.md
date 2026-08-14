@@ -16,6 +16,7 @@ demoUrl: "https://perisai-media-sosial.vercel.app"
 heroImage: "https://cdn.fatah.web.id/portfolio/assets/projects/perisai-temon/perisai-temon-1.webp"
 featured: true
 references:
+  - title: "Decree of Panewu Temon No. 104/2025 (Legal Designation of PERISAI Web Application)"
   - title: "Next.js 16 App Router Docs"
     url: "https://nextjs.org/docs"
   - title: "Supabase PostgreSQL & Row Level Security"
@@ -27,6 +28,8 @@ references:
 ---
 
 ## 📌 1. Problem
+
+> ⚖️ **Legal Designation & Official Status:** This platform is officially designated under **Decree of Panewu Temon No. 104 of 2025** as the official electronic system for public service and data management across Temon District, with Fatahilah Miftahul Rahman serving as the designated **Technical Consultant**.
 
 Kapanewon Temon governs 15 villages (*Kalurahan*) and hosts Yogyakarta International Airport (YIA). Rapid infrastructure growth triggered an increasing surge of public grievances (damaged roads, lighting, drainage, public service requests).
 
