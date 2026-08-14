@@ -40,5 +40,5 @@ scratch/
 migrasi/
 
 #  ai agent skills
-.agents/
 .claude/
+
